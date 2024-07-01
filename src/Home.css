@@ -1,0 +1,188 @@
+/* HOME CSS */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.homepage-main-container {
+    background-color: rgb(2, 2, 20, 0.90);
+}
+  
+.heading-container {
+    text-align: center;
+}
+
+.homepage-heading {
+    background-image: linear-gradient(90deg, #c364fa,#a230ed,#6b00d7,#3e00b3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradientAnimation 5s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.scroll-down-image {
+    width: 20%;
+}
+
+
+
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.bottom-section-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.bottom-section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bottom-section-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.home-page-image {
+    max-width: 45%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.classical-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.classical-section-left-placeholder {
+    flex: 1;
+    border-radius: 8px;
+    height: 300px; 
+    margin-right: 20px;
+}
+.classical-section-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.classical-section-heading {
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.classical-section-text {
+    font-size: 1.2em; /* Increased font size for better readability */
+    line-height: 1.6;
+}
+
+/* BOARD SECTION CSS */
+.board-section { 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.position-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adjust the gap between member cards */
+}
+
+.member-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent; /* Remove the background color */
+    padding: 0; /* Remove the padding */
+    box-shadow: none; /* Remove the box-shadow */
+}
+
+.member-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.member-card-content {
+    margin-top: 10px;
+    text-align: center; /* Center the member name */
+}
+.position-name {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+}
+
+/* Separator */
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+  }
+  
+  .separator::before {
+    margin-right: 4rem;
+  }
+  
+  .separator::after {
+    margin-left: 4rem;
+  }
+  
+  .separator span {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #888;
+  }
