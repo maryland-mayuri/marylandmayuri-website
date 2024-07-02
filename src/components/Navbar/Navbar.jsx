@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './Navbar.css'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import logo from '../../assets/logo.png'
 import menuIcon from '../../assets/menu-icon.png'
 
@@ -30,9 +31,9 @@ const Navbar = () => {
                 </div>
                 {openDropdown === 'about' && (
                     <div className="dropdown">
-                        <NavLink to="/">About Us</NavLink>
-                        <NavLink to="/about">Board</NavLink>
-                        <NavLink to="/about">Philantrophy</NavLink>
+                        <HashLink smooth to="/#about-us">About Us</HashLink>
+                        <HashLink smooth to="/#board">Board</HashLink>
+                        <HashLink smooth to="/#philanthropy">Philantrophy</HashLink>
                     </div>
                 )}
             </div>
@@ -45,8 +46,8 @@ const Navbar = () => {
                 </div>
                 {openDropdown === 'mayuri' && (
                     <div className="dropdown">
-                        <NavLink to="/mayuri">Competition</NavLink>
-                        <NavLink to="/mayuri">Media</NavLink>
+                        <HashLink smooth to="/competition/#competition">Competition</HashLink>
+                        <HashLink smooth to="/competition/#media">Media</HashLink>
                     </div>
                 )}
             </div>

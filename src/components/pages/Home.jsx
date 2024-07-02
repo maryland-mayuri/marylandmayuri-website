@@ -105,7 +105,7 @@ const Home = () => {
       </div>
 
       
-      <div className="bottom-section">
+      <div id="about-us" className="bottom-section">
         <div className="bottom-section-content">
           <h1 className="bottom-section-heading">Who Are We</h1>
           <p className="bottom-section-text">
@@ -131,7 +131,9 @@ const Home = () => {
           </p>
         </div>
       </div>
-  <div className="board-section">
+
+
+  <div id="board" className="board-section">
     {Object.entries(groupedMembers).map(([position, members], index) => (
       <React.Fragment key={position}>
         {index > 0 && <div className="separator">
@@ -155,6 +157,10 @@ const Home = () => {
         </div>
       </React.Fragment>
     ))}
+  </div>
+
+  <div id="philanthropy" className="philanthropy-section">
+    <h2>Our Philanthropy</h2>
   </div>
 
 

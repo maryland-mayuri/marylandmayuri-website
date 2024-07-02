@@ -1,10 +1,10 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Home from './components/pages/Home'
-import About from './components/pages/About'
 import Sponsorship from './components/pages/Sponsorship'
+import Competition from './components/pages/Competition'
 import './index.css'
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         <div className="content-wrapper">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/competition" element={<Competition />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
         </Routes>
         </div>

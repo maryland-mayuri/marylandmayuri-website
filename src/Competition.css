@@ -1,0 +1,128 @@
+.competition-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.media-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.carousel-wrapper {
+    display: flex;
+    gap: 3rem;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+  
+.mixer-carousel,
+.competition-carousel {
+    flex: 1;
+    width: 50%;
+}
+
+.slick-slider {
+    width: 100%;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-container:hover .carousel-overlay {
+    opacity: 1;
+}
+
+.carousel-overlay a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.2s ease;
+}
+
+.team-photos {
+    margin-top: 2rem;
+}
+
+.team-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.team-buttons button {
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.front-back-row-videos {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
+
+.video-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .mixer-carousel,
+    .competition-carousel {
+        width: 100%;
+    }
+}
+
