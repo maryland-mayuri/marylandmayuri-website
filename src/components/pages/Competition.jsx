@@ -4,26 +4,42 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import "../../index.css"
 import "../../Competition.css"
-import aakashPatel from '../../assets/board_member_pictures/aakash_p.jpg'
-import video from '../../assets/test-video.mov'
+import video from '../../assets/video.mp4'
+import comp1 from '../../assets/carousel_images/comp-carousel1.png'
+import comp2 from '../../assets/carousel_images/comp-carousel2.png'
+import comp3 from '../../assets/carousel_images/comp-carousel3.png'
+import comp4 from '../../assets/carousel_images/comp-carousel4.png'
+import comp5 from '../../assets/carousel_images/comp-carousel5.png'
+import comp6 from '../../assets/carousel_images/comp-carousel6.png'
+
 
 const Competition = () => {
 
     const mixerPhotos = [
-        { id: 1, src: aakashPatel, alt: 'Mixer 1' },
-        { id: 2, src: aakashPatel, alt: 'Mixer 2' }
+      {id: 1, src: comp1, alt: 'Comp 1' },
+      {id: 2, src: comp2, alt: 'Comp 2' },
+      {id: 3, src: comp3, alt: 'Comp 3' },
+      {id: 4, src: comp4, alt: 'Comp 4' },
+      {id: 5, src: comp5, alt: 'Comp 5' },
+      {id: 6, src: comp6, alt: 'Comp 6' }
       ];
+
+    const competitionPhotos = [
+      {id: 1, src: comp1, alt: 'Comp 1' },
+      {id: 2, src: comp2, alt: 'Comp 2' },
+      {id: 3, src: comp3, alt: 'Comp 3' },
+      {id: 4, src: comp4, alt: 'Comp 4' },
+      {id: 5, src: comp5, alt: 'Comp 5' },
+      {id: 6, src: comp6, alt: 'Comp 6' }
+    ]
     
-      const competitionPhotos = [
-        { id: 1, src: aakashPatel, alt: 'Competition 1' },
-        { id: 2, src: aakashPatel, alt: 'Competition 2' }
-      ];
+    
 
     const sliderSettings = {
         dots: false,
         arrows: false,
         infinite: true,
-        speed: 500,
+        speed: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -48,12 +64,14 @@ const Competition = () => {
   return (
     <div className='competition-container'>
       {/* Competition section code here */}
+      <div id="competition" className="competition-section">
+
+      </div>
 
       <div id="media" className="media-section">
         <div className="carousel-wrapper">
-            <div className="mixer-carousel">
+            <div className="carousel-container mixer-carousel">
                 <h2>Mixer Photos</h2>
-                <div className="carousel-container">
                     <Slider {...sliderSettings}>
                         {mixerPhotos.map((photo) => (
                             <div key={photo.id}><img src={photo.src} alt={photo.alt} /></div>
@@ -61,14 +79,12 @@ const Competition = () => {
                     </Slider>
 
                     <div className="carousel-overlay">
-                        <a href="https://your-mixer-link.com" target="_blank" rel="noopener noreferrer">View All Mixer Photos</a>
+                        <a href="https://google.com" target="_blank" rel="noopener noreferrer">View All Mixer Photos</a>
                     </div>
-                </div>
             </div>
 
-            <div className="competition-carousel">
+            <div className="carousel-container competition-carousel">
                 <h2>Competition Photos</h2>
-                <div className="carousel-container">
                     <Slider {...sliderSettings}>
                         {competitionPhotos.map((photo) => (
                             <div key={photo.id}><img src={photo.src} alt={photo.alt} /></div>
@@ -78,30 +94,22 @@ const Competition = () => {
                     <div className="carousel-overlay">
                         <a href="https://your-competition-link.com" target="_blank" rel="noopener noreferrer">View All Competition Photos</a>
                     </div>
-                </div>
             </div>
         </div>
 
-        <div className="team-photos">
-          <h2>Team Photos</h2>
-          <div className="team-buttons">
-            {teams.map((team, index) => (
-              <button key={index} onClick={() => handleTeamClick(team)}>
-                {team}
-              </button>
-            ))}
-          </div>
-        </div>
 
         <div className="front-back-row-videos">
-          <video autoPlay loop muted className="background-video">
-            <source src="../../assets/test-video.mov" type="video/quicktime" />
+          <video
+            autoPlay
+            loop 
+            muted 
+            className="background-video"
+            onError={(e) => console.error("Video error:", e)}>
+            <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="video-content">
-            <h2>Competition Videos</h2>
-            <p>Watch our exciting competition performances!</p>
-            <button onClick={() => handleWatchVideos()}>Watch Videos</button>
+            <h2>Front / Back Row Videos</h2>
           </div>
         </div>
       </div>

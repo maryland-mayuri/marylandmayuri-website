@@ -51,8 +51,8 @@ const Navbar = () => {
                     </div>
                 )}
             </div>
-            <div className="nav-item">
-                <NavLink to="/sponsorship" className="nav-link">Sponsorship</NavLink>
+            <div className="nav-item nav-link">
+                <NavLink to="/sponsorship">Sponsorship</NavLink>
             </div>
             </>
         );

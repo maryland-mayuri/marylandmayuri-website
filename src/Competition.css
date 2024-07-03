@@ -1,29 +1,27 @@
+.media-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
 .competition-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-.media-section {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-}
-
 .carousel-wrapper {
     display: flex;
-    gap: 3rem;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .carousel-container {
     position: relative;
+    width: 100%;
+    height: 600px;
     overflow: hidden;
-}
-  
-.mixer-carousel,
-.competition-carousel {
-    flex: 1;
-    width: 50%;
 }
 
 .slick-slider {
@@ -32,11 +30,12 @@
 
 .slick-slide img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
-.carousel-container {
-    position: relative;
+.carousel-overlay {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -59,25 +58,6 @@
     padding: 10px 20px;
     border: 2px solid white;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.2s ease;
-}
-
-.team-photos {
-    margin-top: 2rem;
-}
-
-.team-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.team-buttons button {
-    padding: 0.5rem 1rem;
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 .front-back-row-videos {
@@ -118,11 +98,6 @@
     .carousel-wrapper {
         flex-direction: column;
         gap: 2rem;
-    }
-
-    .mixer-carousel,
-    .competition-carousel {
-        width: 100%;
     }
 }
 
