@@ -9,13 +9,13 @@
 .homepage-main-container {
     background-color: rgb(2, 2, 20, 0.90);
 }
-  
+
 .heading-container {
     text-align: center;
 }
 
 .homepage-heading {
-    background-image: linear-gradient(90deg, #c364fa,#a230ed,#6b00d7,#3e00b3);
+    background-image: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -27,6 +27,7 @@
     0% {
         background-position: 200% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -68,8 +69,10 @@
 }
 
 .home-page-image {
-    max-width: 45%; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 45%;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -89,9 +92,10 @@
 .classical-section-left-placeholder {
     flex: 1;
     border-radius: 8px;
-    height: 300px; 
+    height: 300px;
     margin-right: 20px;
 }
+
 .classical-section-content {
     flex: 1;
     padding: 20px;
@@ -99,90 +103,219 @@
 }
 
 .classical-section-heading {
-    font-size: 2.5em; /* Larger font size */
+    font-size: 2.5em;
+    /* Larger font size */
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .classical-section-text {
-    font-size: 1.2em; /* Increased font size for better readability */
+    font-size: 1.2em;
+    /* Increased font size for better readability */
     line-height: 1.6;
 }
 
 /* BOARD SECTION CSS */
-.board-section { 
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+.board-section {
+    padding: 2rem;
 }
 
-.position-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Adjust the gap between member cards */
+.board-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #f3ec78;
 }
 
-.member-cards {
-    display: flex;
-    flex-wrap: wrap;
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem 0rem;
+    justify-items: center;
+    align-items: start;
+}
+
+
+/* PHILANTHROPY SECTION CSS */
+.philanthropy-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.philanthropy-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f3ec78;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.charity-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 2rem;
+    align-items: center;
 }
+
+.charity-info img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2)
+}
+
+.charity-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff
+}
+
+.charity-info p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.charity-info a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #f3ec78;
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: flex-start;
+}
+
+.charity-info a:hover {
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(243, 236, 120, 0.4);
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 1200px) {
+    .board-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .board-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .board-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .board-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .member-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent; /* Remove the background color */
-    padding: 0; /* Remove the padding */
-    box-shadow: none; /* Remove the box-shadow */
-}
-
-.member-card img {
-    width: 150px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.member-card-content {
-    margin-top: 10px;
-    text-align: center; /* Center the member name */
-}
-.position-name {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3em;
-}
-
-/* Separator */
-.separator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
     width: 100%;
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
   }
   
-  .separator::before,
-  .separator::after {
-    content: "";
-    flex-grow: 1;
-    height: 1px;
-    background-color: #ccc;
+  .member-card:hover {
+    transform: translateY(-5px);
   }
   
-  .separator::before {
-    margin-right: 4rem;
+  .member-image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 133.33%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+    border-radius: 10px;
   }
   
-  .separator::after {
-    margin-left: 4rem;
+  .member-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: filter 0.3s ease;
   }
   
-  .separator span {
+  .neon-border {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 15px;
+    background: transparent;
+    transition: box-shadow 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .member-card:hover .neon-border {
+    box-shadow: 
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #00008B,
+      0 0 8px #00008B,
+      0 0 10px #00008B;
+    opacity: 1;
+  }
+  
+  .member-card:hover .member-image {
+    filter: brightness(1.1) contrast(1.05);
+  }
+  
+  .member-info {
+    margin-top: 1rem;
+  }
+  
+  .member-name {
+    margin: 0;
     font-size: 1.2rem;
-    font-style: italic;
-    color: #888;
+    color: #ffffff;
+    transition: color 0.3s ease;
   }
+  
+  .member-position {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+  }
+  
+  .member-card:hover .member-name {
+    color: #4169E1;
+    text-shadow: 
+      0 0 2px #4169E1,
+      0 0 4px #4169E1;
+  }
+  
+  .member-card:hover .member-position {
+    color: #ffffff;
+    text-shadow: 
+      0 0 2px #fff;
+  }
+

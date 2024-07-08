@@ -30,11 +30,13 @@ import aditya_p from '../../assets/board_member_pictures/person_placeholder.jpg'
 
 import tba from '../../assets/board_member_pictures/person_placeholder.jpg'
 import peacock_image from '../../assets/peacock-icon.png'
+import snom from "../../assets/sponsor_images/snom-logo.jpeg";
+
 
 
 const Home = () => {
   const handleSmoothScroll = () => {
-    const bottomSection = document.querySelector('.bottom-section'); 
+    const bottomSection = document.querySelector('.bottom-section');
     bottomSection.scrollIntoView({ behavior: 'smooth' });
   }
 
@@ -51,7 +53,7 @@ const Home = () => {
 
 
     { name: "Sakshi Shetty ", position: "Hospitality", image: sakshi_s },
-    { name: "Nitya Venkatiagari", position: "Hospitality", image:  nitya_v },
+    { name: "Nitya Venkatiagari", position: "Hospitality", image: nitya_v },
     { name: "Arya Ghorpade", position: "Hospitality", image: arya_g },
     { name: "TBA", position: "Hospitality", image: tba },
 
@@ -65,18 +67,18 @@ const Home = () => {
     { name: "Akash Marakath", position: "Sponsorship", image: akash_m },
     { name: "Sanjana Shankar", position: "Sponsorship", image: sanjana_s },
     { name: "Aditya Patel", position: "Sponsorship", image: aditya_p },
-    { name: "Dhruvi Kadhiwala", position: "Sponsorship", image: dhruvi_k }, 
+    { name: "Dhruvi Kadhiwala", position: "Sponsorship", image: dhruvi_k },
 
-    { name: "Rushina Patel", position: "Public Relations", image: rushina_p }, 
-    { name: "TBA", position: "Public Relations", image: tba }, 
-    { name: "TBA", position: "Public Relations", image: tba }, 
+    { name: "Rushina Patel", position: "Public Relations", image: rushina_p },
+    { name: "TBA", position: "Public Relations", image: tba },
+    { name: "TBA", position: "Public Relations", image: tba },
 
-    { name: "Jayna Patel", position: "Liaison Head", image: jayna_p }, 
-    { name: "Riyanna Desai", position: "Liaison Head", image: riyanna_d }, 
+    { name: "Jayna Patel", position: "Liaison Head", image: jayna_p },
+    { name: "Riyanna Desai", position: "Liaison Head", image: riyanna_d },
 
-    { name: "Jiya Amin", position: "Social Chair", image: jiya_a }, 
+    { name: "Jiya Amin", position: "Social Chair", image: jiya_a },
 
-    { name: "Aditi Gubba", position: "Mixer", image: aditi_g }, 
+    { name: "Aditi Gubba", position: "Mixer", image: aditi_g },
     { name: "Surya UdayShankar", position: "Mixer", image: surya_u }
   ];
 
@@ -92,25 +94,25 @@ const Home = () => {
 
   const groupedMembers = groupByPosition(boardMembers);
 
-  
+
   return (
     <div className='homepage-main-container'>
       <div className='home-container'>
-          <div className='heading-container'>
-            <h1 className='homepage-heading'>Maryland Mayuri</h1>
-              <div className="scroll-down">
-                <img src={peacock_image} onClick={handleSmoothScroll} className="scroll-down-image"/>
-              </div>
+        <div className='heading-container'>
+          <h1 className='homepage-heading'>Maryland Mayuri</h1>
+          <div className="scroll-down">
+            <img src={peacock_image} onClick={handleSmoothScroll} className="scroll-down-image" />
           </div>
+        </div>
       </div>
 
-      
+
       <div id="about-us" className="bottom-section">
         <div className="bottom-section-content">
           <h1 className="bottom-section-heading">Who Are We</h1>
           <p className="bottom-section-text">
-          Founded in 2013, Maryland Mayuri is Maryland's one and only intercollegiate classical Indian dance competition. 
-          We are a registered 501(c)(3) organization that promotes blah blah.
+            Founded in 2013, Maryland Mayuri is Maryland's one and only intercollegiate classical Indian dance competition.
+            We are a registered 501(c)(3) organization that promotes blah blah.
           </p>
         </div>
 
@@ -119,53 +121,50 @@ const Home = () => {
 
       <div className="classical-section">
         <div className="classical-section-left-placeholder">
-          
+
         </div>
         <div className="classical-section-content">
           <h1 className="classical-section-heading">Classical Dance</h1>
           <p className="classical-section-text">
-            Classical Indian dance goes back thousands of years and is deeply rooted in Indian culture. 
-            It is a form of storytelling that combines music, dance, and drama. 
-            There are eight classical dance forms in India, each with its own unique style and technique. 
+            Classical Indian dance goes back thousands of years and is deeply rooted in Indian culture.
+            It is a form of storytelling that combines music, dance, and drama.
+            There are eight classical dance forms in India, each with its own unique style and technique.
             Some of the most popular classical dance forms include Bharatanatyam, Kathak, Odissi, and Kuchipudi.
           </p>
         </div>
       </div>
 
 
-  <div id="board" className="board-section">
-    {Object.entries(groupedMembers).map(([position, members], index) => (
-      <React.Fragment key={position}>
-        {index > 0 && <div className="separator">
-          {/* Render your separator element here */}
-        </div>}
-
-        <div className="position-section">
-          <h3 className="position-name">{position}</h3>
-          <div className="member-cards">
-            {members.map((member) => (
-              <div className="member-card">
-                {/* Render the member's card content here */}
-                <img src={member.image} alt={member.name} />
-                <div className="member-card-content">
-                  <h4>{member.name}</h4>
-                {/* Add any other member information you want to display */}
-                </div>
+      <div id="board" className="board-section">
+        <h2 className="board-title">Our Board</h2>
+        <div className="board-grid">
+          {boardMembers.map((member) => (
+            <div key={member.name} className="member-card">
+              <div className="member-image-container">
+                <img src={member.image} alt={member.name} className="member-image" />
+                <div className="neon-border"></div>
               </div>
-            ))}
+              <div className="member-info">
+                <h4 className="member-name">{member.name}</h4>
+                <p className="member-position">{member.position}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div id="philanthropy" className="philanthropy-section">
+        <h2>Our Charity Partner</h2>
+        <div className="charity-info">
+          <img src={snom} alt="Sankara Nethralaya OM Trust" />
+          <div className="charity-content">
+            <h3>Charity Name</h3>
+            <p>Description of the charity's mission and impact on the community.</p>
+            <a href="https://charity-website.com" target="_blank" rel="noopener noreferrer">Learn More About Our Cause</a>
           </div>
         </div>
-      </React.Fragment>
-    ))}
-  </div>
-
-  <div id="philanthropy" className="philanthropy-section">
-    <h2>Our Philanthropy</h2>
-  </div>
-
-
+      </div>
     </div>
-
   )
 }
 

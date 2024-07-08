@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -15,94 +15,118 @@ import comp6 from '../../assets/carousel_images/comp-carousel6.png'
 
 const Competition = () => {
 
-    const mixerPhotos = [
-      {id: 1, src: comp1, alt: 'Comp 1' },
-      {id: 2, src: comp2, alt: 'Comp 2' },
-      {id: 3, src: comp3, alt: 'Comp 3' },
-      {id: 4, src: comp4, alt: 'Comp 4' },
-      {id: 5, src: comp5, alt: 'Comp 5' },
-      {id: 6, src: comp6, alt: 'Comp 6' }
-      ];
+  const [activeTab, setActiveTab] = useState('event');
 
-    const competitionPhotos = [
-      {id: 1, src: comp1, alt: 'Comp 1' },
-      {id: 2, src: comp2, alt: 'Comp 2' },
-      {id: 3, src: comp3, alt: 'Comp 3' },
-      {id: 4, src: comp4, alt: 'Comp 4' },
-      {id: 5, src: comp5, alt: 'Comp 5' },
-      {id: 6, src: comp6, alt: 'Comp 6' }
-    ]
-    
-    
+  const mixerPhotos = [
+    { id: 1, src: comp1, alt: 'Comp 1' },
+    { id: 2, src: comp2, alt: 'Comp 2' },
+    { id: 3, src: comp3, alt: 'Comp 3' },
+    { id: 4, src: comp4, alt: 'Comp 4' },
+    { id: 5, src: comp5, alt: 'Comp 5' },
+    { id: 6, src: comp6, alt: 'Comp 6' }
+  ];
 
-    const sliderSettings = {
-        dots: false,
-        arrows: false,
-        infinite: true,
-        speed: 1500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-      };
+  const competitionPhotos = [
+    { id: 1, src: comp1, alt: 'Comp 1' },
+    { id: 2, src: comp2, alt: 'Comp 2' },
+    { id: 3, src: comp3, alt: 'Comp 3' },
+    { id: 4, src: comp4, alt: 'Comp 4' },
+    { id: 5, src: comp5, alt: 'Comp 5' },
+    { id: 6, src: comp6, alt: 'Comp 6' }
+  ]
 
-      const teams = [
-        'Team 1', 'Team 2', 'Team 3', 'Team 4',
-        'Team 5', 'Team 6', 'Team 7', 'Team 8'
-      ];
+  const sliderSettings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 1500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
 
-      const handleTeamClick = (team) => {
-        // Implement team click functionality
-        console.log(`Clicked on ${team}`);
-    };
+  const teams = [
+    'Team 1', 'Team 2', 'Team 3', 'Team 4',
+    'Team 5', 'Team 6', 'Team 7', 'Team 8'
+  ];
 
-    const handleWatchVideos = () => {
-        // Implement watch videos functionality
-        console.log('Watch videos clicked');
-    };
+  const handleTeamClick = (team) => {
+    // Implement team click functionality
+    console.log(`Clicked on ${team}`);
+  };
+
+  const handleWatchVideos = () => {
+    // Implement watch videos functionality
+    console.log('Watch videos clicked');
+  };
 
   return (
     <div className='competition-container'>
-      {/* Competition section code here */}
       <div id="competition" className="competition-section">
+        <header className='competition-header'>
+          <h1>Maryland Mayuri 2025 - College Park, MD</h1>
+          <p>February 22nd 2025 | 4:30 PM</p>
+        </header>
+
+        <div className="event-cards">
+          <div className="event-card main-event">
+            <h2>Main Event</h2>
+            <h3>Venue: Wheaton High School</h3>
+            <p>Address: [Insert address here]</p>
+            <p>Time: 4:30 PM</p>
+            <button className="ticket-button">Buy Event Tickets</button>
+          </div>
+
+          <div className="event-card afterparty">
+            <h2>Afterparty</h2>
+            <h3>Venue: TBA</h3>
+            <p>Address: [Insert address here]</p>
+            <p>Time: [Insert time here]</p>
+            <button className="ticket-button">Buy Afterparty Tickets</button>
+          </div>
+
+        </div>
+
 
       </div>
 
       <div id="media" className="media-section">
         <div className="carousel-wrapper">
-            <div className="carousel-container mixer-carousel">
-                <h2>Mixer Photos</h2>
-                    <Slider {...sliderSettings}>
-                        {mixerPhotos.map((photo) => (
-                            <div key={photo.id}><img src={photo.src} alt={photo.alt} /></div>
-                        ))}
-                    </Slider>
+          <div className="carousel-container mixer-carousel">
+            <div className="carousel-heading-container">
+            <div className="carousel-heading">Mixer Photos</div>
 
-                    <div className="carousel-overlay">
-                        <a href="https://google.com" target="_blank" rel="noopener noreferrer">View All Mixer Photos</a>
-                    </div>
             </div>
+            <Slider {...sliderSettings}>
+              {mixerPhotos.map((photo) => (
+                <div key={photo.id} className='carousel-slide'>
+                  <img src={photo.src} alt={photo.alt} />
+                </div>
+              ))}
+            </Slider>
+          </div>
 
-            <div className="carousel-container competition-carousel">
-                <h2>Competition Photos</h2>
-                    <Slider {...sliderSettings}>
-                        {competitionPhotos.map((photo) => (
-                            <div key={photo.id}><img src={photo.src} alt={photo.alt} /></div>
-                        ))}
-                    </Slider>
+          <div className="carousel-container competition-carousel">
+          <div className="carousel-heading-container">
+            <div className="carousel-heading">Competition Photos</div>
 
-                    <div className="carousel-overlay">
-                        <a href="https://your-competition-link.com" target="_blank" rel="noopener noreferrer">View All Competition Photos</a>
-                    </div>
-            </div>
+            </div>            <Slider {...sliderSettings}>
+              {competitionPhotos.map((photo) => (
+                <div key={photo.id} className='carousel-slide'>
+                  <img src={photo.src} alt={photo.alt} />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
 
 
         <div className="front-back-row-videos">
           <video
             autoPlay
-            loop 
-            muted 
+            loop
+            muted
             className="background-video"
             onError={(e) => console.error("Video error:", e)}>
             <source src={video} type="video/mp4" />
