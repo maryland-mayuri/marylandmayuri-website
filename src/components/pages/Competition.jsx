@@ -12,12 +12,16 @@ import comp4 from '../../assets/carousel_images/comp-carousel4.png'
 import comp5 from '../../assets/carousel_images/comp-carousel5.png'
 import comp6 from '../../assets/carousel_images/comp-carousel6.png'
 
+import mixer1 from '../../assets/carousel_images/mixer-photos1.jpeg'
+import mixer2 from '../../assets/carousel_images/mixer-photos2.jpeg'
+import mixer3 from '../../assets/carousel_images/mixer-photos3.jpeg'
+
 
 const Competition = () => {
 
   const [activeTab, setActiveTab] = useState('event');
 
-  const mixerPhotos = [
+  const competitionPhotos = [
     { id: 1, src: comp1, alt: 'Comp 1' },
     { id: 2, src: comp2, alt: 'Comp 2' },
     { id: 3, src: comp3, alt: 'Comp 3' },
@@ -26,10 +30,10 @@ const Competition = () => {
     { id: 6, src: comp6, alt: 'Comp 6' }
   ];
 
-  const competitionPhotos = [
-    { id: 1, src: comp1, alt: 'Comp 1' },
-    { id: 2, src: comp2, alt: 'Comp 2' },
-    { id: 3, src: comp3, alt: 'Comp 3' },
+  const mixerPhotos = [
+    { id: 1, src: mixer1, alt: 'Comp 1' },
+    { id: 2, src: mixer2, alt: 'Comp 2' },
+    { id: 3, src: mixer3, alt: 'Comp 3' },
     { id: 4, src: comp4, alt: 'Comp 4' },
     { id: 5, src: comp5, alt: 'Comp 5' },
     { id: 6, src: comp6, alt: 'Comp 6' }
@@ -43,7 +47,7 @@ const Competition = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
   };
 
   const teams = [
@@ -93,10 +97,10 @@ const Competition = () => {
 
       <div id="media" className="media-section">
         <div className="carousel-wrapper">
+
           <div className="carousel-container mixer-carousel">
             <div className="carousel-heading-container">
-            <div className="carousel-heading">Mixer Photos</div>
-
+              <a href="https://drive.google.com/drive/folders/1M5tD-A0LUey06_Q6JuUhLz3iVw_XgNv3?usp=sharing" target="_blank" className="carousel-heading">Mixer Photos</a>
             </div>
             <Slider {...sliderSettings}>
               {mixerPhotos.map((photo) => (
@@ -108,10 +112,10 @@ const Competition = () => {
           </div>
 
           <div className="carousel-container competition-carousel">
-          <div className="carousel-heading-container">
-            <div className="carousel-heading">Competition Photos</div>
-
-            </div>            <Slider {...sliderSettings}>
+            <div className="carousel-heading-container">
+              <a href="https://drive.google.com/drive/folders/1M5tD-A0LUey06_Q6JuUhLz3iVw_XgNv3?usp=sharing" target="_blank" className="carousel-heading">Competition Photos</a>
+            </div>
+            <Slider {...sliderSettings}>
               {competitionPhotos.map((photo) => (
                 <div key={photo.id} className='carousel-slide'>
                   <img src={photo.src} alt={photo.alt} />
@@ -133,7 +137,7 @@ const Competition = () => {
             Your browser does not support the video tag.
           </video>
           <div className="video-content">
-            <h2>Front / Back Row Videos</h2>
+            <a href="https://www.youtube.com/watch?v=1FwCVkTQkOI&list=PLPMaxQdMb8L-ofmRE6PxkXQgcO1ANELtu" target="_blank" className="carousel-heading">Front and Backrow</a>
           </div>
         </div>
       </div>

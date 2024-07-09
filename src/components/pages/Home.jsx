@@ -112,7 +112,8 @@ const Home = () => {
           <h1 className="bottom-section-heading">Who Are We</h1>
           <p className="bottom-section-text">
             Founded in 2013, Maryland Mayuri is Maryland's one and only intercollegiate classical Indian dance competition.
-            We are a registered 501(c)(3) organization that promotes blah blah.
+            We are a registered 501(c)(3) organization that aims to promote the art of classical Indian dance. Mayuri is 
+            hostedand run by students at the University of Maryland, College Park.  
           </p>
         </div>
 

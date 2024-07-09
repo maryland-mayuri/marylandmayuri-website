@@ -70,80 +70,72 @@
 
 .carousel-slide {
     position: relative;
+    height: 600px;
+
 }
 
-.carousel-label {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    z-index: 2;
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    filter: none;
+    opacity: 0.5;
+
 }
-
-
 
 .carousel-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
     height: 600px;
-    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.carousel-heading-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.carousel-heading {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+    background: none;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.carousel-heading:hover {
+    transform: scale(1.1);
 }
 
 .slick-slider {
     width: 100%;
+    height: 100%
 }
 
-.slick-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-.carousel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.carousel-container:hover .carousel-overlay {
-    opacity: 1;
-}
-
-.carousel-overlay a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.carousel-overlat a:hover {
-    background-color: white;
-    color: black;
-}
-
+/* Video Section */
 .front-back-row-videos {
     position: relative;
-    height: 400px;
+    height: 600px;
     overflow: hidden;
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the section */
 }
 
 .background-video {
@@ -170,10 +162,11 @@
     align-items: center;
     z-index: 1;
     color: white;
+    font-size: 2rem;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
 }
-
 
 
 @media (max-width: 768px) {
