@@ -52,6 +52,10 @@
     background-color: #218838;
   }
 
+  .ticket-link {
+    text-decoration: none;
+  }
+
 
 
 /* Media Section */

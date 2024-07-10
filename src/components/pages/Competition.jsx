@@ -79,7 +79,9 @@ const Competition = () => {
             <h3>Venue: Wheaton High School</h3>
             <p>Address: [Insert address here]</p>
             <p>Time: 4:30 PM</p>
-            <button className="ticket-button">Buy Event Tickets</button>
+            <button className="ticket-button">
+              <a className="ticket-link" href="https://isitchristmas.com/" target="_blank" rel="noopener noreferrer">Buy Event Tickets</a>
+            </button>
           </div>
 
           <div className="event-card afterparty">
@@ -87,7 +89,9 @@ const Competition = () => {
             <h3>Venue: TBA</h3>
             <p>Address: [Insert address here]</p>
             <p>Time: [Insert time here]</p>
-            <button className="ticket-button">Buy Afterparty Tickets</button>
+            <button className="ticket-button">
+              <a className="ticket-link" href="https://isitchristmas.com/" target="_blank" rel="noopener noreferrer">Buy Afterparty Tickets</a>
+            </button>
           </div>
 
         </div>
