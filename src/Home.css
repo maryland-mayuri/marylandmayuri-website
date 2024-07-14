@@ -18,6 +18,7 @@
     background-image: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3, #6b00d7, #3e00b3, #6b00d7, #a230ed, #c364fa);
     background-clip: text;
     -webkit-background-clip: text;
+    font-size: 7rem;
     color: transparent;
     background-size: 200% auto;
     animation: gradientAnimation 10s linear infinite;
@@ -32,7 +33,6 @@
         background-position: -200% 50%;
     }
 }
-
 
 .scroll-down-image {
     width: 20%;
@@ -299,6 +299,34 @@
 
     .divider {
         margin: 40px auto;
+    }
+
+    .homepage-heading {
+        font-size: 4rem; /* Adjust this value as needed */
+    }
+
+    .scroll-down-image {
+        width: 40%;
+    }
+
+    .charity-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .charity-info img {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .charity-content {
+        text-align: center;
+    }
+
+    .charity-content p {
+        max-height: 200px;
+        overflow-y: auto;
+        padding-right: 10px;
     }
 }
 
