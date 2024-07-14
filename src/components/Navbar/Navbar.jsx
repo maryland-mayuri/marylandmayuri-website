@@ -51,8 +51,10 @@ const Navbar = () => {
                     </div>
                 )}
             </div>
-            <div className="nav-item nav-link">
-                <NavLink to="/sponsorship">Sponsorship</NavLink>
+            <div className="nav-item">
+                <div className="nav-link">
+                    <NavLink to="/sponsorship">Sponsorship</NavLink>
+                </div>
             </div>
             </>
         );

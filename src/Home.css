@@ -15,21 +15,21 @@
 }
 
 .homepage-heading {
-    background-image: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3);
+    background-image: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3, #6b00d7, #3e00b3, #6b00d7, #a230ed, #c364fa);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     background-size: 200% auto;
-    animation: gradientAnimation 5s linear infinite;
+    animation: gradientAnimation 10s linear infinite;
 }
 
 @keyframes gradientAnimation {
     0% {
-        background-position: 200% 50%;
+        background-position: 0% 50%;
     }
 
     100% {
-        background-position: 0% 50%;
+        background-position: -200% 50%;
     }
 }
 
@@ -38,105 +38,60 @@
     width: 20%;
 }
 
-
-
-
-.bottom-section {
+/* ABOUT US SECTION */
+.section-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    padding: 80px 40px;
+    margin: 40px 0;
+    border-radius: 15px;
 }
 
-.bottom-section-content {
+.section-content {
     flex: 1;
-    padding: 20px;
+    padding: 0 40px;
     text-align: center;
 }
 
-.bottom-section-heading {
-    font-size: 2.5rem;
+.section-heading {
+    font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.bottom-section-text {
-    font-size: 1.25em;
-    line-height: 1.5;
-}
-
-.home-page-image {
-    max-width: 45%;
-    /* Adjust the width as needed */
-    height: auto;
-    /* Maintain aspect ratio */
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: 20px;
-}
-
-.classical-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-}
-
-.classical-section-left-placeholder {
-    flex: 1;
-    border-radius: 8px;
-    height: 300px;
-    margin-right: 20px;
-}
-
-.classical-section-content {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-}
-
-.classical-section-heading {
-    font-size: 2.5em;
-    /* Larger font size */
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.classical-section-text {
-    font-size: 1.2em;
-    /* Increased font size for better readability */
-    line-height: 1.6;
-}
-
-/* BOARD SECTION CSS */
-
-.board-section {
-    padding: 2rem;
-}
-
-.board-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    background-image: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3);
-    background-clip: text;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.board-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 3rem 0rem;
-    justify-items: center;
-    align-items: start;
+.section-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-image {
+    max-width: 45%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.divider {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c364fa, #3e00b3, transparent);
+    margin: 60px auto;
 }
 
 
@@ -145,8 +100,8 @@
     margin-top: 3rem;
     padding: 2rem;
     border-radius: 10px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: linear-gradient(135deg, rgba(37, 25, 72, 0.1) 0%, rgba(8, 2, 48, 0.05) 100%);
+    box-shadow: 0 8px 32px 0 rgba(45, 45, 52, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -211,14 +166,86 @@
     transform: translateY(-2px);
 }
 
+/* BOARD SECTION */
+/* BOARD SECTION CSS */
+.board-section {
+    padding: 2rem;
+    margin-top: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-@media (max-width: 1200px) {
-    .board-grid {
-        grid-template-columns: repeat(4, 1fr);
+.board-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background-image: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem 1.5rem;
+    justify-content: center;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.member-image-container {
+    padding-top: 133.33%;
+    /* 4:3 aspect ratio */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.member-image {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: top;
+    position: absolute
+}
+
+.member-info {
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+.member-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: #ffffff;
+}
+
+.member-position {
+    font-size: 0.9rem;
+    color: #c364fa;
+}
+
+@media (max-width: 1500px) {
+    .board-section {
+        max-width: 90%;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .board-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -228,6 +255,10 @@
     .board-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .board-section {
+        max-width: 95%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -236,93 +267,47 @@
     }
 }
 
+/* Existing CSS remains the same */
 
-.member-card {
-    width: 100%;
-    max-width: 200px;
-    text-align: center;
-    position: relative;
-    transition: transform 0.3s ease;
-  }
-  
-  .member-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .member-image-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 133.33%; /* 1:1 Aspect Ratio */
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  .member-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    transition: filter 0.3s ease;
-    opacity: 0.8;
-  }
-  
-  .neon-border {
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border-radius: 15px;
-    background: transparent;
-    transition: box-shadow 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-  }
-  
-  .member-card:hover .neon-border {
-    box-shadow: 
-      0 0 2px #fff,
-      0 0 4px #fff,
-      0 0 6px #00008B,
-      0 0 8px #00008B,
-      0 0 10px #00008B;
-    opacity: 1;
-  }
-  
-  .member-card:hover .member-image {
-    filter: brightness(1.1) contrast(1.05);
-  }
-  
-  .member-info {
-    margin-top: 1rem;
-  }
-  
-  .member-name {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #ffffff;
-    transition: color 0.3s ease;
-  }
-  
-  .member-position {
-    margin: 0.5rem 0 0;
-    font-size: 1rem;
-    color: #e0e0e0;
-    transition: color 0.3s ease;
-  }
-  
-  .member-card:hover .member-name {
-    color: #4169E1;
-    text-shadow: 
-      0 0 2px #4169E1,
-      0 0 4px #4169E1;
-  }
-  
-  .member-card:hover .member-position {
-    color: #ffffff;
-    text-shadow: 
-      0 0 2px #fff;
-  }
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
 
+    .section-content {
+        order: 1;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .section-heading {
+        font-size: 2.5rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .section-image {
+        order: 2;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .divider {
+        margin: 40px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .section-text {
+        font-size: 0.9rem;
+    }
+}

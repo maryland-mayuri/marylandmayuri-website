@@ -31,6 +31,7 @@ import aditya_p from '../../assets/board_member_pictures/person_placeholder.jpg'
 import tba from '../../assets/board_member_pictures/person_placeholder.jpg'
 import peacock_image from '../../assets/peacock-icon.png'
 import snom from "../../assets/sponsor_images/snom-logo.jpeg";
+import classical_image from "../../assets/classical-image.jpeg"
 
 
 
@@ -41,9 +42,9 @@ const Home = () => {
   }
 
   const boardMembers = [
-    { name: "Aakash Patel", position: "Directors", image: aakash_p },
-    { name: "Pratiksha Das", position: "Directors", image: pratiksha_d },
-    { name: "Sanjana Chimaladinne", position: "Directors", image: sanjana_c },
+    { name: "Aakash Patel", position: "Director", image: aakash_p },
+    { name: "Pratiksha Das", position: "Director", image: pratiksha_d },
+    { name: "Sanjana Chimaladinne", position: "Director", image: sanjana_c },
 
     { name: "Teja Nallagorla", position: "Event Ops", image: teja_n },
     { name: "Shreya Gavarapattu", position: "Event Ops", image: shreya_g },
@@ -107,33 +108,32 @@ const Home = () => {
       </div>
 
 
-      <div id="about-us" className="bottom-section">
-        <div className="bottom-section-content">
-          <h1 className="bottom-section-heading">Who Are We</h1>
-          <p className="bottom-section-text">
-            Founded in 2013, Maryland Mayuri is Maryland's one and only intercollegiate classical Indian dance competition.
-            We are a registered 501(c)(3) organization that aims to promote the art of classical Indian dance. Mayuri is 
-            hostedand run by students at the University of Maryland, College Park.  
+      <div id="about-us" className="section-container">
+        <div className="section-content">
+          <h1 className="section-heading">Who We Are</h1>
+          <p className="section-text">
+            Founded in 2013, Maryland Mayuri is Maryland's premier intercollegiate classical Indian dance competition.
+            As a registered 501(c)(3) organization, we are dedicated to promoting the art of classical Indian dance.
+            Mayuri is proudly hosted and run by passionate students at the University of Maryland, College Park.
           </p>
         </div>
-
-        <img src={home_page_image} alt="Maryland Mayuri" className="home-page-image" />
+        <img src={home_page_image} alt="Maryland Mayuri" className="section-image" />
       </div>
 
-      <div className="classical-section">
-        <div className="classical-section-left-placeholder">
-
-        </div>
-        <div className="classical-section-content">
-          <h1 className="classical-section-heading">Classical Dance</h1>
-          <p className="classical-section-text">
-            Classical Indian dance goes back thousands of years and is deeply rooted in Indian culture.
-            It is a form of storytelling that combines music, dance, and drama.
-            There are eight classical dance forms in India, each with its own unique style and technique.
-            Some of the most popular classical dance forms include Bharatanatyam, Kathak, Odissi, and Kuchipudi.
+      <div className="section-container">
+        <div className="section-content">
+          <h1 className="section-heading">Classical Dance</h1>
+          <p className="section-text">
+            Classical Indian dance is a timeless art form, deeply rooted in Indian culture for thousands of years.
+            It's a captivating blend of storytelling, music, and drama. India boasts eight distinct classical dance forms,
+            each with its unique style and technique. Among the most renowned are Bharatanatyam, Kathak, Odissi, and Kuchipudi,
+            each telling stories of tradition, mythology, and emotion through graceful movements and expressive gestures.
           </p>
         </div>
+        <img src={classical_image} alt="Classical Dance" className="section-image" />
       </div>
+
+      <div className="divider"></div>
 
 
       <div id="board" className="board-section">
@@ -143,7 +143,6 @@ const Home = () => {
             <div key={member.name} className="member-card">
               <div className="member-image-container">
                 <img src={member.image} alt={member.name} className="member-image" />
-                <div className="neon-border"></div>
               </div>
               <div className="member-info">
                 <h4 className="member-name">{member.name}</h4>
@@ -161,15 +160,15 @@ const Home = () => {
           <div className="charity-content">
             <h3>Sankara Nethralaya OM Trust</h3>
             <p>
-            SNOM is a registered non-profit organization in the United States of America. 
-            The charity was established in 1988 with the main goal of supporting Sankara Nethralaya, 
-            a nonprofit ophthalmic hospital in Chennai, India. Sankara Nethralaya is a leading super specialty 
-            institution for ophthalmic care in India. Founded in 1978 as a branch of the Medical Research Foundation, 
-            the Sankara Nethralaya main hospital is located in Chennai, India, though the organization has since branched out 
-            all over India to locations such as Tirupathi, Andhra Pradesh, and Kolkata, West Bengal. One of their main projects 
-            is their series of mobile clinics that enable them to perform eye surgeries for underserved populations in need 
-            throughout India. SNOM Trust raises funds for Sankara Nethralaya by conducting various events and with the support 
-            from a large group of like-minded individuals.
+              SNOM is a registered non-profit organization in the United States of America.
+              The charity was established in 1988 with the main goal of supporting Sankara Nethralaya,
+              a nonprofit ophthalmic hospital in Chennai, India. Sankara Nethralaya is a leading super specialty
+              institution for ophthalmic care in India. Founded in 1978 as a branch of the Medical Research Foundation,
+              the Sankara Nethralaya main hospital is located in Chennai, India, though the organization has since branched out
+              all over India to locations such as Tirupathi, Andhra Pradesh, and Kolkata, West Bengal. One of their main projects
+              is their series of mobile clinics that enable them to perform eye surgeries for underserved populations in need
+              throughout India. SNOM Trust raises funds for Sankara Nethralaya by conducting various events and with the support
+              from a large group of like-minded individuals.
             </p>
             <a href="https://www.sankaranethralayausa.org/" target="_blank" rel="noopener noreferrer">Learn More About Their Cause</a>
           </div>

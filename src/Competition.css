@@ -1,62 +1,107 @@
 /* Competition Section */
+.competition-section {
+    color: #e0e0e0;
+    padding: 4rem 0;
+    border-radius: 15px;
+}
+
+.competition-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 .competition-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.competition-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.competition-header p {
+    font-size: 1.5rem;
+    color: #a230ed;
 }
 
 .event-cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
+    margin-top: 3rem;
 }
 
 .event-card {
-    flex: 1;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    transition: all 0.3s ease;
+    max-width: 350px;
+    text-align: center;
 }
 
 .event-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .event-card h2 {
-    color: #007bff;
+    transform: translateY(-10px);
+    box-shadow: 0 12px 48px rgba(195, 100, 250, 0.3);
+}
+
+.event-card h2 {
+    color: #c364fa;
+    font-size: 2rem;
     margin-bottom: 1rem;
-  }
-  
-  .event-card h3 {
+}
+
+.event-card h3 {
+    color: #a230ed;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
-  }
-  
-  .event-card p {
+}
+
+.event-card p {
     margin-bottom: 0.5rem;
-  }
-  
-  .ticket-button {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    margin-top: 1rem;
-    background-color: #28a745;
+}
+
+.ticket-button {
+    background: linear-gradient(90deg, #c364fa, #a230ed);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .ticket-button:hover {
-    background-color: #218838;
-  }
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+}
 
-  .ticket-link {
+.ticket-button:hover {
+    background: linear-gradient(90deg, #a230ed, #6b00d7);
+    transform: scale(1.05);
+}
+
+.ticket-link {
+    color: white;
     text-decoration: none;
-  }
+}
 
+@media (max-width: 768px) {
+    .event-cards {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .event-card {
+        width: 100%;
+    }
+}
 
 /* Media Section */
 .media-section {

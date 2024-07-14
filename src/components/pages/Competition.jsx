@@ -68,35 +68,34 @@ const Competition = () => {
   return (
     <div className='competition-container'>
       <div id="competition" className="competition-section">
-        <header className='competition-header'>
-          <h1>Maryland Mayuri 2025 - College Park, MD</h1>
-          <p>February 22nd 2025 | 4:30 PM</p>
-        </header>
+        <div className="competition-container">
+          <header className='competition-header'>
+            <h1>Maryland Mayuri 2025</h1>
+            <p>February 22nd, 2025 | College Park, MD</p>
+          </header>
 
-        <div className="event-cards">
-          <div className="event-card main-event">
-            <h2>Main Event</h2>
-            <h3>Venue: Wheaton High School</h3>
-            <p>Address: [Insert address here]</p>
-            <p>Time: 4:30 PM</p>
-            <button className="ticket-button">
-              <a className="ticket-link" href="https://isitchristmas.com/" target="_blank" rel="noopener noreferrer">Buy Event Tickets</a>
-            </button>
+          <div className="event-cards">
+            <div className="event-card main-event">
+              <h2>Main Event</h2>
+              <h3>Wheaton High School</h3>
+              <p>12401 Dalewood Dr, Silver Spring, MD 20906</p>
+              <p>Doors Open: 4:30 PM</p>
+              <button className="ticket-button">
+                <a className="ticket-link" href="https://your-ticket-link.com" target="_blank" rel="noopener noreferrer">Buy Event Tickets</a>
+              </button>
+            </div>
+
+            <div className="event-card afterparty">
+              <h2>Afterparty</h2>
+              <h3>Venue TBA</h3>
+              <p>Address: To be announced</p>
+              <p>Time: To be announced</p>
+              <button className="ticket-button">
+                <a className="ticket-link" href="https://your-afterparty-ticket-link.com" target="_blank" rel="noopener noreferrer">Buy Afterparty Tickets</a>
+              </button>
+            </div>
           </div>
-
-          <div className="event-card afterparty">
-            <h2>Afterparty</h2>
-            <h3>Venue: TBA</h3>
-            <p>Address: [Insert address here]</p>
-            <p>Time: [Insert time here]</p>
-            <button className="ticket-button">
-              <a className="ticket-link" href="https://isitchristmas.com/" target="_blank" rel="noopener noreferrer">Buy Afterparty Tickets</a>
-            </button>
-          </div>
-
         </div>
-
-
       </div>
 
       <div id="media" className="media-section">
