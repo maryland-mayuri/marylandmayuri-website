@@ -150,12 +150,14 @@
         box-shadow: none;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
     }
 
     .dropdown.open {
         display: flex;
         max-height: 1000px;
+        opacity: 1;
     }
 
     .dropdown a {
@@ -167,7 +169,12 @@
         transform: rotate(0deg);
     }
 
+    .nav-item .dropdown-arrow {
+        transition: transform 0.3s ease;
+    }
+
     .nav-item.open .dropdown-arrow {
         transform: rotate(180deg);
     }
+
 }

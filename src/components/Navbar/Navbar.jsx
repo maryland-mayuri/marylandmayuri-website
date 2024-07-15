@@ -24,6 +24,13 @@ const Navbar = () => {
 
     const toggleNav = () => {
         setOpenNav(!openNav);
+        if (openNav) {
+            setOpenDropdowns({});
+        }
+    };
+
+    const handleLinkClick = () => {
+        setOpenNav(false);
         setOpenDropdowns({});
     };
 
@@ -43,13 +50,14 @@ const Navbar = () => {
                     onMouseEnter={() => !isMobile && setOpenDropdowns(prev => ({ ...prev, about: true }))}
                     onMouseLeave={() => !isMobile && setOpenDropdowns(prev => ({ ...prev, about: false }))}
                     onClick={() => handleDropdown('about')}>
+
                     <div className="nav-link">
                         About <img src={arrowIcon} alt="Dropdown" className="dropdown-arrow" />
                     </div>
                     <div className={`dropdown ${openDropdowns['about'] ? 'open' : ''}`}>
-                        <HashLink smooth to="/#about-us">About Us</HashLink>
-                        <HashLink smooth to="/#board">Board</HashLink>
-                        <HashLink smooth to="/#philanthropy">Philanthropy</HashLink>
+                    <HashLink smooth to="/#about-us" onClick={handleLinkClick}>About Us</HashLink>
+                        <HashLink smooth to="/#board" onClick={handleLinkClick}>Board</HashLink>
+                        <HashLink smooth to="/#philanthropy" onClick={handleLinkClick}>Philanthropy</HashLink>
                     </div>
                 </div>
                 <div className={`nav-item ${openDropdowns['mayuri'] ? 'open' : ''}`}
@@ -60,8 +68,8 @@ const Navbar = () => {
                         Mayuri 2024 <img src={arrowIcon} alt="Dropdown" className="dropdown-arrow" />
                     </div>
                     <div className={`dropdown ${openDropdowns['mayuri'] ? 'open' : ''}`}>
-                        <HashLink smooth to="/competition/#competition">Competition</HashLink>
-                        <HashLink smooth to="/competition/#media">Media</HashLink>
+                        <HashLink smooth to="/competition/#competition" onClick={handleLinkClick}>Competition</HashLink>
+                        <HashLink smooth to="/competition/#media" onClick={handleLinkClick}>Media</HashLink>
                     </div>
                 </div>
                 <div className="nav-item">
