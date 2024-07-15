@@ -74,7 +74,7 @@ const Navbar = () => {
                 </div>
                 <div className="nav-item">
                     <div className="nav-link">
-                        <NavLink to="/sponsorship">Sponsorship</NavLink>
+                        <NavLink to="/sponsorship" onClick={handleLinkClick}>Sponsorship</NavLink>
                     </div>
                 </div>
             </>
