@@ -302,31 +302,68 @@
     }
 
     .homepage-heading {
-        font-size: 4rem; /* Adjust this value as needed */
+        font-size: 4rem;
+        /* Adjust this value as needed */
     }
 
     .scroll-down-image {
         width: 40%;
     }
 
+    .philanthropy-section {
+        padding: 1rem;
+    }
+
+    .philanthropy-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
     .charity-info {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
     }
 
     .charity-info img {
+        width: 80%;
         max-width: 200px;
+        height: auto;
         margin: 0 auto;
     }
 
     .charity-content {
         text-align: center;
+        width: 100%;
+    }
+
+    .charity-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        width: 100%;
     }
 
     .charity-content p {
-        max-height: 200px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        max-height: 150px;
         overflow-y: auto;
-        padding-right: 10px;
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .charity-content a {
+        display: block;
+        width: 80%;
+        margin: 1rem auto;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+        text-align: center;
     }
 }
 

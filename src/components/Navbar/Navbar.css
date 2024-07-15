@@ -32,7 +32,8 @@
     position: relative;
 }
 
-.nav-link, .nav-link a { 
+.nav-link,
+.nav-link a {
     font-size: 1rem;
     text-decoration: none;
     transition: 0.3s ease;
@@ -54,6 +55,16 @@
     text-decoration: none;
 }
 
+.dropdown-arrow {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
 
 .dropdown {
     position: absolute;
@@ -62,12 +73,16 @@
     background-color: rgba(2, 2, 20, 0.95);
     border-radius: 4px;
     padding: 0.5rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 0.5rem;
     z-index: 10;
     min-width: 150px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item:hover .dropdown {
+    display: flex;
 }
 
 .dropdown a {
@@ -82,7 +97,6 @@
 }
 
 @media (max-width: 768px) {
-
     .navbar {
         flex-wrap: wrap;
     }
@@ -100,34 +114,60 @@
         flex-basis: 100%;
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 1rem;
         padding: 1rem;
-    }
-
-    .nav-link, .nav-link a {
-        width: 100%;
-        padding: 0.5rem 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(2, 2, 20, 0.95);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out, display 0s 0.3s;
     }
 
     .nav-links.open {
         display: flex;
+        transform: translateY(0);
+        transition: transform 0.3s ease-in-out;
     }
 
     .nav-item {
         width: 100%;
     }
 
-    .dropdown { 
+    .nav-link,
+    .nav-link a {
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    .dropdown {
         position: static;
+        display: none;
         border: none;
         padding-left: 1rem;
         width: 100%;
         background-color: transparent;
         box-shadow: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .dropdown.open {
+        display: flex;
+        max-height: 1000px;
     }
 
     .dropdown a {
         padding: 0.25rem 0;
     }
 
+    .dropdown-arrow {
+        float: right;
+        transform: rotate(0deg);
+    }
+
+    .nav-item.open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
 }
