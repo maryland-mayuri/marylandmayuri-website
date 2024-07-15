@@ -135,6 +135,8 @@ const Competition = () => {
             loop
             muted
             className="background-video"
+            controls={false}
+            playsInline
             onError={(e) => console.error("Video error:", e)}>
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.

@@ -227,5 +227,9 @@
     .event-cards {
         flex-direction: column;
     }
+
+    .background-video {
+        pointer-events: none;
+    }
 }
 
