@@ -251,16 +251,6 @@
     }
 }
 
-@media (max-width: 768px) {
-    .board-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .board-section {
-        max-width: 95%;
-    }
-}
-
 @media (max-width: 480px) {
     .board-grid {
         grid-template-columns: 1fr;
@@ -364,6 +354,14 @@
         padding: 0.8rem 1rem;
         font-size: 0.9rem;
         text-align: center;
+    }
+
+    .board-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .board-section {
+        max-width: 95%;
     }
 }
 
