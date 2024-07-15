@@ -34,9 +34,7 @@ const Competition = () => {
     { id: 1, src: mixer1, alt: 'Comp 1' },
     { id: 2, src: mixer2, alt: 'Comp 2' },
     { id: 3, src: mixer3, alt: 'Comp 3' },
-    { id: 4, src: comp4, alt: 'Comp 4' },
-    { id: 5, src: comp5, alt: 'Comp 5' },
-    { id: 6, src: comp6, alt: 'Comp 6' }
+    { id: 4, src: mixer2, alt: 'Comp 4' }
   ]
 
   const sliderSettings = {
