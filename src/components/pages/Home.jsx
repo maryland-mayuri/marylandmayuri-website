@@ -165,7 +165,9 @@ const Home = () => {
               a nonprofit ophthalmic hospital in Chennai, India. Sankara Nethralaya is a leading super specialty
               institution for ophthalmic care in India.
             </p>
-            <a href="https://www.sankaranethralayausa.org/" target="_blank" rel="noopener noreferrer">Learn More About Their Cause</a>
+            <a href="https://www.sankaranethralayausa.org/" target="_blank" rel="noopener noreferrer">
+              Learn more about their cause
+            </a>
           </div>
         </div>
       </div>
