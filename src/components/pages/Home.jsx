@@ -109,26 +109,30 @@ const Home = () => {
 
 
       <div id="about-us" className="section-container">
-        <div className="section-content">
-          <h1 className="section-heading">Who We Are</h1>
-          <p className="section-text">
-            Founded in 2013, Maryland Mayuri is Maryland's premier intercollegiate classical Indian dance competition.
-            As a registered 501(c)(3) organization, we are dedicated to promoting the art of classical Indian dance.
-            Mayuri is proudly hosted and run by passionate students at the University of Maryland, College Park.
-          </p>
+        <div className="section-content-wrapper">
+          <div className="section-content">
+            <h1 className="section-heading">Who We Are</h1>
+            <p className="section-text">
+              Founded in 2013, Maryland Mayuri is Maryland's premier intercollegiate classical Indian dance competition.
+              As a registered 501(c)(3) organization, we are dedicated to promoting the art of classical Indian dance.
+              Mayuri is proudly hosted and run by passionate students at the University of Maryland, College Park.
+            </p>
+          </div>
         </div>
         <img src={home_page_image} alt="Maryland Mayuri" className="section-image" />
       </div>
 
-      <div className="section-container">
-        <div className="section-content">
-          <h1 className="section-heading">Classical Dance</h1>
-          <p className="section-text">
-            Classical Indian dance is a timeless art form, deeply rooted in Indian culture for thousands of years.
-            It's a captivating blend of storytelling, music, and drama. India boasts eight distinct classical dance forms,
-            each with its unique style and technique. Among the most renowned are Bharatanatyam, Kathak, Odissi, and Kuchipudi,
-            each telling stories of tradition, mythology, and emotion through graceful movements and expressive gestures.
-          </p>
+      <div className="section-container reverse">
+        <div className="section-content-wrapper">
+          <div className="section-content">
+            <h1 className="section-heading">Classical Dance</h1>
+            <p className="section-text">
+              Classical Indian dance is a timeless art form, deeply rooted in Indian culture for thousands of years.
+              It's a captivating blend of storytelling, music, and drama. India boasts eight distinct classical dance forms,
+              each with its unique style and technique. Among the most renowned are Bharatanatyam, Kathak, Odissi, and Kuchipudi,
+              each telling stories of tradition, mythology, and emotion through graceful movements and expressive gestures.
+            </p>
+          </div>
         </div>
         <img src={classical_image} alt="Classical Dance" className="section-image" />
       </div>

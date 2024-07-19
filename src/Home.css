@@ -3,11 +3,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: calc(100vh - 80px);
+    /* Subtract navbar height */
+    background-color: #3AAFA9;
+    /* Light teal background */
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .homepage-main-container {
-    background-color: rgb(2, 2, 20, 0.90);
+    background-color: #F5F5F5;
+    /* Light off-white background */
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .heading-container {
@@ -15,13 +25,7 @@
 }
 
 .homepage-heading {
-    background-image: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3, #6b00d7, #3e00b3, #6b00d7, #a230ed, #c364fa);
-    background-clip: text;
-    -webkit-background-clip: text;
-    font-size: 7rem;
-    color: transparent;
-    background-size: 200% auto;
-    animation: gradientAnimation 10s linear infinite;
+    color: black;
 }
 
 @keyframes gradientAnimation {
@@ -43,34 +47,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 40px;
-    margin: 40px 0;
+    margin: 60px 3%; /* Add margin to the sides instead of padding */
+    gap: 40px;
+}
+
+.section-content-wrapper {
+    flex: 1;
+    background-color: #3AAFA9; /* Turquoise background */
     border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(58, 175, 169, 0.2); /* Subtle turquoise shadow */
+    padding: 40px 30px; /* Increased vertical padding */
+    min-height: 300px; /* Set a minimum height to make boxes taller */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .section-content {
-    flex: 1;
-    padding: 0 40px;
-    text-align: center;
+    text-align: left;
 }
 
 .section-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 30px;
-    background: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    margin-bottom: 20px;
+    color: #FEFFFF; /* White text */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.8;
-    color: #e0e0e0;
-    max-width: 600px;
-    margin: 0 auto;
+    color: #FEFFFF; /* White text */
 }
 
 .section-image {
@@ -78,13 +86,19 @@
     height: auto;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(58, 175, 169, 0.4), /* Turquoise shadow */
+                0 0 0 5px rgba(58, 175, 169, 0.2); /* Turquoise highlight */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section-image:hover {
     transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 24px rgba(58, 175, 169, 0.5),
+                0 0 0 8px rgba(58, 175, 169, 0.3);
+}
+
+.section-container.reverse {
+    flex-direction: row-reverse;
 }
 
 .divider {
@@ -261,30 +275,29 @@
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
-    .section-container {
+    .section-container,
+    .section-container.reverse {
         flex-direction: column;
-        padding: 40px 20px;
+        margin: 40px 20px;
     }
 
-    .section-content {
-        order: 1;
-        padding: 0;
-        margin-bottom: 30px;
-    }
-
-    .section-heading {
-        font-size: 2.5rem;
-    }
-
-    .section-text {
-        font-size: 1rem;
-        line-height: 1.6;
+    .section-content-wrapper {
+        width: 100%;
+        min-height: auto; /* Remove minimum height on mobile */
+        padding: 30px 20px;
     }
 
     .section-image {
-        order: 2;
         max-width: 100%;
         margin-top: 20px;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .section-text {
+        font-size: 0.9rem;
     }
 
     .divider {
@@ -362,15 +375,5 @@
 
     .board-section {
         max-width: 95%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .section-heading {
-        font-size: 2rem;
-    }
-
-    .section-text {
-        font-size: 0.9rem;
     }
 }

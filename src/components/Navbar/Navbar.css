@@ -6,7 +6,7 @@
     right: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: rgba(2, 2, 20, 0.95);
+    background-color: #17252A; /* Dark teal for navbar */
 }
 
 .navbar {
@@ -37,10 +37,10 @@
     font-size: 1rem;
     text-decoration: none;
     transition: 0.3s ease;
-    color: #f0f0f0;
     padding: 0.5rem 1rem;
     cursor: pointer;
     display: inline-block;
+    color: #DEF2F1; /* Very light teal for nav links */
 }
 
 .nav-link:hover,
@@ -48,11 +48,7 @@
 .nav-link a:hover,
 .dropdown a:hover,
 .dropdown a:focus {
-    background: linear-gradient(45deg, #9f7aea, #667eea);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-decoration: none;
+    color: #3AAFA9; /* Light teal for nav links on hover */
 }
 
 .dropdown-arrow {

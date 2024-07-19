@@ -11,6 +11,7 @@ const App = () => {
 
   return (
     <div className='app-container'>
+
         <Navbar/>
         <div className="content-wrapper">
         <Routes>
