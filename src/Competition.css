@@ -1,8 +1,9 @@
 /* Competition Section */
 .competition-section {
-    color: #e0e0e0;
+    color: #17252A; /* Dark text color */
     padding: 4rem 0;
     border-radius: 15px;
+    background-color: #F5F5F5;
 }
 
 .competition-container {
@@ -20,16 +21,13 @@
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #c364fa, #a230ed, #6b00d7, #3e00b3);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #3AAFA9; /* Turquoise color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .competition-header p {
     font-size: 1.5rem;
-    color: #a230ed;
+    color: #2B7A78; /* Darker turquoise */
 }
 
 .event-cards {
@@ -50,28 +48,30 @@
 
 .event-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 48px rgba(195, 100, 250, 0.3);
+    box-shadow: 0 12px 48px rgba(58, 175, 169, 0.3);
+
 }
 
 .event-card h2 {
-    color: #c364fa;
+    color: #3AAFA9; /* Turquoise color */
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .event-card h3 {
-    color: #a230ed;
+    color: #2B7A78; /* Darker turquoise */
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 
 .event-card p {
     margin-bottom: 0.5rem;
+    color: #17252A; /* Dark text color */
 }
 
 .ticket-button {
-    background: linear-gradient(90deg, #c364fa, #a230ed);
-    color: white;
+    background-color: #3AAFA9; /* Turquoise background */
+    color: #FEFFFF; /* White text */
     border: none;
     border-radius: 25px;
     padding: 0.75rem 1.5rem;
@@ -83,12 +83,12 @@
 }
 
 .ticket-button:hover {
-    background: linear-gradient(90deg, #a230ed, #6b00d7);
+    background-color: #2B7A78; /* Darker turquoise on hover */    
     transform: scale(1.05);
 }
 
 .ticket-link {
-    color: white;
+    color: #FEFFFF; /* White text */
     text-decoration: none;
 }
 
@@ -159,6 +159,7 @@
 .carousel-heading {
     color: white;
     font-size: 3rem;
+    font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     cursor: pointer;

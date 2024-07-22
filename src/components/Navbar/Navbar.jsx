@@ -13,6 +13,8 @@ const Navbar = () => {
     const [openDropdowns, setOpenDropdowns] = useState({});
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+    
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -86,7 +88,7 @@ const Navbar = () => {
         <div className="navbar-container">
             <nav className={`navbar ${openNav ? 'open' : ''}`}>
                 <div className="navbar-logo">
-                    <img src={logo} alt="Logo" />
+                    <a href="/"><img src={logo} alt="Logo" /></a>
                 </div>
 
                 <button className='hamburger' onClick={toggleNav}>

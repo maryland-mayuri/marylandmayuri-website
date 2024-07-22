@@ -82,27 +82,6 @@ const Sponsorship = () => {
         </div>
       </section>
 
-      <section className="philanthropy-section">
-        <h2>Our Charity Partner</h2>
-        <div className="charity-info">
-          <img src={snom} alt="Sankara Nethralaya OM Trust" />
-          <div className="charity-content">
-            <h3>Sankara Nethralaya OM Trust</h3>
-            <p>
-              SNOM is a registered non-profit organization in the United States of America.
-              The charity was established in 1988 with the main goal of supporting Sankara Nethralaya,
-              a nonprofit ophthalmic hospital in Chennai, India. Sankara Nethralaya is a leading super specialty
-              institution for ophthalmic care in India. Founded in 1978 as a branch of the Medical Research Foundation,
-              the Sankara Nethralaya main hospital is located in Chennai, India, though the organization has since branched out
-              all over India to locations such as Tirupathi, Andhra Pradesh, and Kolkata, West Bengal. One of their main projects
-              is their series of mobile clinics that enable them to perform eye surgeries for underserved populations in need
-              throughout India. SNOM Trust raises funds for Sankara Nethralaya by conducting various events and with the support
-              from a large group of like-minded individuals.
-            </p>
-            <a href="https://www.sankaranethralayausa.org/" target="_blank" rel="noopener noreferrer">Learn More About Their Cause</a>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

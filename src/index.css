@@ -11,8 +11,11 @@
 body, html {
   height: 100%;
   overflow-x: hidden; /* Prevents horizontal scrolling */
-  font-family: 'Roboto', sans-serif;
-
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  scroll-padding-top: 80px; /* Adjust this value to match your navbar height */
 }
 
 .app-container {
@@ -22,7 +25,6 @@ body, html {
   flex-direction: column;
   padding-top: 80px; /* Add padding to account for navbar height */
   max-width: 100vw; /* Ensures content doesn't exceed viewport width */
-
 }
 
 .homepage-heading {
