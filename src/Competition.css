@@ -1,6 +1,7 @@
 /* Competition Section */
 .competition-section {
-    color: #17252A; /* Dark text color */
+    color: #17252A;
+    /* Dark text color */
     padding: 4rem 0;
     border-radius: 15px;
     background-color: #F5F5F5;
@@ -21,13 +22,15 @@
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #3AAFA9; /* Turquoise color */
+    color: #3AAFA9;
+    /* Turquoise color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .competition-header p {
     font-size: 1.5rem;
-    color: #2B7A78; /* Darker turquoise */
+    color: #2B7A78;
+    /* Darker turquoise */
 }
 
 .event-cards {
@@ -53,25 +56,30 @@
 }
 
 .event-card h2 {
-    color: #3AAFA9; /* Turquoise color */
+    color: #3AAFA9;
+    /* Turquoise color */
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .event-card h3 {
-    color: #2B7A78; /* Darker turquoise */
+    color: #2B7A78;
+    /* Darker turquoise */
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 
 .event-card p {
     margin-bottom: 0.5rem;
-    color: #17252A; /* Dark text color */
+    color: #17252A;
+    /* Dark text color */
 }
 
 .ticket-button {
-    background-color: #3AAFA9; /* Turquoise background */
-    color: #FEFFFF; /* White text */
+    background-color: #3AAFA9;
+    /* Turquoise background */
+    color: #FEFFFF;
+    /* White text */
     border: none;
     border-radius: 25px;
     padding: 0.75rem 1.5rem;
@@ -83,12 +91,14 @@
 }
 
 .ticket-button:hover {
-    background-color: #2B7A78; /* Darker turquoise on hover */    
+    background-color: #2B7A78;
+    /* Darker turquoise on hover */
     transform: scale(1.05);
 }
 
 .ticket-link {
-    color: #FEFFFF; /* White text */
+    color: #FEFFFF;
+    /* White text */
     text-decoration: none;
 }
 
@@ -103,6 +113,172 @@
     }
 }
 
+/* Competing Teams Section */
+.competing-teams-section {
+    padding: 4rem 0;
+    background-color: #F5F5F5;
+}
+
+.competing-teams-section h2 {
+    text-align: center;
+    color: #3AAFA9;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.team-panels {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-panel {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.team-panel-header {
+    padding: 1rem;
+    background-color: #3AAFA9;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.team-panel-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.team-panel-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.team-panel.active .team-panel-content {
+    max-height: 500px;
+    /* Adjust this value based on your content */
+    padding: 1rem;
+}
+
+.team-panel-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.team-panel-content p {
+    color: #17252A;
+}
+
+
+/* Media Team Section */
+.media-team-section {
+    padding: 4rem 0;
+    background-color: #F5F5F5;
+  }
+  
+  .media-team-section h2 {
+    text-align: center;
+    color: #3AAFA9;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .media-carousel-container {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 40px; /* Add padding for arrows */
+  }
+  
+  .media-team-member {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .image-container {
+    width: 100%;
+    padding-bottom: 100%; /* Creates a square aspect ratio */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .media-team-member img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .member-info {
+    margin-top: 1rem;
+  }
+  
+  .media-team-member h3 {
+    color: #2B7A78;
+    margin-bottom: 0.5rem;
+  }
+  
+  .media-team-member p {
+    color: #17252A;
+  }
+  
+  /* Custom arrows */
+  .custom-prev-arrow,
+  .custom-next-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .custom-prev-arrow {
+    left: 0;
+  }
+  
+  .custom-next-arrow {
+    right: 0;
+  }
+  
+  .custom-prev-arrow img,
+  .custom-next-arrow img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .custom-prev-arrow img {
+    transform: rotate(90deg);
+  }
+  
+  .custom-next-arrow img {
+    transform: rotate(-90deg);
+  }
+  
+  /* Slider dots */
+  .media-team-section .slick-dots {
+    bottom: -30px;
+  }
+  
+  .media-team-section .slick-dots li button:before {
+    font-size: 12px;
+    color: #3AAFA9;
+  }
+  
+  .media-team-section .slick-dots li.slick-active button:before {
+    color: #2B7A78;
+  }
 /* Media Section */
 .media-section {
     width: 100%;
@@ -125,9 +301,9 @@
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  
+    object-fit: cover;
     filter: none;
-    opacity: 0.5;
+    opacity: 0.7;
 
 }
 
@@ -161,7 +337,7 @@
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     background: none;
     transition: transform 0.3s ease;
@@ -183,8 +359,10 @@
     position: relative;
     height: 600px;
     overflow: hidden;
-    width: 100vw; /* Full viewport width */
-    margin-left: calc(-50vw + 50%); /* Center the section */
+    width: 100vw;
+    /* Full viewport width */
+    margin-left: calc(-50vw + 50%);
+    /* Center the section */
 }
 
 .background-video {
@@ -213,8 +391,9 @@
     color: white;
     font-size: 2rem;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
 }
 
 
@@ -247,6 +426,21 @@
     .carousel-heading {
         font-size: 2.2rem;
     }
-    
-}
 
+    .team-panels {
+        padding: 0 1rem;
+    }
+
+    .carousel-container {
+        max-width: 80%;
+        padding: 0 30px; /* Adjust padding for mobile */
+      }
+    
+      .custom-prev-arrow {
+        left: -5px;
+      }
+    
+      .custom-next-arrow {
+        right: -5px;
+      }
+}

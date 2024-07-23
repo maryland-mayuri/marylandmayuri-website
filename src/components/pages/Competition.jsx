@@ -17,9 +17,41 @@ import mixer2 from '../../assets/carousel_images/mixer-photos2.jpeg'
 import mixer3 from '../../assets/carousel_images/mixer-photos3.jpeg'
 
 
+import siva from '../../assets/media-team-siva.jpg'
+import surender from '../../assets/media-team-surender.jpg'
+import sashu from '../../assets/media-team-sashu.jpg'
+import amrit from '../../assets/media-team-amrit.jpg'
+
+import arrowIcon from '../../assets/arrow-icon-dark.png'
+
+import jhu from '../../assets/jhushakti.jpg'
+import pitt from '../../assets/pittnrityamala.jpg'
+import ru from '../../assets/runatya.jpg'
+import berkeley from '../../assets/natyaberkeley.jpg'
+import cornell from '../../assets/cornellanjali.jpg'
+import tamu from '../../assets/tamusahithya.jpg'
+import ut from '../../assets/nrityasangam.jpg'
+import gt from '../../assets/gtpulse.jpg'
+
+
+
+
+
 const Competition = () => {
 
   const [activeTab, setActiveTab] = useState('event');
+  const [activeTeam, setActiveTeam] = useState(null);
+
+  const slider = React.useRef(null);
+
+
+  const goToPrev = () => {
+    slider.current.slickPrev();
+  };
+
+  const goToNext = () => {
+    slider.current.slickNext();
+  };
 
   const competitionPhotos = [
     { id: 1, src: comp1, alt: 'Comp 1' },
@@ -37,6 +69,25 @@ const Competition = () => {
     { id: 4, src: mixer2, alt: 'Comp 4' }
   ]
 
+  const teams = [
+    { id: 1, src: ru, alt: "RU Natya" },
+    { id: 2, src: berkeley, alt: "Natya @ Berkeley" },
+    { id: 3, src: tamu, alt: "TAMU Sahithya" },
+    { id: 4, src: jhu, alt: "JHU Shakti" },
+    { id: 5, src: cornell, alt: "Cornell Anjali" },
+    { id: 6, src: ut, alt: "UT Nritya Sangam" },
+    { id: 7, src: pitt, alt: "Pitt Nrityamala" },
+    { id: 8, src: gt, alt: "GT Pulse" }
+  ]
+
+  const mediaTeam = [
+    { name: 'John Doe', role: 'Photographer', src: sashu },
+    { name: 'Jane Smith', role: 'Videographer', src: amrit },
+    { name: 'Mike Johnson', role: 'Photographer', src: siva },
+    { name: 'Sarah Brown', role: 'Editor', src: surender }
+  ];
+
+
   const sliderSettings = {
     dots: false,
     arrows: false,
@@ -48,11 +99,6 @@ const Competition = () => {
     autoplaySpeed: 5000,
   };
 
-  const teams = [
-    'Team 1', 'Team 2', 'Team 3', 'Team 4',
-    'Team 5', 'Team 6', 'Team 7', 'Team 8'
-  ];
-
   const handleTeamClick = (team) => {
     // Implement team click functionality
     console.log(`Clicked on ${team}`);
@@ -61,6 +107,26 @@ const Competition = () => {
   const handleWatchVideos = () => {
     // Implement watch videos functionality
     console.log('Watch videos clicked');
+  };
+
+  const mediaTeamSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    arrows: false, // Disable default arrows
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '0px'
+        }
+      }
+    ]
   };
 
   return (
@@ -74,7 +140,7 @@ const Competition = () => {
 
           <div className="event-cards">
             <div className="event-card main-event">
-              <h2>Main Event</h2>
+              <h2>Competition</h2>
               <h3>Wheaton High School</h3>
               <p>12401 Dalewood Dr, Silver Spring, MD 20906</p>
               <p>Doors Open: 4:30 PM</p>
@@ -93,6 +159,51 @@ const Competition = () => {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="competing-teams-section">
+        <h2>Competing Teams</h2>
+        <div className="team-panels">
+          {teams.map((team, index) => (
+            <div
+              key={index}
+              className={`team-panel ${activeTeam === index ? 'active' : ''}`}
+              onClick={() => setActiveTeam(activeTeam === index ? null : index)}
+            >
+              <div className="team-panel-header">
+                <h3>{team.alt}</h3>
+              </div>
+              <div className="team-panel-content">
+                <img src={team.src} alt={team.alt} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="media-team-section">
+        <h2>Our Media Team</h2>
+        <div className="media-carousel-container">
+          <Slider {...mediaTeamSettings}>
+            {mediaTeam.map((member, index) => (
+              <div key={index} className="media-team-member">
+                <div className="image-container">
+                  <img src={member.src} alt={member.name} />
+                </div>
+                <div className="member-info">
+                  <h3>{member.name}</h3>
+                  <p>{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </Slider>
+          <button className="custom-prev-arrow">
+            <img src={arrowIcon} alt="Previous" />
+          </button>
+          <button className="custom-next-arrow">
+            <img src={arrowIcon} alt="Next" />
+          </button>
         </div>
       </div>
 
