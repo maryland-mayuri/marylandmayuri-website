@@ -29,9 +29,9 @@ import jiya_a from '../../assets/board_member_pictures/person_placeholder.jpg'
 import aditya_p from '../../assets/board_member_pictures/person_placeholder.jpg'
 
 import tba from '../../assets/board_member_pictures/person_placeholder.jpg'
-import peacock_image from '../../assets/peacock-icon.png'
 import snom from "../../assets/sponsor_images/snom-logo.jpeg";
 import classical_image from "../../assets/classical-image.jpeg"
+import homepage_image from "../../assets/homepage-image.jpg"
 
 
 
@@ -98,12 +98,11 @@ const Home = () => {
 
   return (
     <div className='homepage-main-container'>
-      <div className='home-container'>
+      <div className='home-container'
+            style={{'--homepage-image': `url(${homepage_image})`}}
+      >
         <div className='heading-container'>
           <h1 className='homepage-heading'>Maryland Mayuri</h1>
-          <div className="scroll-down">
-            <img src={peacock_image} onClick={handleSmoothScroll} className="scroll-down-image" />
-          </div>
         </div>
       </div>
 
