@@ -22,14 +22,14 @@
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #3AAFA9;
+    color: #013222;
     /* Turquoise color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .competition-header p {
     font-size: 1.5rem;
-    color: #2B7A78;
+    color: #004D14;
     /* Darker turquoise */
 }
 
@@ -47,23 +47,25 @@
     transition: all 0.3s ease;
     max-width: 350px;
     text-align: center;
+    background-color: #E1E5DC;
 }
 
 .event-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 48px rgba(58, 175, 169, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(1, 50, 34, 0.3),
+                0 0 0 8px rgba(4, 98, 0, 0.2);
 
 }
 
 .event-card h2 {
-    color: #3AAFA9;
+    color: #013222;
     /* Turquoise color */
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .event-card h3 {
-    color: #2B7A78;
+    color: #013222;
     /* Darker turquoise */
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
@@ -71,15 +73,13 @@
 
 .event-card p {
     margin-bottom: 0.5rem;
-    color: #17252A;
+    color: #004D14;
     /* Dark text color */
 }
 
 .ticket-button {
-    background-color: #3AAFA9;
-    /* Turquoise background */
-    color: #FEFFFF;
-    /* White text */
+    background-color: #046200;
+    color: #F6F7F2;
     border: none;
     border-radius: 25px;
     padding: 0.75rem 1.5rem;
@@ -91,7 +91,7 @@
 }
 
 .ticket-button:hover {
-    background-color: #2B7A78;
+    background-color: #004D14;
     /* Darker turquoise on hover */
     transform: scale(1.05);
 }
@@ -116,12 +116,14 @@
 /* Competing Teams Section */
 .competing-teams-section {
     padding: 4rem 0;
-    background-color: #F5F5F5;
+    background-color: #E1E5DC;
+    border-radius: 5px;
+
 }
 
 .competing-teams-section h2 {
     text-align: center;
-    color: #3AAFA9;
+    color: #013222;
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
@@ -134,7 +136,6 @@
 }
 
 .team-panel {
-    background-color: #FFFFFF;
     border-radius: 8px;
     margin-bottom: 1rem;
     overflow: hidden;
@@ -144,8 +145,8 @@
 
 .team-panel-header {
     padding: 1rem;
-    background-color: #3AAFA9;
     color: #FFFFFF;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -163,8 +164,17 @@
 .team-panel.active .team-panel-content {
     max-height: 500px;
     /* Adjust this value based on your content */
-    padding: 1rem;
 }
+
+.team-panel:nth-child(even) {
+    background-color: #046200;
+
+}
+
+.team-panel:nth-child(odd) {
+    background-color: #013222;
+}
+
 
 .team-panel-content img {
     width: 100%;
@@ -181,12 +191,11 @@
 /* Media Team Section */
 .media-team-section {
     padding: 4rem 0;
-    background-color: #F5F5F5;
   }
   
   .media-team-section h2 {
     text-align: center;
-    color: #3AAFA9;
+    color: #013222;
     font-size: 2.5rem;
     margin-bottom: 2rem;
   }
@@ -224,24 +233,25 @@
   }
   
   .media-team-member h3 {
-    color: #2B7A78;
+    color: #17252A; /* Dark text color */
     margin-bottom: 0.5rem;
   }
   
   .media-team-member p {
-    color: #17252A;
+    color: #17252A; /* Dark text color */
   }
   
   /* Custom arrows */
   .custom-prev-arrow,
   .custom-next-arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 50%;  /* Center the arrow vertically */
+    transform: translateY(-50%);  /* Offset by half of its height */
     background: none;
     border: none;
     cursor: pointer;
     z-index: 1;
+    padding: 0;
   }
   
   .custom-prev-arrow {
@@ -431,7 +441,7 @@
         padding: 0 1rem;
     }
 
-    .carousel-container {
+    .media-carousel-container {
         max-width: 80%;
         padding: 0 30px; /* Adjust padding for mobile */
       }

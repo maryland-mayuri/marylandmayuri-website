@@ -1,6 +1,6 @@
 .main-footer {
-    background-color: #17252A; /* Dark teal for footer */
-    color: #DEF2F1; /* Very light teal for footer text */
+    background-color: #013222; /* Darkest green for footer */
+    color: #F6F7F2; /* Lightest gray for footer text */
     padding: 3em 0;
     width: 100%;
     margin-top: 20px;
@@ -15,8 +15,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05)), 
-                linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.05) 75%, rgba(255,255,255,0.05));
+    background: linear-gradient(45deg, rgba(230,237,224,0.05) 25%, transparent 25%, transparent 75%, rgba(230,237,224,0.05) 75%, rgba(230,237,224,0.05)), 
+                linear-gradient(45deg, rgba(230,237,224,0.05) 25%, transparent 25%, transparent 75%, rgba(230,237,224,0.05) 75%, rgba(230,237,224,0.05));
     background-size: 60px 60px;
     background-position: 0 0, 30px 30px;
     opacity: 0.1;
@@ -36,11 +36,11 @@
     right: 20px;
     height: 2px;
     background: linear-gradient(to right, 
-        rgba(255,255,255,0), 
-        rgba(255,255,255,0.7) 20%, 
-        rgba(255,255,255,0.7) 80%, 
-        rgba(255,255,255,0)
-    );
+    rgba(230,237,224,0), 
+    rgba(230,237,224,0.7) 20%, 
+    rgba(230,237,224,0.7) 80%, 
+    rgba(230,237,224,0)
+);
 }
 
 .footer-content {
@@ -94,11 +94,12 @@
 
 .social-media-row a {
     display: inline-block;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .social-media-row a:hover {
     transform: scale(1.2);
+    filter: brightness(1.2);
 }
 
 .social-media-row img {
