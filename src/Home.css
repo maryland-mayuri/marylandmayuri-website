@@ -4,13 +4,15 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
     /* Subtract navbar height */
     /* background-color:  */
     background-color: #F6F7F2;
     max-width: 100%; /* Limit width on larger screens */
     margin: 0 auto; /* Center the container */
     padding: 0;
+    margin-top: -80px; /* Add this line to offset the navbar height */
+    padding-top: 80px; /* Add this line to ensure content isn't hidden behind navbar */
     overflow: hidden;
 }
 
@@ -287,7 +289,6 @@
     .home-container {
         padding: 15px;
         max-width: 100%;
-        margin: 0 auto;
     }
 
     .homepage-heading {
@@ -402,5 +403,15 @@
 
     .board-section {
         max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .heading-container {
+        padding: 10px;
+    }
+
+    .homepage-heading {
+        font-size: 2rem; /* Even smaller font size for very small screens */
     }
 }
