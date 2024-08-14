@@ -16,7 +16,7 @@ const Sponsorship = () => {
   const sponsors = [
     {
       name: "Red Bull", description:
-        "Red Bull, an iconic energy drink brand, energizes consumers with its unique blend of caffeine, taurine, and B-vitamins. Renowned for its invigorating effects, Red Bull provides a boost in physical and mental performance. With a distinct flavor and vibrantmarketing, it has become a symbol of energy and vitality globally.",
+        "Red Bull, an iconic energy drink brand, energizes consumers with its unique blend of caffeine, taurine, and B-vitamins. Renowned for its invigorating effects, Red Bull provides a boost in physical and mental performance. With a distinct flavor and vibrant marketing, it has become a symbol of energy and vitality globally.",
       img: redbull, link: "https://www.redbull.com/us-en/"
     },
     {
