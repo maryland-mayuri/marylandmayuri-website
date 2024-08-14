@@ -88,11 +88,11 @@ const Navbar = () => {
         <div className="navbar-container">
             <nav className={`navbar ${openNav ? 'open' : ''}`}>
                 <div className="navbar-logo">
-                    <a href="/"><img src={logo} alt="Logo" /></a>
+                    <a href="/"><img className="navbar-logo-img" src={logo} alt="Logo" /></a>
                 </div>
 
                 <button className='hamburger' onClick={toggleNav}>
-                    <img src={menuIcon} alt="Menu" />
+                    <img className="hamburger-img" src={menuIcon} alt="Menu" />
                 </button>
 
                 <div className={`nav-links ${openNav ? 'open' : ''}`}>

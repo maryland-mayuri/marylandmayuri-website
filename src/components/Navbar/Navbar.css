@@ -95,6 +95,7 @@
 @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
+        padding: 0.5rem 1rem; /* Reduce padding to decrease height */
     }
 
     .hamburger {
@@ -103,6 +104,16 @@
         border: none;
         cursor: pointer;
         color: #f0f0f0;
+    }
+
+    .hamburger-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar-logo-img {
+        height: 20px;
+        width: auto;
     }
 
     .nav-links {
