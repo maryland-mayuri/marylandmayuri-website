@@ -8,9 +8,9 @@
     /* Subtract navbar height */
     /* background-color:  */
     background-color: #F6F7F2;
-    margin: 0;
+    max-width: 100%; /* Limit width on larger screens */
+    margin: 0 auto; /* Center the container */
     padding: 0;
-    width: 100%;
     overflow: hidden;
 }
 
@@ -284,6 +284,24 @@
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
+    .home-container {
+        padding: 15px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .homepage-heading {
+        font-size: 2.0rem;
+    }
+
+    .home-container::before {
+        filter: blur(4px); /* Less blur on mobile */
+    }
+
+    .heading-container {
+        padding: 10px;
+    }   
+
     .section-container,
     .section-container.reverse {
         flex-direction: column;
