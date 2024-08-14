@@ -42,16 +42,6 @@ const Competition = () => {
   const [activeTab, setActiveTab] = useState('event');
   const [activeTeam, setActiveTeam] = useState(null);
 
-  const slider = React.useRef(null);
-
-
-  const goToPrev = () => {
-    slider.current.slickPrev();
-  };
-
-  const goToNext = () => {
-    slider.current.slickNext();
-  };
 
   const competitionPhotos = [
     { id: 1, src: comp1, alt: 'Comp 1' },
@@ -97,6 +87,16 @@ const Competition = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+  };
+
+  const sliderRef = React.useRef(null);
+
+  const goToPrev = () => {
+    sliderRef.current.slickPrev();
+  };
+  
+  const goToNext = () => {
+    sliderRef.current.slickNext();
   };
 
   const handleTeamClick = (team) => {
@@ -185,7 +185,7 @@ const Competition = () => {
       <div className="media-team-section">
         <h2>Our Media Team</h2>
         <div className="media-carousel-container">
-          <Slider {...mediaTeamSettings}>
+          <Slider ref={sliderRef} {...mediaTeamSettings}>
             {mediaTeam.map((member, index) => (
               <div key={index} className="media-team-member">
                 <div className="image-container">
@@ -198,10 +198,10 @@ const Competition = () => {
               </div>
             ))}
           </Slider>
-          <button className="custom-prev-arrow">
+          <button className="custom-prev-arrow" onClick={goToPrev}>
             <img src={arrowIcon} alt="Previous" />
           </button>
-          <button className="custom-next-arrow">
+          <button className="custom-next-arrow" onClick={goToNext}>
             <img src={arrowIcon} alt="Next" />
           </button>
         </div>
