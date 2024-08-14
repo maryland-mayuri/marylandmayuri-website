@@ -71,7 +71,7 @@
 
 .section-content-wrapper {
     flex: 1;
-    background-color: hsl(87, 20%, 91%);
+    background-color: #e9ede3;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(58, 175, 169, 0.2); /* Subtle turquoise shadow */
     padding: 40px 30px; /* Increased vertical padding */
@@ -221,11 +221,14 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
 }
 
 .member-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(1, 50, 34, 0.2); /* Dark green shadow */
+    box-shadow: 0 5px 15px rgba(47, 232, 50, 0.2); /* Dark green shadow */
+    background-color: #e9ede3;
+
 }
 
 .member-image-container {
