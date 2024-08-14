@@ -126,6 +126,15 @@
     margin-right: 0;
     margin-bottom: 1.5rem;
   }
+
+  .thank-you h1 {
+    font-size: 2.0rem;
+  }
+
+  .thank-you p {
+    font-size: 1rem;
+    padding: 10px;
+  }
 }
 
 .sponsor-item:not(:last-child) {
