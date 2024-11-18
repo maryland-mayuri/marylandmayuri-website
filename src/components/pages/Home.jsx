@@ -91,7 +91,7 @@ const Home = () => {
     { name: "Srinidhi Gubba", position: "Judging", image: srinidhi_g },
     { name: "Shruti Marichetty", position: "Judging", image: shruti_m },
 
-    { name: "Sanjana Shankar", position: "Sponsorship", image: sanjana_s },
+    { name: "Sanjana Sankar", position: "Sponsorship", image: sanjana_s },
     { name: "Aditya Patel", position: "Sponsorship", image: aditya_p },
     { name: "Dhruvi Kadhiwala", position: "Sponsorship", image: dhruvi_k },
     { name: "Rahul Anantuni", position: "Sponsorship", image: rahul_a },
