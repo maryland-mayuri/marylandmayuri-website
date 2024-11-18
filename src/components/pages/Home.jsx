@@ -13,46 +13,45 @@ import teja_n from '../../assets/board_member_pictures/teja_n.jpg'
 import shreya_g from '../../assets/board_member_pictures/shreya_g.jpg'
 
 // Registration
-import giridhar_s from '../../assets/board_member_pictures/person_placeholder.jpg'
-import saathu_n from '../../assets/board_member_pictures/person_placeholder.jpg'
+import giridhar_s from '../../assets/board_member_pictures/giri_s.jpg'
+import saathu_n from '../../assets/board_member_pictures/saathu_n.jpg'
 
 // Hospitality
 import nitya_v from '../../assets/board_member_pictures/nitya_v.jpg'
 import sakshi_s from '../../assets/board_member_pictures/sakshi_s.jpg'
-import suhan_n from '../../assets/board_member_pictures/person_placeholder.jpg'
-import arya_g from '../../assets/board_member_pictures/person_placeholder.jpg'
+import suhan_n from '../../assets/board_member_pictures/suhan_n.jpg'
+import arya_g from '../../assets/board_member_pictures/arya_g.jpg'
 
 // Technology
 import sashu_p from '../../assets/board_member_pictures/sashu_p.jpg'
 import ishaan_b from '../../assets/board_member_pictures/ishaan_b.jpg'
-import mahathi_c from '../../assets/board_member_pictures/person_placeholder.jpg'
-
 
 // Judging
 import srinidhi_g from '../../assets/board_member_pictures/srinidhi_g.jpg'
-import shruti_m from '../../assets/board_member_pictures/person_placeholder.jpg'
+import shruti_m from '../../assets/board_member_pictures/shruti_m.jpg'
 
 // Sponsorship
 import sanjana_s from '../../assets/board_member_pictures/sanjana_s.jpg'
-import dhruvi_k from '../../assets/board_member_pictures/person_placeholder.jpg'
-import aditya_p from '../../assets/board_member_pictures/person_placeholder.jpg'
-import rahul_a from '../../assets/board_member_pictures/person_placeholder.jpg'
+import dhruvi_k from '../../assets/board_member_pictures/dhruvi_k.jpg'
+import aditya_p from '../../assets/board_member_pictures/aditya_p.jpg'
+import rahul_a from '../../assets/board_member_pictures/rahul_a.jpg'
 
 // Public Relations
-import rushina_p from '../../assets/board_member_pictures/person_placeholder.jpg'
-import sachin_t from  '../../assets/board_member_pictures/person_placeholder.jpg'
-import nihira_m from '../../assets/board_member_pictures/person_placeholder.jpg'
+import rushina_p from '../../assets/board_member_pictures/rushina_p.jpg'
+import sachin_t from  '../../assets/board_member_pictures/sachin_t.jpg'
+import nihira_m from '../../assets/board_member_pictures/nihira_m.jpg'
 
 // Liaison Head
-import riyanna_d from '../../assets/board_member_pictures/person_placeholder.jpg'
+import mahathi_c from '../../assets/board_member_pictures/mahathi_c.jpg'
+
 
 // Social 
-import jiya_a from '../../assets/board_member_pictures/person_placeholder.jpg'
+import jiya_a from '../../assets/board_member_pictures/jiya_a.jpg'
 
 // Mixer
 import aditi_g from '../../assets/board_member_pictures/aditi_g.jpg'
-import samaya_t from '../../assets/board_member_pictures/person_placeholder.jpg'
-import disha_t from '../../assets/board_member_pictures/person_placeholder.jpg'
+import samaya_t from '../../assets/board_member_pictures/samaya_t.jpg'
+import disha_t from '../../assets/board_member_pictures/disha_t.jpg'
 
 
 import tba from '../../assets/board_member_pictures/person_placeholder.jpg'
@@ -87,11 +86,10 @@ const Home = () => {
     { name: "Suhan Neema", position: "Hospitality", image: suhan_n },
 
     { name: "Sashu Prakash", position: "Technology", image: sashu_p },
-    { name: "Mahathi Chintapalli", position: "Technology", image: mahathi_c },
     { name: "Ishaan Bhardvaj", position: "Technology", image: ishaan_b },
 
     { name: "Srinidhi Gubba", position: "Judging", image: srinidhi_g },
-    { name: "Shruti Marichetty", position: "Judging", image: tba },
+    { name: "Shruti Marichetty", position: "Judging", image: shruti_m },
 
     { name: "Sanjana Shankar", position: "Sponsorship", image: sanjana_s },
     { name: "Aditya Patel", position: "Sponsorship", image: aditya_p },
@@ -102,8 +100,8 @@ const Home = () => {
     { name: "Sachin Thapar", position: "Public Relations", image: sachin_t },
     { name: "Nihira Mulkar", position: "Public Relations", image: nihira_m },
 
+    { name: "Mahathi Chintapalli", position: "Liaison Head", image: mahathi_c },
     { name: "Apurva Hari", position: "Liaison Head", image: tba },
-    { name: "Riyanna Desai", position: "Liaison Head", image: riyanna_d },
 
     { name: "Jiya Amin", position: "Social Chair", image: jiya_a },
 
