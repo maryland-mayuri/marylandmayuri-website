@@ -71,10 +71,10 @@ const Competition = () => {
   ]
 
   const mediaTeam = [
-    { name: 'John Doe', role: 'Photographer', src: sashu },
-    { name: 'Jane Smith', role: 'Videographer', src: amrit },
-    { name: 'Mike Johnson', role: 'Photographer', src: siva },
-    { name: 'Sarah Brown', role: 'Editor', src: surender }
+    { name: 'Sashu Prakash', role: 'Livestream/Videographer', src: sashu },
+    { name: 'Amrit Magesh', role: 'Videographer', src: amrit },
+    { name: 'Siva Sottalu', role: 'Photographer', src: siva },
+    { name: 'Sasi Bennuru', role: 'Photographer', src: surender }
   ];
 
 
