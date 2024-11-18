@@ -101,7 +101,6 @@ const Home = () => {
     { name: "Nihira Mulkar", position: "Public Relations", image: nihira_m },
 
     { name: "Mahathi Chintapalli", position: "Liaison Head", image: mahathi_c },
-    { name: "Apurva Hari", position: "Liaison Head", image: tba },
 
     { name: "Jiya Amin", position: "Social Chair", image: jiya_a },
 
