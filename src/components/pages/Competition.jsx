@@ -212,7 +212,7 @@ const Competition = () => {
 
           <div className="carousel-container mixer-carousel">
             <div className="carousel-heading-container">
-              <a href="https://drive.google.com/drive/folders/1M5tD-A0LUey06_Q6JuUhLz3iVw_XgNv3?usp=sharing" target="_blank" className="carousel-heading">Mixer Photos</a>
+              <a href="https://sashuphoto.com/events" target="_blank" className="carousel-heading">Mixer Photos</a>
             </div>
             <Slider {...sliderSettings}>
               {mixerPhotos.map((photo) => (
