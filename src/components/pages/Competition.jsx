@@ -60,18 +60,18 @@ const Competition = () => {
   ]
 
   const teams = [
-    { id: 1, src: ru, alt: "RU Natya" },
-    { id: 2, src: berkeley, alt: "Natya @ Berkeley" },
-    { id: 3, src: tamu, alt: "TAMU Sahithya" },
-    { id: 4, src: jhu, alt: "JHU Shakti" },
-    { id: 5, src: cornell, alt: "Cornell Anjali" },
+    { id: 1, src: ru, alt: "Natya @ Berkeley" },
+    { id: 2, src: berkeley, alt: "UGA Amara" },
+    { id: 3, src: tamu, alt: "Tufts Pulse" },
+    { id: 4, src: jhu, alt: "USCD Pushpanjali" },
+    { id: 5, src: cornell, alt: "Rice Rasikas" },
     { id: 6, src: ut, alt: "UT Nritya Sangam" },
     { id: 7, src: pitt, alt: "Pitt Nrityamala" },
-    { id: 8, src: gt, alt: "GT Pulse" }
+    { id: 8, src: gt, alt: "RPI Rudras" }
   ]
 
   const mediaTeam = [
-    { name: 'Sashu Prakash', role: 'Livestream/Videographer', src: sashu },
+    { name: 'Sashu Prakash', role: 'Technical Director', src: sashu },
     { name: 'Amrit Magesh', role: 'Videographer', src: amrit },
     { name: 'Siva Sottalu', role: 'Photographer', src: siva },
     { name: 'Sasi Bennuru', role: 'Photographer', src: surender }
