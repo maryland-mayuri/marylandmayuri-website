@@ -5,6 +5,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import "../../index.css"
 import "../../Competition.css"
 import video from '../../assets/video.mp4'
+
+
 import comp1 from '../../assets/carousel_images/comp-carousel1.png'
 import comp2 from '../../assets/carousel_images/comp-carousel2.png'
 import comp3 from '../../assets/carousel_images/comp-carousel3.png'
@@ -24,14 +26,14 @@ import amrit from '../../assets/media-team-amrit.jpg'
 
 import arrowIcon from '../../assets/arrow-icon-dark.png'
 
-import jhu from '../../assets/jhushakti.jpg'
+import uscd from '../../assets/logo.png'
 import pitt from '../../assets/pittnrityamala.jpg'
-import ru from '../../assets/runatya.jpg'
+import rpi from '../../assets/logo.png'
 import berkeley from '../../assets/natyaberkeley.jpg'
-import cornell from '../../assets/cornellanjali.jpg'
-import tamu from '../../assets/tamusahithya.jpg'
-import ut from '../../assets/nrityasangam.jpg'
-import gt from '../../assets/gtpulse.jpg'
+import rice from '../../assets/ricerasikas.jpg'
+import tufts from '../../assets/tuftspulse.jpg'
+import ut from '../../assets/logo.png'
+import uga from '../../assets/ugaamara.jpg'
 
 
 
@@ -60,14 +62,14 @@ const Competition = () => {
   ]
 
   const teams = [
-    { id: 1, src: ru, alt: "Natya @ Berkeley" },
-    { id: 2, src: berkeley, alt: "UGA Amara" },
-    { id: 3, src: tamu, alt: "Tufts Pulse" },
-    { id: 4, src: jhu, alt: "USCD Pushpanjali" },
-    { id: 5, src: cornell, alt: "Rice Rasikas" },
+    { id: 1, src: berkeley, alt: "Natya @ Berkeley" },
+    { id: 2, src: uga, alt: "UGA Amara" },
+    { id: 3, src: tufts, alt: "Tufts Pulse" },
+    { id: 4, src: uscd, alt: "USCD Pushpanjali" },
+    { id: 5, src: rice, alt: "Rice Rasikas" },
     { id: 6, src: ut, alt: "UT Nritya Sangam" },
     { id: 7, src: pitt, alt: "Pitt Nrityamala" },
-    { id: 8, src: gt, alt: "RPI Rudras" }
+    { id: 8, src: rpi, alt: "RPI Rudras" }
   ]
 
   const mediaTeam = [
