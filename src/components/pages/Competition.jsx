@@ -36,6 +36,9 @@ import ut from '../../assets/utnrityasangam.jpeg'
 import uga from '../../assets/ugaamara.jpg'
 
 
+import tempLogo from '../../assets/logo.png'
+
+
 
 
 
@@ -74,9 +77,8 @@ const Competition = () => {
 
   const mediaTeam = [
     { name: 'Sashu Prakash', role: 'Technical Director', src: sashu },
-    { name: 'Amrit Magesh', role: 'Videographer', src: amrit },
-    { name: 'Siva Sottalu', role: 'Photographer', src: siva },
-    { name: 'Sasi Bennuru', role: 'Photographer', src: surender }
+    { name: 'Pranav Pajjuri', role: '(Videographer + Livestream)', src: tempLogo },
+    { name: 'Ali Siddiqui', role: 'Photographer', src: tempLogo }
   ];
 
 
