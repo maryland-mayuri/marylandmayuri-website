@@ -28,7 +28,7 @@ import arrowIcon from '../../assets/arrow-icon-dark.png'
 
 import uscd from '../../assets/logo.png'
 import pitt from '../../assets/pittnrityamala.jpg'
-import rpi from '../../assets/rpirudras.png'
+import rpi from '../../assets/rpirudras.jpg'
 import berkeley from '../../assets/natyaberkeley.jpg'
 import rice from '../../assets/ricerasikas.jpg'
 import tufts from '../../assets/tuftspulse.jpg'
