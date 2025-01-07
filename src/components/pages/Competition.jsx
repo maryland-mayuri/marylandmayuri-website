@@ -28,11 +28,11 @@ import arrowIcon from '../../assets/arrow-icon-dark.png'
 
 import uscd from '../../assets/logo.png'
 import pitt from '../../assets/pittnrityamala.jpg'
-import rpi from '../../assets/logo.png'
+import rpi from '../../assets/rpirudras.png'
 import berkeley from '../../assets/natyaberkeley.jpg'
 import rice from '../../assets/ricerasikas.jpg'
 import tufts from '../../assets/tuftspulse.jpg'
-import ut from '../../assets/logo.png'
+import ut from '../../assets/utnrityasangam.jpeg'
 import uga from '../../assets/ugaamara.jpg'
 
 
