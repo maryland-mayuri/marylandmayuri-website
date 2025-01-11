@@ -2,14 +2,9 @@ import React from 'react'
 import '../../index.css'
 import '../../Sponsorship.css'
 
-import redbull from "../../assets/sponsor_images/redbull-logo.png";
-import celsius from "../../assets/sponsor_images/celsius-logo.png";
-import verb from "../../assets/sponsor_images/verb-logo.avif";
-import kates_real_food from "../../assets/sponsor_images/kates-logo.png";
-import herrs from "../../assets/sponsor_images/herrs-logo.png";
-import snom from "../../assets/sponsor_images/snom-logo.jpeg";
-import mezcla from "../../assets/sponsor_images/mezcla-logo.png";
+import biryanicitymd from "../../assets/sponsor_images/biryanicity-logo.jpeg";
 import subway from "../../assets/sponsor_images/subway-logo.png";
+import dominoes from "../../assets/sponsor_images/dominoes-logo.png"
 
 import placeholder from '../../assets/logo.png'
 
@@ -17,19 +12,19 @@ const Sponsorship = () => {
 
   const sponsors = [
     {
-      name: "TBD", description:
+      name: "Biryani City", description:
       "",
-      img: placeholder, link: "https://www.redbull.com/us-en/"
+      img: biryanicitymd, link: "https://biryanicitymd.com/"
     },
     {
-      name: "TBD", description:
+      name: "Subway", description:
       "",
-      img: placeholder, link: "https://www.celsius.com/"
+      img: subway, link: "https://www.subway.com/en-us"
     },
     {
-      name: "TBD", description:
+      name: "Dominoes", description:
       "",
-      img: placeholder, link: "https://verbenergy.co/"
+      img: dominoes, link: "https://www.dominos.com/en/"
     },
     {
       name: "TBD", description:
