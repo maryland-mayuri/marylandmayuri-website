@@ -5,6 +5,7 @@ import '../../Sponsorship.css'
 import biryanicitymd from "../../assets/sponsor_images/biryanicity-logo.jpeg";
 import subway from "../../assets/sponsor_images/subway-logo.png";
 import dominoes from "../../assets/sponsor_images/dominoes-logo.png"
+import vhpa from "../../assets/sponsor_images/vhpa.jpg"
 
 import placeholder from '../../assets/logo.png'
 
@@ -27,9 +28,9 @@ const Sponsorship = () => {
       img: dominoes, link: "https://www.dominos.com/en/"
     },
     {
-      name: "TBD", description:
+      name: "VHPA", description:
       "",
-      img: placeholder, link: "https://katesrealfood.com/"
+      img: vhpa, link: "https://dc.vhp-america.org/rjb/"
     },
     {
       name: "TBD", description:
@@ -41,12 +42,6 @@ const Sponsorship = () => {
       "",
       img: placeholder, link: "https://eatmezcla.com/"
     },
-    {
-      name: "TBD", description:
-      "",
-      img: placeholder, link: "https://subway.com/"
-    },
-
   ]
 
   return (
