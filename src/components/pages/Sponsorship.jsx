@@ -59,7 +59,7 @@ const Sponsorship = () => {
         <div className="sponsor-list">
           {sponsors.map((sponsor, index) => (
             <div key={index} className='sponsor-item'>
-              <img src={sponsor.img} alt={`${sponsor.name} logo`} />
+              <img loading="lazy" src={sponsor.img} alt={`${sponsor.name} logo`} />
               <div className="sponsor-item-content">
                 <h3>{sponsor.name}</h3>
                 {sponsor.description && (

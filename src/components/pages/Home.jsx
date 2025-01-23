@@ -171,7 +171,7 @@ const Home = () => {
           {boardMembers.map((member) => (
             <div key={member.name} className="member-card">
               <div className="member-image-container">
-                <img src={member.image} alt={member.name} className="member-image" />
+                <img src={member.image} alt={member.name} className="member-image" loading="lazy" />
               </div>
               <div className="member-info">
                 <h4 className="member-name">{member.name}</h4>
