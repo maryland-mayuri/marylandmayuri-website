@@ -26,14 +26,14 @@ import amrit from '../../assets/media-team-amrit.jpg'
 
 import arrowIcon from '../../assets/arrow-icon-dark.png'
 
-import uscd from '../../assets/team_photos/ucsdpushpanjali.png'
+import uscd from '../../assets/team_photos/ucsdpushpanjali.jpg'
 import pitt from '../../assets/team_photos/pittnrityamala.jpg'
 import rpi from '../../assets/team_photos/rpirudras.jpg'
 import berkeley from '../../assets/team_photos/natyaberkeley.jpg'
 import rice from '../../assets/team_photos/ricerasikas.jpg'
 import tufts from '../../assets/team_photos/tuftspulse.jpg'
 import ut from '../../assets/team_photos/utnrityasangam.jpeg'
-import uga from '../../assets/team_photos/ugaamara.jpg'
+import uga from '../../assets/team_photos/ugaamara.jpeg'
 
 
 import tempLogo from '../../assets/logo.png'
