@@ -2,16 +2,29 @@ import React from 'react'
 import '../../index.css'
 import '../../Sponsorship.css'
 
+import vhpa from "../../assets/sponsor_images/vhpa.jpg"
+import herrs from "../../assets/sponsor_images/herrs-logo.png"
 import biryanicitymd from "../../assets/sponsor_images/biryanicity-logo.jpeg";
 import subway from "../../assets/sponsor_images/subway-logo.png";
-import dominoes from "../../assets/sponsor_images/dominoes-logo.png"
-import vhpa from "../../assets/sponsor_images/vhpa.jpg"
+import bakerly from "../../assets/sponsor_images/bakerly-logo.jpeg"
+import redbull from "../../assets/sponsor_images/redbull-logo.png"
+import dominoes from "../../assets/sponsor_images/dominoes-logo.png" 
 
 import placeholder from '../../assets/logo.png'
 
 const Sponsorship = () => {
 
   const sponsors = [
+    {
+      name: "VHPA", description:
+      "",
+      img: vhpa, link: "https://dc.vhp-america.org/rjb/"
+    },
+    {
+      name: "Herrs", description:
+      "",
+      img: herrs, link: "https://www.herrs.com/"
+    },
     {
       name: "Biryani City", description:
       "",
@@ -23,24 +36,14 @@ const Sponsorship = () => {
       img: subway, link: "https://www.subway.com/en-us"
     },
     {
-      name: "Dominoes", description:
+      name: "Bakerly", description:
       "",
-      img: dominoes, link: "https://www.dominos.com/en/"
+      img: bakerly, link: "https://bakerly.com/?tw_source=google&tw_adid=614464093190&tw_campaign=17940401900&gad_source=1&gclid=Cj0KCQiAy8K8BhCZARIsAKJ8sfSyWEn09d-T7769Tydyk2YFb6Z_ljO3arYu_N8GUYLfTuvmDqvF4joaArVCEALw_wcB"
     },
     {
-      name: "VHPA", description:
+      name: "Redbull", description:
       "",
-      img: vhpa, link: "https://dc.vhp-america.org/rjb/"
-    },
-    {
-      name: "TBD", description:
-      "",
-      img: placeholder, link: "https://www.herrs.com/"
-    },
-    {
-      name: "TBD", description:
-      "",
-      img: placeholder, link: "https://eatmezcla.com/"
+      img: redbull, link: "https://www.redbull.com/us-en"
     },
   ]
 
