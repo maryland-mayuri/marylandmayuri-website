@@ -17,32 +17,27 @@ const Sponsorship = () => {
   const sponsors = [
     {
       name: "VHPA", description:
-      "",
+      "An organization dedicated to promoting Hindu values, unity, and awareness while fostering harmony and respect among all. Its mission includes raising awareness, serving communities, teaching Hindu heritage, and building global networks. Guided by Vedic principles of unity and inclusivity, it aims to educate future generations, advocate for Hindu interests, dispel misconceptions, and provide aid to those in need. It envisions a strong, prosperous, and spiritually enriched society.",
       img: vhpa, link: "https://dc.vhp-america.org/rjb/"
     },
     {
       name: "Herrs", description:
-      "",
+      "Herr's Chips, a leading snack brand, crafts a diverse range of delicious potato chips and snacks. Known for their quality and variety, Herr's offers flavors that cater to every palate. With a commitment to delivering crunchy satisfaction, Herr's continues to be a go-to choice for snack enthusiasts seeking premium taste experiences.",
       img: herrs, link: "https://www.herrs.com/"
     },
     {
       name: "Biryani City", description:
-      "",
+      "Located in North Bethesda, MD, Biryani City brings the authentic taste of India to your table, blending rich spices, fresh ingredients, and traditional cooking techniques. Every dish tells a story of heritage and passion, offering a culinary experience that warms the heart and satisfies the soul. Whether you're savoring a flavorful biryani or indulging in classic Indian delicacies, Biryani City is your destination for a truly delightful dining experience.",
       img: biryanicitymd, link: "https://biryanicitymd.com/"
     },
     {
       name: "Subway", description:
-      "",
+      "The Subway in College Park, MD, a part of a global fast-food franchise, offers a diverse menu of customizable sandwiches and salads. Known for its fresh ingredients and quick service, Subway allows customers to build their sandwiches to suit personal preferences. With a commitment to healthier options, Subway continues to be a popular choice for on-the-go dining worldwide.",
       img: subway, link: "https://www.subway.com/en-us"
     },
     {
-      name: "Bakerly", description:
-      "",
-      img: bakerly, link: "https://bakerly.com/?tw_source=google&tw_adid=614464093190&tw_campaign=17940401900&gad_source=1&gclid=Cj0KCQiAy8K8BhCZARIsAKJ8sfSyWEn09d-T7769Tydyk2YFb6Z_ljO3arYu_N8GUYLfTuvmDqvF4joaArVCEALw_wcB"
-    },
-    {
       name: "Redbull", description:
-      "",
+      "Red Bull, an iconic energy drink brand, energizes consumers with its unique blend of caffeine, taurine, and B-vitamins. Renowned for its invigorating effects, Red Bull provides a boost in physical and mental performance. With a distinct flavor and vibrant marketing, it has become a symbol of energy and vitality globally.",
       img: redbull, link: "https://www.redbull.com/us-en"
     },
   ]

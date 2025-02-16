@@ -19,10 +19,8 @@ import mixer2 from '../../assets/carousel_images/mixer-photos2.jpeg'
 import mixer3 from '../../assets/carousel_images/mixer-photos3.jpeg'
 
 
-import siva from '../../assets/media-team-siva.jpg'
-import surender from '../../assets/media-team-surender.jpg'
-import sashu from '../../assets/media-team-sashu.jpg'
-import amrit from '../../assets/media-team-amrit.jpg'
+import ali from '../../assets/media-team-ali.jpeg'
+import pranav from '../../assets/media-team-pranav.jpg'
 
 import arrowIcon from '../../assets/arrow-icon-dark.png'
 
@@ -76,9 +74,8 @@ const Competition = () => {
   ]
 
   const mediaTeam = [
-    { name: 'Sashu Prakash', role: 'Technical Director', src: sashu },
-    { name: 'Pranav Pajjuri', role: '(Videographer + Livestream)', src: tempLogo },
-    { name: 'Ali Siddiqui', role: 'Photographer', src: tempLogo }
+    { name: 'Pranav Pajjuri', role: '(Videographer + Livestream)', src: pranav },
+    { name: 'Ali Siddiqui', role: 'Photographer', src: ali }
   ];
 
 
@@ -149,7 +146,7 @@ const Competition = () => {
               <p>12401 Dalewood Dr, Silver Spring, MD 20906</p>
               <p>Doors Open: 4:30 PM</p>
               <button className="ticket-button">
-                <a className="ticket-link" href="https://your-ticket-link.com" target="_blank" rel="noopener noreferrer">Buy Event Tickets</a>
+                <a className="ticket-link" href="https://www.ticketleap.events/tickets/maryland-mayuri/maryland-mayuri-2025" target="_blank" rel="noopener noreferrer">Buy Event Tickets</a>
               </button>
             </div>
 
@@ -159,7 +156,7 @@ const Competition = () => {
               <p>Address: To be announced</p>
               <p>Time: To be announced</p>
               <button className="ticket-button">
-                <a className="ticket-link" href="https://your-afterparty-ticket-link.com" target="_blank" rel="noopener noreferrer">Buy Afterparty Tickets</a>
+                <a className="ticket-link" href="https://www.eventbrite.com/e/mayuri-afterparty-2025-presented-by-nitesout-maryland-mayuri-tickets-1238651151939" target="_blank" rel="noopener noreferrer">Buy Afterparty Tickets</a>
               </button>
             </div>
           </div>
