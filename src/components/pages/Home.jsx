@@ -86,8 +86,8 @@ const Home = () => {
     { name: "Aditya Patel", position: "Director", image: aditya_p },
 
 
-    { name: "Suhan Neema", position: "Event Ops", image: suhan_n },    
-    { name: "Rushina Patel", position: "Event Ops", image: rushina_p },
+    { name: "Suhan Neema", position: "Event Operations", image: suhan_n },    
+    { name: "Rushina Patel", position: "Event Operations", image: rushina_p },
 
     { name: "Pranav Palle", position: "Registration", image: pranav_p },
     { name: "Bharvi Patel", position: "Registration", image: bhavri_p },
@@ -114,9 +114,9 @@ const Home = () => {
     { name: "Manvi Kalachagari", position: "Liaison Head", image: manvi_k },
     { name: "Paridhi Parekh", position: "Liaison Head", image: paridhi_p },
 
-    { name: "Jiya Amin", position: "Social Chair", image: jiya_a },
-    { name: "Ishaan Desai", position: "Social Chair", image: ishaan_d },
-    { name: "Khushi Patel", position: "Social Chair", image: khushi_p },
+    { name: "Jiya Amin", position: "Social", image: jiya_a },
+    { name: "Ishaan Desai", position: "Social", image: ishaan_d },
+    { name: "Khushi Patel", position: "Social", image: khushi_p },
 
     { name: "Sanya Gupta", position: "Mixer", image: sanya_g },
     { name: "Sahana Subbanna", position: "Mixer", image: sahana_s },
