@@ -106,13 +106,15 @@
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(1, 50, 34, 0.2), /* Dark green shadow */
     0 0 0 5px rgba(4, 98, 0, 0.1); /* Light green highlight */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
 }
 
 .section-image:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(1, 50, 34, 0.3),
-                0 0 0 8px rgba(4, 98, 0, 0.2);
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(1, 50, 34, 0.25),
+                0 0 0 6px rgba(4, 98, 0, 0.15);
 }
 
 .section-container.reverse {
@@ -220,15 +222,16 @@
 .member-card {
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 8px;
+    will-change: transform;
 }
 
 .member-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(47, 232, 50, 0.2); /* Dark green shadow */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(47, 232, 50, 0.15);
     background-color: #e9ede3;
-
 }
 
 .member-image-container {
