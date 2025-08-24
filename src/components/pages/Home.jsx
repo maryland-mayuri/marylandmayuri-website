@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../index.css'
 import '../../Home.css'
 import home_page_image from '../../assets/home-page-image.jpg'
+import Confetti from '../Confetti'
 
 // Directors
 import pratiksha_d from '../../assets/board_member_pictures/pratiksha_d.jpg'
@@ -75,9 +76,19 @@ import homepage_image from "../../assets/homepage-image.jpg"
 
 
 const Home = () => {
+  const [showConfetti, setShowConfetti] = useState(false);
+
   const handleSmoothScroll = () => {
     const bottomSection = document.querySelector('.bottom-section');
     bottomSection.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const handlePranavClick = () => {
+    setShowConfetti(true);
+  }
+
+  const handleConfettiComplete = () => {
+    setShowConfetti(false);
   }
 
   const boardMembers = [
@@ -138,6 +149,7 @@ const Home = () => {
 
   return (
     <div className='homepage-main-container'>
+      <Confetti isActive={showConfetti} onComplete={handleConfettiComplete} />
       <div className='home-container'
             style={{'--homepage-image': `url(${homepage_image})`}}
       >
@@ -185,7 +197,14 @@ const Home = () => {
           {boardMembers.map((member) => (
             <div key={member.name} className="member-card">
               <div className="member-image-container">
-                <img src={member.image} alt={member.name} className="member-image" loading="lazy" />
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  className="member-image" 
+                  loading="lazy"
+                  onClick={member.name === "Pranav Palle" ? handlePranavClick : undefined}
+                  style={member.name === "Pranav Palle" ? { cursor: 'pointer' } : {}}
+                />
               </div>
               <div className="member-info">
                 <h4 className="member-name">{member.name}</h4>
