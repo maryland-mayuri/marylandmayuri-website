@@ -1,5 +1,5 @@
 .main-footer {
-    background-color: #013222; /* Darkest green for footer */
+    background-color: #1d1d1d; /* Darkest red for footer */
     color: #F6F7F2; /* Lightest gray for footer text */
     padding: 3em 0;
     width: 100%;
@@ -15,8 +15,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(230,237,224,0.05) 25%, transparent 25%, transparent 75%, rgba(230,237,224,0.05) 75%, rgba(230,237,224,0.05)), 
-                linear-gradient(45deg, rgba(230,237,224,0.05) 25%, transparent 25%, transparent 75%, rgba(230,237,224,0.05) 75%, rgba(230,237,224,0.05));
+    background: linear-gradient(45deg, rgba(237, 224, 224, 0.05) 25%, transparent 25%, transparent 75%, rgba(230,237,224,0.05) 75%, rgba(230,237,224,0.05)), 
+                linear-gradient(45deg, rgba(237, 224, 224, 0.05) 25%, transparent 25%, transparent 75%, rgba(230,237,224,0.05) 75%, rgba(230,237,224,0.05));
     background-size: 60px 60px;
     background-position: 0 0, 30px 30px;
     opacity: 0.1;

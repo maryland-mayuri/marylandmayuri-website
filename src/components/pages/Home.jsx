@@ -73,6 +73,8 @@ import snom from "../../assets/sponsor_images/snom-logo.jpeg";
 import classical_image from "../../assets/classical-image.jpeg"
 import homepage_image from "../../assets/homepage-image.jpg"
 
+import garba_1 from "../../assets/garba_tickets/garba-tickets-1.png"
+import garba_2 from "../../assets/garba_tickets/garba-tickets-2.png"
 
 
 const Home = () => {
@@ -155,6 +157,11 @@ const Home = () => {
       >
         <div className='heading-container'>
           <h1 className='homepage-heading'>Maryland Mayuri</h1>
+          <a href="https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-garba" target="_blank" className='tickets'>
+          <img src={garba_1} height={175} className="ticket1" 
+          onMouseOver={e => (e.currentTarget.src=garba_2) (e.currentTarget.height=250)} 
+          onMouseOut={e => (e.currentTarget.src=garba_1) (e.currentTarget.height=175)}/>
+          </a>
         </div>
       </div>
 
@@ -174,10 +181,10 @@ const Home = () => {
       </div>
 
       <div className="section-container reverse">
-        <div className="section-content-wrapper">
+        <div className="section-content-wrapper" id="classical-wrapper">
           <div className="section-content">
-            <h1 className="section-heading">Classical Dance</h1>
-            <p className="section-text">
+            <h1 className="section-heading" id="classical-heading">Classical Dance</h1>
+            <p className="section-text" id="classical-text">
               Classical Indian dance is a timeless art form, deeply rooted in Indian culture for thousands of years.
               It's a captivating blend of storytelling, music, and drama. India boasts eight distinct classical dance forms,
               each with its unique style and technique. Among the most renowned are Bharatanatyam, Kathak, Odissi, and Kuchipudi,
