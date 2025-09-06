@@ -67,7 +67,7 @@ const Navbar = () => {
                     onMouseLeave={() => !isMobile && setOpenDropdowns(prev => ({ ...prev, mayuri: false }))}
                     onClick={() => handleDropdown('mayuri')}>
                     <div className="nav-link">
-                        Mayuri 2024 <img src={arrowIcon} alt="Dropdown" className="dropdown-arrow" />
+                        Mayuri 2025 <img src={arrowIcon} alt="Dropdown" className="dropdown-arrow" />
                     </div>
                     <div className={`dropdown ${openDropdowns['mayuri'] ? 'open' : ''}`}>
                         <HashLink smooth to="/competition/#competition" onClick={handleLinkClick}>Competition</HashLink>
