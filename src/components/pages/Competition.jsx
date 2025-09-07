@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -23,6 +23,7 @@ import ali from '../../assets/media-team-ali.jpeg'
 import pranav from '../../assets/media-team-pranav.jpg'
 
 import arrowIcon from '../../assets/arrow-icon-dark.png'
+import tuxClipart from '../../assets/real-tux-clipart.png'
 
 import uscd from '../../assets/team_photos/ucsdpushpanjali.jpg'
 import pitt from '../../assets/team_photos/pittnrityamala.jpg'
@@ -45,6 +46,11 @@ const Competition = () => {
   const [activeTab, setActiveTab] = useState('event');
   const [activeTeam, setActiveTeam] = useState(null);
 
+  // Password protection state
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const correctPassword = "iruyam2026"; // Change this to your desired password
 
   const competitionPhotos = [
     { id: 1, src: comp1, alt: 'Comp 1' },
@@ -129,6 +135,122 @@ const Competition = () => {
       }
     ]
   };
+
+  // Typewriter effect for TOP SECRET
+  const topSecretText = "TOP SECRET";
+  const [typedText, setTypedText] = useState("");
+  const [showTux, setShowTux] = useState(false);
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setTypedText(topSecretText.slice(0, i + 1));
+      i++;
+      if (i === topSecretText.length) {
+        clearInterval(interval);
+        setTimeout(() => setShowTux(true), 300); // Show tux after a short delay
+      }
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Animation for input, button, and info text
+  const [showLockUI, setShowLockUI] = useState(false);
+  useEffect(() => {
+    if (showTux) {
+      const timer = setTimeout(() => setShowLockUI(true), 500);
+      return () => clearTimeout(timer);
+    }
+  }, [showTux]);
+
+  if (!isUnlocked) {
+    return (
+      <div className="password-lock-screen" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'flex-start', // Move content up
+        minHeight: '100vh',
+        background: '#000',
+        paddingTop: '10rem', // Add some top padding
+      }}>
+        <h1 style={{
+          fontFamily: 'Cinzel, serif',
+          fontWeight: 900,
+          fontSize: '3rem',
+          letterSpacing: '0.25em',
+          color: 'gold',
+          textShadow: '2px 2px 8px #222, 0 0 10px #bfa76f',
+          marginBottom: '1.5rem',
+          textAlign: 'center',
+          textTransform: 'uppercase',
+          minHeight: '3.5rem',
+        }}>{typedText}<span style={{color: 'gold', fontWeight: 1000}}>{typedText.length < topSecretText.length ? '|' : ''}</span></h1>
+        <div style={{
+          opacity: showTux ? 1 : 0,
+          transform: showTux ? 'translateY(0)' : 'translateY(80px)',
+          transition: 'opacity 1.2s ease, transform 1.2s ease',
+          display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginBottom: '1rem',
+        }}>
+          <img src={tuxClipart} alt="Tuxedo" style={{maxWidth: '150px', margin: '0 auto', display: 'block'}} />
+        </div>
+        <div style={{
+          opacity: showLockUI ? 1 : 0,
+          transform: showLockUI ? 'translateY(0)' : 'translateY(80px)',
+          transition: 'opacity 1.2s ease, transform 1.2s ease',
+          display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%',
+        }}>
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: '320px', marginLeft: '32px'}}>
+            <input
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              placeholder="Enter password"
+              style={{
+                padding: '0.5rem 1rem',
+                fontSize: '1.1rem',
+                border: '2px solid #fff',
+                marginBottom: '0.5rem',
+                background: '#000',
+                color: '#fff',
+                outline: 'none',
+                borderRadius: '0',
+                marginRight: '0.5rem',
+                textIndent: '0rem',
+              }}
+            />
+            <button
+              style={{
+                padding: '0.5rem',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                marginBottom: '0.5rem',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+              onClick={() => {
+                if (password === correctPassword) {
+                  setIsUnlocked(true);
+                  setError("");
+                } else {
+                  setError("Incorrect password. Please try again.");
+                }
+              }}
+              aria-label="Unlock"
+            >
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 8L20 16L12 24" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <div style={{color: '#fff', padding: '0.5rem 1rem', borderRadius: '8px', fontSize: '1rem', textAlign: 'center', maxWidth: '100%', marginBottom: '0.5rem', marginTop: '0.5rem'}}>
+            Get access to exclusive content when you <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNVcHH7_mt0wBPsFWyEht6PUsphzsUyqsLyXYIha3BSzw4qA/viewform" style={{color: '#fff'}} target='_blank'> join our e board...</a>
+          </div>
+        </div>
+        {error && <div style={{color: 'red', marginTop: '1rem'}}>{error}</div>}
+      </div>
+    );
+  }
 
   return (
     <div className='competition-container'>
