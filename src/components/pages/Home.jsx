@@ -26,11 +26,17 @@ import bhavri_p from '../../assets/board_member_pictures/BharviPatel_Headshot.jp
 // Hospitality
 import apurva_h from '../../assets/board_member_pictures/person_placeholder.jpg'
 import azraa_a  from '../../assets/board_member_pictures/Azraa Abdoul- Headshot.jpg' 
+import harshita_d from '../../assets/board_member_pictures/Harshita-Dasot-prof.jpg'
+import isabelle_g from '../../assets/board_member_pictures/Isabelle-George-prof.jpeg'
 
 // Technology
 import saanvi_v from '../../assets/board_member_pictures/Saanvi_Verma_headshot.jpg'
 import disha_t from '../../assets/board_member_pictures/disha_t.jpg'
-import shivank_b from '../../assets/board_member_pictures/shivank-bhimavarapu-headshot.jpeg'
+import shivank_b from '../../assets/board_member_pictures/Shivank-B-prof.jpeg'
+import ashar_s from '../../assets/board_member_pictures/Ashar-Siddiqui-prof.JPEG'
+
+// Arnav
+import arnav_p from '../../assets/board_member_pictures/Arnav-Patel-prof.jpeg'
 
 
 // Judging
@@ -48,6 +54,7 @@ import tanisha_s from  '../../assets/board_member_pictures/tanisha shah.jpg'
 // Public Relations
 import manasa_c from  '../../assets/board_member_pictures/ManasaChekuri_headshot_.jpg'
 import simran_k from  '../../assets/board_member_pictures/Simran Kumar Headshot.jpg'
+import nidhi_p from  '../../assets/board_member_pictures/Nidhi-Patel-prof.jpeg'
 
 
 
@@ -65,7 +72,8 @@ import khushi_p from '../../assets/board_member_pictures/KhushiPatel_Headshot.jp
 // Mixer
 import sahana_s from '../../assets/board_member_pictures/SahanaSHeadshot.jpg'
 import sanya_g from '../../assets/board_member_pictures/Sanya_Gupta.jpg'
-
+import rayan_s from '../../assets/board_member_pictures/Rayan-Shah-prof.jpeg'
+import sania_m from '../../assets/board_member_pictures/Sania-Manyem-prof.png'
 
 import tba from '../../assets/board_member_pictures/person_placeholder.jpg'
 
@@ -107,11 +115,21 @@ const Home = () => {
     { name: "Giridhar Sawhney", position: "Registration", image: giridhar_s },
 
     { name: "Azraa Abdoul", position: "Hospitality", image: azraa_a },
+    { name: "Harshita Dasot", position: "Hospitality", image: harshita_d },
+    { name: "Isabella George", position: "Hospitality", image: isabelle_g },
     { name: "Apurva Hari", position: "Hospitality", image: apurva_h },
 
     { name: "Shivank Bhimavarapu", position: "Technology", image: shivank_b },
+    { name: "Ashar Siddiqui", position: "Technology", image: ashar_s },
     { name: "Disha Tulsyan", position: "Technology", image: disha_t },
     { name: "Saanvi Verma", position: "Technology", image: saanvi_v },
+
+    { name: "Arnav Patel", position: "Technology / Public Relations", image: arnav_p },
+
+    { name: "Manasa Chekuri", position: "Public Relations", image: manasa_c },
+    { name: "Simran Kumar", position: "Public Relations", image: simran_k },
+    { name: "Nidhi Patel", position: "Public Relations", image: nidhi_p },
+    
 
     { name: "Mahathi Chintapalli", position: "Judging", image: mahathi_c },
     { name: "Srinidhi Gubba", position: "Judging", image: srinidhi_g },
@@ -121,8 +139,7 @@ const Home = () => {
     { name: "Tanisha Shah", position: "Sponsorship", image: tanisha_s },
     { name: "Sachin Thapar", position: "Sponsorship", image: sachin_t },
 
-    { name: "Manasa Chekuri", position: "Public Relations", image: manasa_c },
-    { name: "Simran Kumar", position: "Public Relations", image: simran_k },
+
 
     { name: "Manvi Kalachagari", position: "Liaison Head", image: manvi_k },
     { name: "Paridhi Parekh", position: "Liaison Head", image: paridhi_p },
@@ -132,6 +149,8 @@ const Home = () => {
     { name: "Khushi Patel", position: "Social", image: khushi_p },
 
     { name: "Sanya Gupta", position: "Mixer", image: sanya_g },
+    { name: "Sania Manyem", position: "Mixer", image: sania_m },
+    { name: "Rayan Shah", position: "Mixer", image: rayan_s },
     { name: "Sahana Subbanna", position: "Mixer", image: sahana_s },
 
   ];
