@@ -176,11 +176,11 @@ const Home = () => {
       >
         <div className='heading-container'>
           <h1 className='homepage-heading'>Maryland Mayuri</h1>
-          <a href="https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-garba" target="_blank" className='tickets'>
+          {/* <a href="https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-garba" target="_blank" className='tickets'>
           <img src={garba_1} height={175} className="ticket1" 
           onMouseOver={e => (e.currentTarget.src=garba_2) (e.currentTarget.height=250)} 
           onMouseOut={e => (e.currentTarget.src=garba_1) (e.currentTarget.height=175)}/>
-          </a>
+          </a> */}
         </div>
       </div>
 
@@ -190,7 +190,7 @@ const Home = () => {
           <div className="section-content">
             <h1 className="section-heading">Who We Are</h1>
             <p className="section-text">
-              Founded in 2013, Maryland Mayuri is Maryland's premier intercollegiate classical Indian dance competition.
+              Founded in 2013, Maryland Mayuri is Maryland&apos;s premier intercollegiate classical Indian dance competition.
               As a registered 501(c)(3) organization, we are dedicated to promoting the art of classical Indian dance.
               Mayuri is proudly hosted and run by passionate students at the University of Maryland, College Park.
             </p>
@@ -205,7 +205,7 @@ const Home = () => {
             <h1 className="section-heading" id="classical-heading">Classical Dance</h1>
             <p className="section-text" id="classical-text">
               Classical Indian dance is a timeless art form, deeply rooted in Indian culture for thousands of years.
-              It's a captivating blend of storytelling, music, and drama. India boasts eight distinct classical dance forms,
+              It&apos;s a captivating blend of storytelling, music, and drama. India boasts eight distinct classical dance forms,
               each with its unique style and technique. Among the most renowned are Bharatanatyam, Kathak, Odissi, and Kuchipudi,
               each telling stories of tradition, mythology, and emotion through graceful movements and expressive gestures.
             </p>

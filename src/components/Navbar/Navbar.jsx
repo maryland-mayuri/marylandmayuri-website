@@ -52,12 +52,11 @@ const Navbar = () => {
                     onMouseEnter={() => !isMobile && setOpenDropdowns(prev => ({ ...prev, about: true }))}
                     onMouseLeave={() => !isMobile && setOpenDropdowns(prev => ({ ...prev, about: false }))}
                     onClick={() => handleDropdown('about')}>
-
-                    <div className="nav-link">
-                        About <img src={arrowIcon} alt="Dropdown" className="dropdown-arrow" />
-                    </div>
+                    <HashLink smooth to="/" onClick={handleLinkClick} className='nav-link'>
+                        About <img src={arrowIcon} alt="Dropdown" className="dropdown-arrow"/>
+                    </HashLink>
                     <div className={`dropdown ${openDropdowns['about'] ? 'open' : ''}`}>
-                    <HashLink smooth to="/#about-us" onClick={handleLinkClick}>About Us</HashLink>
+                        <HashLink smooth to="/#about-us" onClick={handleLinkClick}>About Us</HashLink>
                         <HashLink smooth to="/#board" onClick={handleLinkClick}>Board</HashLink>
                         <HashLink smooth to="/#philanthropy" onClick={handleLinkClick}>Philanthropy</HashLink>
                     </div>
@@ -66,8 +65,8 @@ const Navbar = () => {
                     onMouseEnter={() => !isMobile && setOpenDropdowns(prev => ({ ...prev, mayuri: true }))}
                     onMouseLeave={() => !isMobile && setOpenDropdowns(prev => ({ ...prev, mayuri: false }))}
                     onClick={() => handleDropdown('mayuri')}>
-                    <HashLink smooth to="/competition/#competition" onClick={handleLinkClick} style={{display: 'flex', alignItems: 'center', textDecoration: "none", color: "#fff"}}>
-                        Mayuri 2026 <img src={arrowIcon} alt="Dropdown" className="dropdown-arrow" />
+                    <HashLink smooth to="/competition/#competition" onClick={handleLinkClick} className='nav-link'>
+                        Mayuri 2026 <img src={arrowIcon} alt="Dropdown" className="dropdown-arrow"/>
                     </HashLink>
                     <div className={`dropdown ${openDropdowns['mayuri'] ? 'open' : ''}`}>
                         <HashLink smooth to="/competition/#competition" onClick={handleLinkClick}>Competition</HashLink>
