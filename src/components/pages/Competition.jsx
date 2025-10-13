@@ -205,6 +205,16 @@ const Competition = () => {
               value={password}
               onChange={e => setPassword(e.target.value)}
               placeholder="Enter password"
+              onKeyDown={e => {
+                if (e.key === 'Enter') {
+                  if (password === correctPassword) {
+                    setIsUnlocked(true);
+                    setError("");
+                  } else {
+                    setError("Incorrect password. Please try again.");
+                  }
+                }
+              }}
               style={{
                 padding: '0.5rem 1rem',
                 fontSize: '1.1rem',
