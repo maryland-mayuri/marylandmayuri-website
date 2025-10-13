@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import '../../index.css'
 import '../../Home.css'
 import home_page_image from '../../assets/home-page-image.jpg'
@@ -81,12 +84,38 @@ import snom from "../../assets/sponsor_images/snom-logo.jpeg";
 import classical_image from "../../assets/classical-image.jpeg"
 import homepage_image from "../../assets/homepage-image.jpg"
 
-import garba_1 from "../../assets/garba_tickets/garba-tickets-1.png"
-import garba_2 from "../../assets/garba_tickets/garba-tickets-2.png"
+// Garba Slides
+import garba_slide_1 from "../../assets/garba_slides_pics/garba_slide_1.JPG"
+import garba_slide_2 from "../../assets/garba_slides_pics/garba_slide_2.JPG"
+import garba_slide_3 from "../../assets/garba_slides_pics/garba_slide_3.JPG"
+import garba_slide_4 from "../../assets/garba_slides_pics/garba_slide_4.JPG"
+import garba_slide_5 from "../../assets/garba_slides_pics/garba_slide_5.JPG"
+import garba_slide_6 from "../../assets/garba_slides_pics/garba_slide_6.JPG"
+
 
 
 const Home = () => {
   const [showConfetti, setShowConfetti] = useState(false);
+
+  const garbaPhotos = [
+    { id: 1, src: garba_slide_1, alt: 'Garba 1' },
+    { id: 2, src: garba_slide_2, alt: 'Garba 2' },
+    { id: 3, src: garba_slide_3, alt: 'Garba 3' },
+    { id: 4, src: garba_slide_4, alt: 'Garba 4' },
+    { id: 5, src: garba_slide_5, alt: 'Garba 5' },
+    { id: 6, src: garba_slide_6, alt: 'Garba 6' }
+  ];
+
+  const carouselSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true
+  };
 
   const handleSmoothScroll = () => {
     const bottomSection = document.querySelector('.bottom-section');
@@ -184,6 +213,115 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Diwali Event Section */}
+      <div className="diwali-event-section" style={{
+        backgroundColor: '#001f3f',
+        padding: '100px 20px',
+        minHeight: '700px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <h1 style={{
+          fontFamily: '"Courier New", Courier, monospace',
+          fontSize: '4rem',
+          color: '#ffffff',
+          fontWeight: 'normal',
+          textAlign: 'center',
+          marginBottom: '40px',
+          letterSpacing: '0.05em'
+        }}>
+          OVER <span style={{ fontWeight: 'bold' }}>500</span> TICKETS SOLD AT GARBA!
+        </h1>
+
+        {/* Two content bubbles */}
+        <div style={{ display: 'flex', gap: '40px', maxWidth: '1200px', width: '100%', flexWrap: 'wrap', justifyContent: 'center' }}>
+          {/* Garba Thank You Bubble */}
+          <div style={{
+            flex: '1',
+            minWidth: '300px',
+            backgroundColor: '#f2e4e8',
+            borderRadius: '15px',
+            boxShadow: '0 10px 20px rgba(102, 15, 48, 0.2)',
+            padding: '40px 30px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}>
+            <div style={{ textAlign: 'center' }}>
+              <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '20px', color: '#210101' }}>
+                Thank You!
+              </h2>
+              <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#210101' }}>
+                Thank you to everyone who came out to Garba! With over 500 tickets sold, 
+                it was an incredible celebration of culture, music, and community. We couldn't have 
+                done it without your amazing energy and support!
+              </p>
+            </div>
+          </div>
+
+          {/* Diwali Event Promotion Bubble */}
+          <div style={{
+            flex: '1',
+            minWidth: '300px',
+            backgroundColor: '#e5e4f2',
+            borderRadius: '15px',
+            boxShadow: '0 10px 20px rgba(48, 15, 102, 0.2)',
+            padding: '40px 30px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}>
+            <div style={{ textAlign: 'center' }}>
+              <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '20px', color: '#010221' }}>
+                And If You Liked Garba...
+              </h2>
+              <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#010221' }}>
+                You'll LOVE what we're hosting for <a target="_blank" href='https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-diwali-formal?fbclid=PAZXh0bgNhZW0CMTEAAafl-3DgA0pCD5_FIWuY8dHaazy2vDctYtgcOGrvTLMoKHboqLxs3AgwhgYiKg_aem_0MUfEmcGgb8bvMop6m34eg'>Diwali!</a> Join us in the Stamp Grand Ballroom
+                on October 25th for an evening filled with 
+                lights, laughter, and festive joy. 
+                You won't want to miss this spectacular celebration!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Garba Photos Carousel */}
+        <div style={{ 
+          width: '100%', 
+          maxWidth: '900px', 
+          marginTop: '60px',
+          padding: '0 20px'
+        }}>
+          <Slider {...carouselSettings}>
+            {garbaPhotos.map((photo) => (
+              <div key={photo.id}>
+                <img 
+                  src={photo.src} 
+                  alt={photo.alt}
+                  style={{
+                    width: '100%',
+                    height: '500px',
+                    objectFit: 'cover',
+                    borderRadius: '15px'
+                  }}
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
+
+        {/* Photo Link Text */}
+        <div style={{
+          marginTop: '30px',
+          textAlign: 'center',
+          fontSize: '1.2rem',
+          color: '#ffffff'
+        }}>
+          Check out your photos <a target="_blank" href="https://photos.google.com/share/AF1QipOxFzH4aWTXFUk1mNei_uCj9gy-Zvc2gMUemLkX5YfMTEtrssfcOPuMIzeUwcXESg?key=Y25wR0wwQ3VGMjNfZlI0aXZyRUR4NWNac1RxS0ZR" style={{ color: '#ffd700', textDecoration: 'underline' }}>here!</a>
+        </div>
+      </div>
 
       <div id="about-us" className="section-container">
         <div className="section-content-wrapper">
