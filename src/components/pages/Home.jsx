@@ -29,7 +29,7 @@ import bhavri_p from '../../assets/board_member_pictures/BharviPatel_Headshot.jp
 // Hospitality
 import apurva_h from '../../assets/board_member_pictures/person_placeholder.jpg'
 import azraa_a  from '../../assets/board_member_pictures/Azraa Abdoul- Headshot.jpg' 
-import harshita_d from '../../assets/board_member_pictures/Harshita-Dasot-prof.jpg'
+import amos_s from '../../assets/board_member_pictures/amos_s_prof.jpg'
 import isabelle_g from '../../assets/board_member_pictures/Isabelle-George-prof.jpeg'
 
 // Technology
@@ -144,7 +144,7 @@ const Home = () => {
     { name: "Giridhar Sawhney", position: "Registration", image: giridhar_s },
 
     { name: "Azraa Abdoul", position: "Hospitality", image: azraa_a },
-    { name: "Harshita Dasot", position: "Hospitality", image: harshita_d },
+    { name: "Amos Saudager", position: "Hospitality", image: amos_s },
     { name: "Isabella George", position: "Hospitality", image: isabelle_g },
     { name: "Apurva Hari", position: "Hospitality", image: apurva_h },
 
@@ -302,9 +302,11 @@ const Home = () => {
                   alt={photo.alt}
                   style={{
                     width: '100%',
-                    height: '500px',
-                    objectFit: 'cover',
-                    borderRadius: '15px'
+                    height: 'auto',
+                    maxHeight: '600px',
+                    objectFit: 'contain',
+                    borderRadius: '15px',
+                    display: 'block'
                   }}
                 />
               </div>
