@@ -253,9 +253,6 @@ const Competition = () => {
               </svg>
             </button>
           </div>
-          <div style={{color: '#fff', padding: '0.5rem 1rem', borderRadius: '8px', fontSize: '1rem', textAlign: 'center', maxWidth: '100%', marginBottom: '0.5rem', marginTop: '0.5rem'}}>
-            Get access to exclusive content when you <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNVcHH7_mt0wBPsFWyEht6PUsphzsUyqsLyXYIha3BSzw4qA/viewform" style={{color: '#fff'}} target='_blank'> join our e board...</a>
-          </div>
         </div>
         {error && <div style={{color: 'red', marginTop: '1rem'}}>{error}</div>}
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -83,6 +83,7 @@ import tba from '../../assets/board_member_pictures/person_placeholder.jpg'
 import snom from "../../assets/sponsor_images/snom-logo.jpeg";
 import classical_image from "../../assets/classical-image.jpeg"
 import homepage_image from "../../assets/homepage-image.jpg"
+import deepam_png from "../../assets/deepam.png"
 
 // Garba Slides
 import garba_slide_1 from "../../assets/garba_slides_pics/garba_slide_1.JPG"
@@ -96,6 +97,14 @@ import garba_slide_6 from "../../assets/garba_slides_pics/garba_slide_6.JPG"
 
 const Home = () => {
   const [showConfetti, setShowConfetti] = useState(false);
+  const [showDiwali, setShowDiwali] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowDiwali(true);
+    }, 750);
+    return () => clearTimeout(timer);
+  }, []);
 
   const garbaPhotos = [
     { id: 1, src: garba_slide_1, alt: 'Garba 1' },
@@ -205,6 +214,71 @@ const Home = () => {
       >
         <div className='heading-container'>
           <h1 className='homepage-heading'>Maryland Mayuri</h1>
+          
+          {/* Diwali Formal Section with Arched Text */}
+          <a href="https://umdtickets.universitytickets.com/w/event.aspx?id=1622&fbclid=PAZXh0bgNhZW0CMTEAAaduPajEn5Uut5603hGugHDH9qwto0FZyoGiDoFl-3HFTHaRkLJjzT0Fueetpw_aem_-iiMopzvXMSZGOgfikp6Xg" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', cursor: 'pointer' }}>
+            <div style={{ 
+              position: 'relative', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: 'center', 
+              margin: '20px auto',
+              opacity: showDiwali ? 1 : 0,
+              transition: 'opacity 0.8s ease-in-out'
+            }}>
+              {/* Top Arched Text */}
+              <div style={{ 
+                textAlign: 'center', 
+                marginBottom: '10px',
+                transform: 'translateY(35px)'
+              }}>
+                <svg viewBox="0 0 300 60" width="300" height="60" style={{ overflow: 'visible' }}>
+                  <defs>
+                    <path id="archTop" d="M 30,50 Q 150,15 270,50" fill="transparent" />
+                  </defs>
+                  <text style={{ 
+                    fill: '#000000', 
+                    fontSize: '20px', 
+                    fontWeight: 'bold',
+                    letterSpacing: '3px',
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                  }}>
+                    <textPath href="#archTop" startOffset="51.5%" textAnchor="middle">
+                      DIWALI FORMAL
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+
+              {/* Deepam Image */}
+              <img src={deepam_png} alt="Deepam" style={{ maxWidth: '200px', display: 'block', margin: '0 auto' }} />
+
+              {/* Bottom U-Shaped Text */}
+              <div style={{ 
+                textAlign: 'center', 
+                marginTop: '10px',
+                transform: 'translateY(-10px)'
+              }}>
+                <svg viewBox="0 0 300 60" width="300" height="60" style={{ overflow: 'visible' }}>
+                  <defs>
+                    <path id="archBottom" d="M 30,10 Q 150,50 270,10" fill="transparent" />
+                  </defs>
+                  <text style={{ 
+                    fill: '#ffd700', 
+                    fontSize: '20px', 
+                    fontWeight: 'bold',
+                    letterSpacing: '3px',
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                  }}>
+                    <textPath href="#archBottom" startOffset="50%" textAnchor="middle">
+                      TICKETS OUT NOW!
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+            </div>
+          </a>
+
           {/* <a href="https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-garba" target="_blank" className='tickets'>
           <img src={garba_1} height={175} className="ticket1" 
           onMouseOver={e => (e.currentTarget.src=garba_2) (e.currentTarget.height=250)} 
@@ -278,7 +352,7 @@ const Home = () => {
                 And If You Liked Garba...
               </h2>
               <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#010221' }}>
-                You'll LOVE what we're hosting for <a target="_blank" href='https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-diwali-formal?fbclid=PAZXh0bgNhZW0CMTEAAafl-3DgA0pCD5_FIWuY8dHaazy2vDctYtgcOGrvTLMoKHboqLxs3AgwhgYiKg_aem_0MUfEmcGgb8bvMop6m34eg'>Diwali!</a> Join us in the Stamp Grand Ballroom
+                You'll LOVE what we're hosting for <a target="_blank" href='https://umdtickets.universitytickets.com/w/event.aspx?id=1622&fbclid=PAZXh0bgNhZW0CMTEAAaduPajEn5Uut5603hGugHDH9qwto0FZyoGiDoFl-3HFTHaRkLJjzT0Fueetpw_aem_-iiMopzvXMSZGOgfikp6Xg'>Diwali!</a> Join us in the Stamp Grand Ballroom
                 on October 25th for an evening filled with 
                 lights, laughter, and festive joy. 
                 You won't want to miss this spectacular celebration!
