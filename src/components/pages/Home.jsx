@@ -154,7 +154,7 @@ const Home = () => {
 
     { name: "Azraa Abdoul", position: "Hospitality", image: azraa_a },
     { name: "Amos Saudager", position: "Hospitality", image: amos_s },
-    { name: "Isabella George", position: "Hospitality", image: isabelle_g },
+    { name: "Isabelle George", position: "Hospitality", image: isabelle_g },
     { name: "Apurva Hari", position: "Hospitality", image: apurva_h },
 
     { name: "Shivank Bhimavarapu", position: "Technology", image: shivank_b },
