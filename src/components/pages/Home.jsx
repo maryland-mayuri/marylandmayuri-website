@@ -216,7 +216,7 @@ const Home = () => {
           <h1 className='homepage-heading'>Maryland Mayuri</h1>
           
           {/* Diwali Formal Section with Arched Text */}
-          <a href="https://umdtickets.universitytickets.com/w/event.aspx?id=1622&fbclid=PAZXh0bgNhZW0CMTEAAaduPajEn5Uut5603hGugHDH9qwto0FZyoGiDoFl-3HFTHaRkLJjzT0Fueetpw_aem_-iiMopzvXMSZGOgfikp6Xg" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', cursor: 'pointer' }}>
+          <a href="https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-diwali-formal?fbclid=PAZXh0bgNhZW0CMTEAAaclXA_A4-S_TVClyHcIJH60cLO0HhmWwkX_KicE7KvhuOUKMhikcEWbxL1Xcg_aem_yJrE60FarxHHOSDStkqonw" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', cursor: 'pointer' }}>
             <div style={{ 
               position: 'relative', 
               display: 'flex', 
@@ -352,7 +352,7 @@ const Home = () => {
                 And If You Liked Garba...
               </h2>
               <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#010221' }}>
-                You'll LOVE what we're hosting for <a target="_blank" href='https://umdtickets.universitytickets.com/w/event.aspx?id=1622&fbclid=PAZXh0bgNhZW0CMTEAAaduPajEn5Uut5603hGugHDH9qwto0FZyoGiDoFl-3HFTHaRkLJjzT0Fueetpw_aem_-iiMopzvXMSZGOgfikp6Xg'>Diwali!</a> Join us in the Stamp Grand Ballroom
+                You'll LOVE what we're hosting for <a target="_blank" href='https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-diwali-formal?fbclid=PAZXh0bgNhZW0CMTEAAaclXA_A4-S_TVClyHcIJH60cLO0HhmWwkX_KicE7KvhuOUKMhikcEWbxL1Xcg_aem_yJrE60FarxHHOSDStkqonw'>Diwali!</a> Join us in the Stamp Grand Ballroom
                 on October 25th for an evening filled with 
                 lights, laughter, and festive joy. 
                 You won't want to miss this spectacular celebration!
