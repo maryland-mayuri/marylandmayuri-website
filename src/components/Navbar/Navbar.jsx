@@ -78,6 +78,15 @@ const Navbar = () => {
                         <NavLink to="/sponsorship" onClick={handleLinkClick}>Sponsorship</NavLink>
                     </div>
                 </div>
+
+                <div className="nav-item">
+                    <div className="nav-link">
+                        <a href = 'https://www.zeffy.com/en-US/donation-form/donate-to-mayland-mayuri' target = 'blank'>Donate</a>
+                    </div>
+                </div>
+
+
+
             </>
         );
     };
