@@ -93,15 +93,22 @@ import garba_slide_4 from "../../assets/garba_slides_pics/garba_slide_4.JPG"
 import garba_slide_5 from "../../assets/garba_slides_pics/garba_slide_5.JPG"
 import garba_slide_6 from "../../assets/garba_slides_pics/garba_slide_6.JPG"
 
+// Diwali Slides
+import diwali_slide_1 from "../../assets/diwali_slides_pics/diwali_slide_1.JPG"
+import diwali_slide_2 from "../../assets/diwali_slides_pics/diwali_slide_2.JPG"
+import diwali_slide_3 from "../../assets/diwali_slides_pics/diwali_slide_3.JPG"
+import diwali_slide_4 from "../../assets/diwali_slides_pics/diwali_slide_4.JPG"
+import diwali_slide_5 from "../../assets/diwali_slides_pics/diwali_slide_5.JPG"
 
 
 const Home = () => {
   const [showConfetti, setShowConfetti] = useState(false);
-  const [showDiwali, setShowDiwali] = useState(false);
+  const [showDiwali, setShowGarba] = useState(false);
+  const [activeEventTab, setActiveEventTab] = useState('diwali');
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowDiwali(true);
+      setShowGarba(true);
     }, 750);
     return () => clearTimeout(timer);
   }, []);
@@ -114,6 +121,14 @@ const Home = () => {
     { id: 5, src: garba_slide_5, alt: 'Garba 5' },
     { id: 6, src: garba_slide_6, alt: 'Garba 6' }
   ];
+
+  const diwaliPhotos = [
+    { id: 1, src: diwali_slide_1, alt: 'Diwali 1' },
+    { id: 2, src: diwali_slide_2, alt: 'Diwali 2'},
+    { id: 3, src: diwali_slide_3, alt: 'Diwali 3'},
+    { id: 4, src: diwali_slide_4, alt: 'Diwali 4'},
+    { id: 5, src: diwali_slide_5, alt: 'Diwali 5'},
+  ]
 
   const carouselSettings = {
     dots: true,
@@ -215,69 +230,7 @@ const Home = () => {
         <div className='heading-container'>
           <h1 className='homepage-heading'>Maryland Mayuri</h1>
           
-          {/* Diwali Formal Section with Arched Text */}
-          <a href="https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-diwali-formal?fbclid=PAZXh0bgNhZW0CMTEAAaclXA_A4-S_TVClyHcIJH60cLO0HhmWwkX_KicE7KvhuOUKMhikcEWbxL1Xcg_aem_yJrE60FarxHHOSDStkqonw" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', cursor: 'pointer' }}>
-            <div style={{ 
-              position: 'relative', 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              margin: '20px auto',
-              opacity: showDiwali ? 1 : 0,
-              transition: 'opacity 0.8s ease-in-out'
-            }}>
-              {/* Top Arched Text */}
-              <div style={{ 
-                textAlign: 'center', 
-                marginBottom: '10px',
-                transform: 'translateY(35px)'
-              }}>
-                <svg viewBox="0 0 300 60" width="300" height="60" style={{ overflow: 'visible' }}>
-                  <defs>
-                    <path id="archTop" d="M 30,50 Q 150,15 270,50" fill="transparent" />
-                  </defs>
-                  <text style={{ 
-                    fill: '#000000', 
-                    fontSize: '20px', 
-                    fontWeight: 'bold',
-                    letterSpacing: '3px',
-                    textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
-                  }}>
-                    <textPath href="#archTop" startOffset="51.5%" textAnchor="middle">
-                      DIWALI FORMAL
-                    </textPath>
-                  </text>
-                </svg>
-              </div>
-
-              {/* Deepam Image */}
-              <img src={deepam_png} alt="Deepam" style={{ maxWidth: '200px', display: 'block', margin: '0 auto' }} />
-
-              {/* Bottom U-Shaped Text */}
-              <div style={{ 
-                textAlign: 'center', 
-                marginTop: '10px',
-                transform: 'translateY(-10px)'
-              }}>
-                <svg viewBox="0 0 300 60" width="300" height="60" style={{ overflow: 'visible' }}>
-                  <defs>
-                    <path id="archBottom" d="M 30,10 Q 150,50 270,10" fill="transparent" />
-                  </defs>
-                  <text style={{ 
-                    fill: '#ffd700', 
-                    fontSize: '20px', 
-                    fontWeight: 'bold',
-                    letterSpacing: '3px',
-                    textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
-                  }}>
-                    <textPath href="#archBottom" startOffset="50%" textAnchor="middle">
-                      TICKETS OUT NOW!
-                    </textPath>
-                  </text>
-                </svg>
-              </div>
-            </div>
-          </a>
+          
 
           {/* <a href="https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-garba" target="_blank" className='tickets'>
           <img src={garba_1} height={175} className="ticket1" 
@@ -287,16 +240,58 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Diwali Event Section */}
-      <div className="diwali-event-section" style={{
-        backgroundColor: '#001f3f',
-        padding: '100px 20px',
-        minHeight: '700px',
+      {/* Event Tabs */}
+      <div style={{
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center'
+        backgroundColor: '#f6f7f2'
       }}>
+        <button
+          onClick={() => setActiveEventTab('diwali')}
+          style={{
+            width: '50%',
+            padding: '15px 40px',
+            fontSize: '1.2rem',
+            fontWeight: 'bold',
+            backgroundColor: activeEventTab === 'diwali' ? '#4A0E1F' : '#ffffff',
+            color: activeEventTab === 'diwali' ? '#ffffff' : '#4A0E1F',
+            border: 'none',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease',
+            boxShadow: activeEventTab === 'diwali' ? '0 4px 8px rgba(74,14,31,0.3)' : 'none'
+          }}
+        >
+          Diwali
+        </button>
+        <button
+          onClick={() => setActiveEventTab('garba')}
+          style={{
+            width: '50%',
+            padding: '15px 40px',
+            fontSize: '1.2rem',
+            fontWeight: 'bold',
+            backgroundColor: activeEventTab === 'garba' ? '#001f3f' : '#ffffff',
+            color: activeEventTab === 'garba' ? '#ffffff' : '#001f3f',
+            border: 'none',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease',
+            boxShadow: activeEventTab === 'garba' ? '0 4px 8px rgba(0,31,63,0.3)' : 'none'
+          }}
+        >
+          Garba
+        </button>
+      </div>
+
+      {/* Garba Event Section */}
+      {activeEventTab === 'garba' && (
+        <div className="garba-event-section" style={{
+          backgroundColor: '#001f3f',
+          padding: '100px 20px',
+          minHeight: '700px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
         <h1 style={{
           fontFamily: '"Courier New", Courier, monospace',
           fontSize: '4rem',
@@ -325,7 +320,7 @@ const Home = () => {
           }}>
             <div style={{ textAlign: 'center' }}>
               <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '20px', color: '#210101' }}>
-                Thank You!
+                A Night to Remember!
               </h2>
               <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#210101' }}>
                 Thank you to everyone who came out to Garba! With over 500 tickets sold, 
@@ -335,7 +330,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Diwali Event Promotion Bubble */}
+          {/* Liason Promotion Bubble */}
           <div style={{
             flex: '1',
             minWidth: '300px',
@@ -349,13 +344,13 @@ const Home = () => {
           }}>
             <div style={{ textAlign: 'center' }}>
               <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '20px', color: '#010221' }}>
-                And If You Liked Garba...
+                Wanna Get Involved?
               </h2>
               <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#010221' }}>
-                You'll LOVE what we're hosting for <a target="_blank" href='https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-diwali-formal?fbclid=PAZXh0bgNhZW0CMTEAAaclXA_A4-S_TVClyHcIJH60cLO0HhmWwkX_KicE7KvhuOUKMhikcEWbxL1Xcg_aem_yJrE60FarxHHOSDStkqonw'>Diwali!</a> Join us in the Stamp Grand Ballroom
-                on October 25th for an evening filled with 
-                lights, laughter, and festive joy. 
-                You won't want to miss this spectacular celebration!
+                If you want to get involved with creating amazing events like our Diwali Formal and our Garba,
+                then come be a liason with us! Liason help run our competition in the spring, 
+                and by becoming one, you can tap into Indian Culture and be a part of 
+                one of the best communities at UMD! Click <a href='https://docs.google.com/forms/d/e/1FAIpQLScT6ORv3axopgfVZ62RCZey5HFJ88xWaGYI1jnj2Xlbth2I4g/viewform' target='blank'>this link</a> to learn more.
               </p>
             </div>
           </div>
@@ -397,7 +392,124 @@ const Home = () => {
         }}>
           Check out your photos <a target="_blank" href="https://photos.google.com/share/AF1QipOxFzH4aWTXFUk1mNei_uCj9gy-Zvc2gMUemLkX5YfMTEtrssfcOPuMIzeUwcXESg?key=Y25wR0wwQ3VGMjNfZlI0aXZyRUR4NWNac1RxS0ZR" style={{ color: '#ffd700', textDecoration: 'underline' }}>here!</a>
         </div>
-      </div>
+        </div>
+      )}
+
+      {/* Diwali Event Section */}
+      {activeEventTab === 'diwali' && (
+        <div className="diwali-event-section" style={{
+          backgroundColor: '#4A0E1F',
+          padding: '100px 20px',
+          minHeight: '700px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+          <h1 style={{
+            fontFamily: '"Playfair Display", "Georgia", serif',
+            fontSize: '4.5rem',
+            color: '#ffffff',
+            fontWeight: '700',
+            fontStyle: 'italic',
+            textAlign: 'center',
+            marginBottom: '40px',
+            letterSpacing: '0.03em',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+          }}>
+            A <span style={{ fontWeight: '900', textDecoration: 'underline', textDecorationColor: '#ffd700' }}>LIT</span> Night at Diwali!
+          </h1>
+
+          {/* Two content bubbles */}
+          <div style={{ display: 'flex', gap: '40px', maxWidth: '1200px', width: '100%', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {/* diwali Thank You Bubble */}
+            <div style={{
+              flex: '1',
+              minWidth: '300px',
+              backgroundColor: '#f2e4e8',
+              borderRadius: '15px',
+              boxShadow: '0 10px 20px rgba(102, 15, 48, 0.2)',
+              padding: '40px 30px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center'
+            }}>
+              <div style={{ textAlign: 'center' }}>
+                <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '20px', color: '#210101' }}>
+                  Thank You!
+                </h2>
+                <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#210101' }}>
+                  Thank you to everyone who came out to our Diwali celebration! It was an amazing 
+                  festival of lights, music, and joy. You guys brought great energy and truly made our event feel special.
+                </p>
+              </div>
+            </div>
+
+            {/* Liason Promotion Bubble */}
+            <div style={{
+              flex: '1',
+              minWidth: '300px',
+              backgroundColor: '#e5e4f2',
+              borderRadius: '15px',
+              boxShadow: '0 10px 20px rgba(48, 15, 102, 0.2)',
+              padding: '40px 30px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center'
+            }}>
+              <div style={{ textAlign: 'center' }}>
+                <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '20px', color: '#010221' }}>
+                  If You Enjoyed Diwali...
+                </h2>
+                <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#010221' }}>
+                Then you might enojy being a liason for Maryland Mayuri!
+                Liasons are essential in running our competition in the spring, so we want you!
+                By being a liason, you can tap into the beautiful world of Indian Classical dance,
+                and you get to be a part of one of the best communities at UMD!
+                Click <a href='https://docs.google.com/forms/d/e/1FAIpQLScT6ORv3axopgfVZ62RCZey5HFJ88xWaGYI1jnj2Xlbth2I4g/viewform' target='blank'>this link</a> to learn more
+                </p>
+              </div>
+            </div>
+          </div>
+{/* Garba Photos Carousel */}
+        <div style={{ 
+          width: '100%', 
+          maxWidth: '900px', 
+          marginTop: '60px',
+          padding: '0 20px'
+        }}>
+          <Slider {...carouselSettings}>
+            {diwaliPhotos.map((photo) => (
+              <div key={photo.id}>
+                <img 
+                  src={photo.src} 
+                  alt={photo.alt}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    maxHeight: '600px',
+                    objectFit: 'contain',
+                    borderRadius: '15px',
+                    display: 'block'
+                  }}
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
+
+
+          {/* Photo Link Text for diwali */}
+          <div style={{
+            marginTop: '40px',
+            textAlign: 'center',
+            fontSize: '1.2rem',
+            color: '#ffffff'
+          }}>
+            Check out your diwali photos <a target="_blank" href="https://photos.google.com/share/AF1QipP_Y1z-NPmaLRvFdnX2jz89AaZA_X29S6lkCMRRuT61YZpICyx4hGAtI2L6RB6iDA?key=THdXSWNtNURQZTFwZ1J2aURwU1dFTzQ5eVozSW9B" style={{ color: '#ffd700', textDecoration: 'underline' }}>here!</a>
+          </div>
+        </div>
+      )}
 
       <div id="about-us" className="section-container">
         <div className="section-content-wrapper">
