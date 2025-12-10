@@ -2,15 +2,15 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #F5F5F5; /* Light teal background */
+  background-color: #fff2f2; /* Light teal background */
 }
 
 /* Thank You Section */
 .thank-you {
   text-align: center;
   padding: 3rem 0;
-  color: #013222;
-    background-color: #E1E5DC;
+  color: #320101;
+    background-color: #fff2f2;
   border-radius: 10px;
   margin-bottom: 3rem;
 }
@@ -19,14 +19,14 @@
   font-size: 3rem;
   margin-bottom: 1rem;
   letter-spacing: 2px;
-  color: #013222;
+  color: #000000;
 }
 
 .thank-you p {
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto;
-  color: #004D14;
+  color: #250000;
 }
 
 /* Sponsor Grid */
@@ -34,7 +34,7 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #013222;
+  color: #000000;
 }
 
 .sponsor-list {
@@ -53,20 +53,20 @@
 }
 
 .sponsor-item:nth-child(even) {
-  background-color: #013222;
-  color: #E1E5DC;
+  background-color: #320101;
+  color: #e5dcdc;
 }
 
 .sponsor-item:nth-child(odd) {
-  background-color: #E1E5DC;
-  color: #013222;
+  background-color: #ffe1e1;
+  color: #320101;
 }
 
 .sponsor-item:nth-child(odd) a {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #013222;
-  color: #F6F7F2;
+  background-color: #320101;
+  color: #f7f2f2;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -76,8 +76,8 @@
 .sponsor-item:nth-child(even) a {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #E1E5DC;
-  color: #013222;
+  background-color: #e5dcdc;
+  color: #320101;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -87,7 +87,7 @@
 
 
 .sponsor-item a:hover {
-  background-color: #dcde9d; /* Darker turquoise on hover */
+  background-color: #de9d9d; /* Darker turquoise on hover */
 }
 
 .sponsor-item:hover {

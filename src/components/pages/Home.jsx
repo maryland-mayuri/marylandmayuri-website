@@ -344,13 +344,11 @@ const Home = () => {
           }}>
             <div style={{ textAlign: 'center' }}>
               <h2 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '20px', color: '#010221' }}>
-                Wanna Get Involved?
+                So What's Next?
               </h2>
               <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#010221' }}>
-                If you want to get involved with creating amazing events like our Diwali Formal and our Garba,
-                then come be a liason with us! Liason help run our competition in the spring, 
-                and by becoming one, you can tap into Indian Culture and be a part of 
-                one of the best communities at UMD! Click <a href='https://docs.google.com/forms/d/e/1FAIpQLScT6ORv3axopgfVZ62RCZey5HFJ88xWaGYI1jnj2Xlbth2I4g/viewform' target='blank'>this link</a> to learn more.
+                Next up is our competition in the spring! If you loved the energy at Garba, you'll definitely love the energy at Mayuri, happening on
+                February 21st at Montogomery Blair High School. Follow our Instagram and Tiktok to be the first to grab tickets when they drop!
               </p>
             </div>
           </div>
@@ -462,11 +460,9 @@ const Home = () => {
                   If You Enjoyed Diwali...
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: '1.8', color: '#010221' }}>
-                Then you might enojy being a liason for Maryland Mayuri!
-                Liasons are essential in running our competition in the spring, so we want you!
-                By being a liason, you can tap into the beautiful world of Indian Classical dance,
-                and you get to be a part of one of the best communities at UMD!
-                Click <a href='https://docs.google.com/forms/d/e/1FAIpQLScT6ORv3axopgfVZ62RCZey5HFJ88xWaGYI1jnj2Xlbth2I4g/viewform' target='blank'>this link</a> to learn more
+                  Then you'll definitely love Mayuri. Come watch as the most talented teams across the country compete in
+                  our classical Indian dance compeition! This will be held on February 21st at Montgomery Blair High School.
+                  Follow our Instagram and Tiktok to be the first to grab tickets when they drop!
                 </p>
               </div>
             </div>
