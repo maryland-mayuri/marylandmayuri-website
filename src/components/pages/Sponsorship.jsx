@@ -3,16 +3,16 @@ import Slider from 'react-slick'
 import '../../index.css'
 import '../../Sponsorship.css'
 
+// Sponsor images
 import vhpa from "../../assets/sponsor_images/vhpa.jpg"
 import lmnt from "../../assets/sponsor_images/lmnt-logo.png"
 import herrs from "../../assets/sponsor_images/herrs-logo.png"
-
 import celsius from "../../assets/sponsor_images/celsius-logo.jpeg"
 import desai from "../../assets/sponsor_images/desai-logo.png"
 import bubblr from "../../assets/sponsor_images/bubblr-logo.png"
 
+// Background video
 import bgVideo from "../../assets/sponsor_images/sponsorship-bg.mp4"
-
 
 const Sponsorship = () => {
   const sliderRef = useRef(null)
@@ -28,7 +28,7 @@ const Sponsorship = () => {
     {
       name: "Amit Desai",
       description:
-        "Amit Desai is a Mortgage Sales Manager with 25+ years of experience helping borrowers with their home ownership needs. He has a deep level of expertise, helping first-time homebuyers, seasoned homeowners, and those refinancing an existing loan find the best loan for their needs. He takes the time to carefully consult and regularly communicate with borrowers so they clearly understand their options and the mortgage process. Because his business is built on referrals, his goal is to far exceed your expectations!",
+        "Amit Desai is a Mortgage Sales Manager with 25+ years of experience helping borrowers with their home ownership needs. He has a deep level of expertise, helping first-time homebuyers, seasoned homeowners, and those refinancing an existing loan find the best loan for their needs. He takes the time to carefully consult and regularly communicate with borrowers so they clearly understand their options and the mortgage process. Because his business is built on referrals, his goal is to exceed your expectations!",
       img: desai,
       link: "mailto:amit.desai@td.com"
     },
