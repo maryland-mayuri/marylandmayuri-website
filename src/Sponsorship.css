@@ -2,15 +2,47 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #fff2f2; /* Light teal background */
+  position: relative;
+  z-index: 1;
+  background-color: #0000003a;
+}
+
+/* Video Background */
+.sponsorship-video-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: transparent;
+  z-index: 0;
+}
+
+.background-video {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: scale(0.15);
+  transform-origin: center;
+  z-index: -10;
+  pointer-events: none;
+  transition: transform 1s ease-in-out;
+}
+
+.sponsorship-video-wrapper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+  z-index: -5;
+  pointer-events: none;
 }
 
 /* Thank You Section */
 .thank-you {
   text-align: center;
   padding: 3rem 0;
-  color: #320101;
-    background-color: #fff2f2;
+  background-color: #1e1e1e05;
   border-radius: 10px;
   margin-bottom: 3rem;
 }
@@ -19,102 +51,99 @@
   font-size: 3rem;
   margin-bottom: 1rem;
   letter-spacing: 2px;
-  color: #000000;
+  color: #e2cfcf;
 }
 
 .thank-you p {
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto;
-  color: #250000;
+  color: #f2dada;
 }
 
-/* Sponsor Grid */
-.sponsor-grid h2 {
+/* Sponsor Slider */
+.sponsor-slider h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #000000;
-}
-
-.sponsor-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  color: #d2c8c8;
 }
 
 .sponsor-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  gap: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(58, 175, 169, 0.1); /* Turquoise shadow */
   padding: 2rem;
+  background-color: rgba(50, 1, 1, 0.85);
+  color: #e2cfcf;
   transition: transform 0.3s ease;
-}
-
-.sponsor-item:nth-child(even) {
-  background-color: #320101;
-  color: #e5dcdc;
-}
-
-.sponsor-item:nth-child(odd) {
-  background-color: #ffe1e1;
-  color: #320101;
-}
-
-.sponsor-item:nth-child(odd) a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #320101;
-  color: #f7f2f2;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-}
-
-.sponsor-item:nth-child(even) a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #e5dcdc;
-  color: #320101;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-}
-
-
-
-.sponsor-item a:hover {
-  background-color: #de9d9d; /* Darker turquoise on hover */
 }
 
 .sponsor-item:hover {
   transform: translateY(-5px);
 }
 
-
-
-.sponsor-item img {
-  max-width: 200px;
-  height: auto;
-  margin-right: 2rem;
-  object-fit: contain;
+.sponsor-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
 }
 
-.sponsor-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.sponsor-left img {
+  height: 100px;
+  width: auto;
+  margin-bottom: 1rem;
 }
 
-.sponsor-item p {
+.sponsor-left h3 {
+  text-align: center;
+  color: #f7f2f2;
+  margin: 0;
+}
+
+.sponsor-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.sponsor-right p {
+  color: #e2cfcf;
   font-size: 1rem;
   margin-bottom: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
+.sponsor-right a {
+  color: #e4a56a;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
 
+.sponsor-right a:hover {
+  text-decoration: underline;
+}
+
+/* Slick carousel overrides */
+.slick-dots li button:before {
+  color: #fff;
+}
+
+.slick-prev, .slick-next {
+  color: #fff;
+  z-index: 5;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+  opacity: 1;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .sponsor-item {
     flex-direction: column;
@@ -122,22 +151,12 @@
     text-align: center;
   }
 
-  .sponsor-item img {
-    margin-right: 0;
-    margin-bottom: 1.5rem;
+  .sponsor-left {
+    min-width: auto;
+    margin-bottom: 1rem;
   }
 
-  .thank-you h1 {
-    font-size: 2.0rem;
+  .sponsor-right p {
+    font-size: 0.95rem;
   }
-
-  .thank-you p {
-    font-size: 1rem;
-    padding: 10px;
-  }
-}
-
-.sponsor-item:not(:last-child) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 3rem;
 }
