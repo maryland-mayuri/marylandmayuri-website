@@ -20,7 +20,7 @@ import rushina_p from '../../assets/board_member_pictures/eventops-Rushina-Patel
 
 
 // Registration
-import giridhar_s from '../../assets/board_member_pictures/reg-Giridhar-Sawhney.jpg'
+import giridhar_s from '../../assets/board_member_pictures/reg-Giridhar-Sawhney.JPG'
 import pranav_p from '../../assets/board_member_pictures/reg-Pranav-Palle.jpg'
 import bhavri_p from '../../assets/board_member_pictures/reg-Bharvi-Patel.jpg'
 
