@@ -42,7 +42,7 @@ import arnav_p from '../../assets/board_member_pictures/tech-pr-Arnav-Patel.jpg'
 
 
 // Judging
-import srinidhi_g from '../../assets/board_member_pictures/judging-Srinidhi-Gubba.jpg'
+import srinidhi_g from '../../assets/board_member_pictures/judging-Srinidhi-Gubba.JPG'
 import mahathi_c from '../../assets/board_member_pictures/judging-Mahathi-Chinthapalli.jpg'
 
 // Sponsorship
