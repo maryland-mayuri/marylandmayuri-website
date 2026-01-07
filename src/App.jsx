@@ -6,6 +6,7 @@ import Home from './components/pages/Home'
 import Sponsorship from './components/pages/Sponsorship'
 import Competition from './components/pages/Competition'
 import './index.css'
+import { Analytics } from '@vercel/analytics/react'
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
         </Routes>
         </div>
       <Footer/>
+      <Analytics />
     </div>
   )
 }
