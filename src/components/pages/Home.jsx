@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -8,6 +9,9 @@ import home_page_image from '../../assets/home-page-image.jpg'
 import full_mayuri_board_photo from '../../assets/full-mayuri-board-photo.jpg'
 import mayuri_m_photo from '../../assets/mayuri-m-photo.jpg'
 import Confetti from '../Confetti'
+import mayuriGlitch from '../../assets/mayuri_text_glitch.gif'
+import bluePillHand from '../../assets/blue_pill_hand.png'
+import redPillHand from '../../assets/red_pill_hand.png'
 
 // Directors
 import nihira_m from '../../assets/board_member_pictures/director-Nihira-Mulkar.jpeg'
@@ -84,17 +88,24 @@ import tba from '../../assets/board_member_pictures/person_placeholder.jpg'
 import snom from "../../assets/sponsor_images/snom-logo.jpeg";
 import classical_image from "../../assets/classical-image.jpeg"
 import homepage_image from "../../assets/homepage-image.jpg"
-import deepam_png from "../../assets/deepam.png"
 
 
 const Home = () => {
   const [showConfetti, setShowConfetti] = useState(false);
-
-
+  const navigate = useNavigate();
+  const nextSectionRef = useRef(null);
 
   const handleSmoothScroll = () => {
     const bottomSection = document.querySelector('.bottom-section');
     bottomSection.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const handleBluePillClick = () => {
+    nextSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const handleRedPillClick = () => {
+    navigate('/competition');
   }
 
   const handlePranavClick = () => {
@@ -174,8 +185,38 @@ const Home = () => {
 
   return (
     <div className='homepage-main-container'>
+      <div className='hero-section'>
+        <img src={mayuriGlitch} alt="Maryland Mayuri" className="mayuri-glitch-header" />
+        
+        <div className='pill-hands-container'>
+          <div className='pill-hand-wrapper'>
+            <img 
+              src={bluePillHand} 
+              alt="Blue Pill" 
+              onClick={handleBluePillClick}
+              className='pill-hand-image'
+            />
+            <p className='pill-hand-text'>
+              Take the blue pill, and everything remains the same
+            </p>
+          </div>
+          
+          <div className='pill-hand-wrapper'>
+            <img 
+              src={redPillHand} 
+              alt="Red Pill" 
+              onClick={handleRedPillClick}
+              className='pill-hand-image'
+            />
+            <p className='pill-hand-text'>
+              Take the red pill, and help Mission Mayuri
+            </p>
+          </div>
+        </div>
+      </div>
+      
       <Confetti isActive={showConfetti} onComplete={handleConfettiComplete} />
-      <div className='home-container'
+      <div ref={nextSectionRef} className='home-container'
             style={{'--homepage-image': `url(${mayuri_m_photo})`}}
       >
         <div className='heading-container'>

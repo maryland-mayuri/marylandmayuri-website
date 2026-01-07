@@ -455,3 +455,54 @@
         font-size: 2rem; /* Even smaller font size for very small screens */
     }
 }
+
+/* Matrix SECTION WITH GLITCH AND PILLS */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mayuri-glitch-header {
+    max-width: 100%;
+    display: block;
+}
+
+.pill-hands-container {
+    position: absolute;
+    top: clamp(50%, 50% + 10vw, 60%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 4vw, 4rem);
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.pill-hand-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pill-hand-image {
+    max-width: clamp(120px, 30vw, 35vw);
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.pill-hand-text {
+    color: #fff;
+    text-align: center;
+    font-size: clamp(0.7rem, 1.8vw, 1.2rem);
+    font-weight: 500;
+    margin: 1rem 0 0 0;
+    padding: 0;
+}
