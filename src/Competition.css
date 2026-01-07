@@ -50,7 +50,7 @@
 }
 
 .competition-header h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: bold;
     margin-bottom: 1rem;
     color: #FFFFFF;
@@ -59,7 +59,7 @@
 }
 
 .competition-header h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: bold;
     margin-bottom: 1rem;
     color: #ec5555;
@@ -68,7 +68,7 @@
 }
 
 .competition-header p {
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 2vw, 1rem);
     color: #FFFFFF;
     /* Darker turquoise */
 }
@@ -98,13 +98,13 @@
 
 .event-card h2 {
     color: #FFFFFF;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: clamp(1.2rem, 4vw, 2.8rem);
+    margin-bottom: 1rem;
 }
 
 .event-card h3 {
     color: #FFFFFF;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 4vw, 2rem);
     margin-bottom: 1.5rem;
 }
 
@@ -149,8 +149,8 @@
 }
 .transition-header {
     text-align: center;
-    font-size: 5rem;
-    margin: -2rem 0 2rem 0;
+    font-size: clamp(2rem, 7vw, 20rem);
+    margin: -3rem 0 1rem 0;
     color: #ffb1b1;
 }
 

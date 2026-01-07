@@ -181,7 +181,7 @@ const Competition = () => {
       <div id="competition" className="competition-section">
         <div className="competition-container">
           <header className='competition-header'>
-            <TextEncrypted text="Maryland Mayuri 2026" interval={90} fontSize='4rem' fontWeight='bold' />
+            <TextEncrypted text="Maryland Mayuri 2026" interval={90} fontSize='clamp(2rem, 6vw, 4rem)' fontWeight='bold' />
             <p className='fade-in' style={{marginTop: '1rem'}}>Will they be able to complete the mission? Find out on</p>
             <h2 className='fade-in' style={{marginTop: '1rem'}}>February 21st, 2026</h2>
           </header>
