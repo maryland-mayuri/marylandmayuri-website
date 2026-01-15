@@ -70,7 +70,6 @@ const Navbar = () => {
                     </HashLink>
                     <div className={`dropdown ${openDropdowns['mayuri'] ? 'open' : ''}`}>
                         <HashLink smooth to="/competition/#competition" onClick={handleLinkClick}>Competition</HashLink>
-                        <HashLink smooth to="/competition/#media" onClick={handleLinkClick}>Media</HashLink>
                     </div>
                 </div>
                 <div className="nav-item">

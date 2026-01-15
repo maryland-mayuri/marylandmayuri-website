@@ -1,16 +1,47 @@
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 2500ms;
+}
+
+.fade-in-longer {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 3500ms;
+}
+
 /* Competition Section */
 .competition-section {
-    color: #17252A;
+    color: #000000;
     /* Dark text color */
-    padding: 2rem 0;
+    padding: 0rem 0;
     border-radius: 15px;
-    background-color: #F5F5F5;
+    background-color: #2c2929;
 }
 
 .competition-container {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+}
+
+.full-width-breakout {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .competition-header {
@@ -19,17 +50,26 @@
 }
 
 .competition-header h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #013222;
+    color: #FFFFFF;
+    /* Turquoise color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.competition-header h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ec5555;
     /* Turquoise color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .competition-header p {
-    font-size: 1.5rem;
-    color: #004D14;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    color: #FFFFFF;
     /* Darker turquoise */
 }
 
@@ -41,47 +81,42 @@
 }
 
 .event-card {
-    border-radius: 15px;
+    border-radius: 0;
     padding: 2rem;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
     transition: all 0.3s ease;
     max-width: 350px;
     text-align: center;
-    background-color: #E1E5DC;
 }
 
 .event-card:hover {
     transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(1, 50, 34, 0.3),
-                0 0 0 8px rgba(4, 98, 0, 0.2);
-
+    border-color: #FFFFFF;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .event-card h2 {
-    color: #013222;
-    /* Turquoise color */
-    font-size: 2rem;
+    color: #FFFFFF;
+    font-size: clamp(1.2rem, 4vw, 2.8rem);
     margin-bottom: 1rem;
 }
 
 .event-card h3 {
-    color: #013222;
-    /* Darker turquoise */
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    color: #FFFFFF;
+    font-size: clamp(1rem, 4vw, 2rem);
+    margin-bottom: 1.5rem;
 }
 
 .event-card p {
     margin-bottom: 0.5rem;
-    color: #004D14;
-    /* Dark text color */
+    color: #FFFFFF;
 }
 
 .ticket-button {
-    background-color: #046200;
+    background-color: #000000;
     color: #F6F7F2;
     border: none;
-    border-radius: 25px;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
@@ -90,11 +125,11 @@
     margin-top: 1.5rem;
 }
 
-.ticket-button:hover {
-    background-color: #004D14;
+/* .ticket-button:hover { */
+    /* background-color: #ec5555; */
     /* Darker turquoise on hover */
-    transform: scale(1.05);
-}
+    /* transform: scale(1.05); */
+/* } */
 
 .ticket-link {
     color: #FEFFFF;
@@ -111,6 +146,12 @@
     .event-card {
         width: 100%;
     }
+}
+.transition-header {
+    text-align: center;
+    font-size: clamp(2rem, 7vw, 20rem);
+    margin: -3rem 0 1rem 0;
+    color: #ffb1b1;
 }
 
 /* Competing Teams Section */

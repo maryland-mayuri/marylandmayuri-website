@@ -6,7 +6,7 @@
     right: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(104, 1, 1, 0.1);
-    background-color: #1d1d1d;
+    background-color: #000000;
 }
 
 .navbar {
@@ -40,7 +40,7 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
     display: inline-block;
-    color: #DEF2F1; /* Very light teal for nav links */
+    color: #fff1f1; /* Very light teal for nav links */
 }
 
 .nav-link:hover,

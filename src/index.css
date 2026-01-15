@@ -20,7 +20,7 @@ body, html {
 
 .app-container {
   min-height: 100vh;
-  background-color: #F5F5F5; /* Light teal background */
+  background-color: #2c2929; /* Light teal background */
   display: flex;
   flex-direction: column;
   padding-top: 80px; /* Add padding to account for navbar height */
