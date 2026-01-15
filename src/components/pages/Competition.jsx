@@ -38,14 +38,15 @@ import pranav from '../../assets/media-team-pranav.jpg'
 
 import arrowIcon from '../../assets/arrow-icon-dark.png'
 
-import uscd from '../../assets/team_photos/ucsdpushpanjali.jpg'
-import pitt from '../../assets/team_photos/pittnrityamala.jpg'
-import rpi from '../../assets/team_photos/rpirudras.jpg'
-import berkeley from '../../assets/team_photos/natyaberkeley.jpg'
-import rice from '../../assets/team_photos/ricerasikas.jpg'
-import tufts from '../../assets/team_photos/tuftspulse.jpg'
-import ut from '../../assets/team_photos/utnrityasangam.jpeg'
-import uga from '../../assets/team_photos/ugaamara.jpeg'
+import nsu from '../../assets/team_photos/nsuTeamPic.png'
+import bu from '../../assets/team_photos/buTeamPic.jpg'
+import tamu from '../../assets/team_photos/tamuTeamPic.jpg'
+import uw from '../../assets/team_photos/uwTeamPic.jpg'
+import slu from '../../assets/team_photos/sluTeamPic.JPG'
+import tufts from '../../assets/team_photos/nsuTeamPic.png'
+import ut from '../../assets/team_photos/utTeamPic.jpg'
+import ncsu from '../../assets/team_photos/ncsuTeamPic.JPG'
+
 
 
 import tempLogo from '../../assets/logo.png'
@@ -96,14 +97,14 @@ const Competition = () => {
   ]
 
   const teams = [
-    { id: 1, src: berkeley, alt: "TAMU Sahithya" },
-    { id: 2, src: uga, alt: "SLU Omkara" },
+    { id: 1, src: tamu, alt: "TAMU Sahithya" },
+    { id: 2, src: slu, alt: "SLU Omkara" },
     { id: 3, src: tufts, alt: "Tufts Pulse" },
-    { id: 4, src: uscd, alt: "Natya @ UW" },
-    { id: 5, src: rice, alt: "Rice Rasikas" },
+    { id: 4, src: uw, alt: "Natya @ UW" },
+    { id: 5, src: bu, alt: "BU Dheem" },
     { id: 6, src: ut, alt: "UT Nritya Sangam" },
-    { id: 7, src: pitt, alt: "NCSU Thandav" },
-    { id: 8, src: rpi, alt: "NSU Veera" }
+    { id: 7, src: ncsu, alt: "NCSU Thandav" },
+    { id: 8, src: nsu, alt: "NSU Veera" }
   ]
 
   const mediaTeam = [
