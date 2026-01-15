@@ -207,6 +207,26 @@ const Competition = () => {
               </button>
             </div> */}
           </div>
+
+          <div className="competing-teams-section fade-in">
+            <h2>Competing Teams</h2>
+            <div className="team-panels">
+              {teams.map((team, index) => (
+                <div
+                  key={index}
+                  className={`team-panel ${activeTeam === index ? 'active' : ''}`}
+                  onClick={() => setActiveTeam(activeTeam === index ? null : index)}
+                >
+                  <div className="team-panel-header">
+                    <h3>{team.alt}</h3>
+                  </div>
+                  <div className="team-panel-content">
+                    <img src={team.src} alt={team.alt} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="divider fade-in"></div>
           <h1 className='transition-header fade-in-longer'>Past Events</h1>
 
@@ -301,7 +321,7 @@ const Competition = () => {
             </div>
           </div>
 
-          {/* Liaison Promotion Bubble */}
+          {/* Comp Promotion Bubble */}
           <div style={{
             flex: '1',
             minWidth: '300px',
@@ -414,7 +434,7 @@ const Competition = () => {
               </div>
             </div>
 
-            {/* Liaison Promotion Bubble */}
+            {/* Comp Promotion Bubble */}
             <div style={{
               flex: '1',
               minWidth: '300px',
@@ -480,25 +500,7 @@ const Competition = () => {
         </div>
       </div>
 
-      {/* <div className="competing-teams-section">
-        <h2>Competing Teams</hZ2>
-        <div className="team-panels">
-          {teams.map((team, index) => (
-            <div
-              key={index}
-              className={`team-panel ${activeTeam === index ? 'active' : ''}`}
-              onClick={() => setActiveTeam(activeTeam === index ? null : index)}
-            >
-              <div className="team-panel-header">
-                <h3>{team.alt}</h3>
-              </div>
-              <div className="team-panel-content">
-                <img src={team.src} alt={team.alt} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
+
 
       {/* <div className="media-team-section">
         <h2>Our Media Team</h2>
