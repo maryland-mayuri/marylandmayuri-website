@@ -69,14 +69,14 @@ const Competition = () => {
   ]
 
   const teams = [
-    { id: 1, src: berkeley, alt: "Natya @ Berkeley" },
-    { id: 2, src: uga, alt: "UGA Amara" },
+    { id: 1, src: berkeley, alt: "TAMU Sahithya" },
+    { id: 2, src: uga, alt: "SLU Omkara" },
     { id: 3, src: tufts, alt: "Tufts Pulse" },
-    { id: 4, src: uscd, alt: "USCD Pushpanjali" },
+    { id: 4, src: uscd, alt: "Natya @ UW" },
     { id: 5, src: rice, alt: "Rice Rasikas" },
     { id: 6, src: ut, alt: "UT Nritya Sangam" },
-    { id: 7, src: pitt, alt: "Pitt Nrityamala" },
-    { id: 8, src: rpi, alt: "RPI Rudras" }
+    { id: 7, src: pitt, alt: "NCSU Thandav" },
+    { id: 8, src: rpi, alt: "NSU Veera" }
   ]
 
   const mediaTeam = [

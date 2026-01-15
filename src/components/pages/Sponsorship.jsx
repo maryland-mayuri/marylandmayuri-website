@@ -6,6 +6,7 @@ import vhpa from "../../assets/sponsor_images/vhpa.jpg"
 import lmnt from "../../assets/sponsor_images/lmnt-logo.png"
 import herrs from "../../assets/sponsor_images/herrs-logo.png"
 import celsius from "../../assets/sponsor_images/celsius-logo.jpeg"
+import klogo from "../../assets/sponsor_images/klogo.png"
 
 
 
@@ -36,6 +37,12 @@ const Sponsorship = () => {
       name: "LMNT", description:
       "LMNT is a zero-sugar electrolyte drink mix formulated to deliver optimal hydration and performance through science-backed mineral balance. Designed for athletes, performers, and anyone seeking better daily hydration, LMNT provides a precise combination of sodium, potassium, and magnesium. The brand emphasizes clean formulation—no sugar, gluten, or unnecessary additives—to support peak physical and mental output. LMNT champions transparent nutrition and fueling people to feel and perform their best.",
       img: lmnt, link: "https://drinklmnt.com/"
+    },
+    
+    {
+      name: "Kadhiwala Hotels Group", description:
+      "Kadhiwala Hotels is a family-driven hospitality group committed to delivering exceptional comfort, service, and value to every guest. With a strong foundation built on years of experience in hotel ownership and management, Kadhiwala Hotels proudly serves business travelers, families, and long-term guests by providing clean, welcoming, and well-maintained properties. Each stay is thoughtfully designed to combine convenience, affordability, and personalized service, ensuring guests feel at home from the moment they arrive. Because our reputation is built on repeat guests and word-of-mouth referrals, our goal is simple: to exceed expectations and create a stay you’ll want to return to.",
+      img: klogo, link: "http://jayrjkinc.com/Home"
     }
 
 
