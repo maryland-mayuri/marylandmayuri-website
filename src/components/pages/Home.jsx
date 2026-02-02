@@ -146,7 +146,7 @@ const Home = () => {
     { name: "Nidhi Patel", position: "Public Relations", image: nidhi_p },
     
 
-    { name: "Mahathi Chintapalli", position: "Judging", image: mahathi_c },
+    { name: "Mahathi Chinthapalli", position: "Judging", image: mahathi_c },
     { name: "Srinidhi Gubba", position: "Judging", image: srinidhi_g },
 
     { name: "Rahul Anantuni", position: "Sponsorship", image: rahul_a },
