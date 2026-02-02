@@ -190,10 +190,10 @@ const Competition = () => {
           <div className="event-cards">
             <div className="event-card main-event fade-in">
               <h2>Competition</h2>
-              <h3>Montgomery Blair High School</h3>
-              <p>51 University Blvd E, Silver Spring, MD 20901</p>
+              <h3>John F. Kennedy High School</h3>
+              <p>1901 Randolph Rd, Wheaton, MD 20902</p>
               <button className="ticket-button">
-                <a className="ticket-link" href="" rel="noopener noreferrer">Tickets Coming Out Soon...</a>
+                <a className="ticket-link" href="https://doorlist.app/e/ub5am90?s=hTtEk7nZf6&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnkBBfLKiCzKcC1eXn2NzP2Qfz4Z9Vqp9Elc80L-JZYhwnWHmW6C6qRkNI7cY_aem_KJlhdcK7D_AYWAHI82AjAg" rel="noopener noreferrer">Buy Tickets Here</a>
               </button>
             </div>
 {/* 
