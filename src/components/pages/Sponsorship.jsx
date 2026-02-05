@@ -8,6 +8,7 @@ import vhpa from "../../assets/sponsor_images/vhpa.jpg"
 import lmnt from "../../assets/sponsor_images/lmnt-logo.png"
 import herrs from "../../assets/sponsor_images/herrs-logo.png"
 import celsius from "../../assets/sponsor_images/celsius-logo.jpeg"
+import klogo from "../../assets/sponsor_images/klogo.png"
 import desai from "../../assets/sponsor_images/desai-logo.png"
 import bubblr from "../../assets/sponsor_images/bubblr-logo.png"
 
@@ -45,6 +46,11 @@ const Sponsorship = () => {
         "Celsius is a fitness-focused energy drink brand committed to clean ingredients, sustained energy, and empowering active lifestyles. Formulated with functional ingredients and no artificial preservatives, Celsius promotes healthier performance without the crash. The brand is rooted in supporting wellness journeys, from everyday routines to high-intensity training. Their mission centers on helping people feel energized, motivated, and ready to take on their goals.",
       img: celsius,
       link: "https://www.celsius.com/"
+    },
+    {
+      name: "Kadhiwala Hotels Group", description:
+      "Kadhiwala Hotels is a family-driven hospitality group committed to delivering exceptional comfort, service, and value to every guest. With a strong foundation built on years of experience in hotel ownership and management, Kadhiwala Hotels proudly serves business travelers, families, and long-term guests by providing clean, welcoming, and well-maintained properties. Each stay is thoughtfully designed to combine convenience, affordability, and personalized service, ensuring guests feel at home from the moment they arrive. Because our reputation is built on repeat guests and word-of-mouth referrals, our goal is simple: to exceed expectations and create a stay you’ll want to return to.",
+      img: klogo, link: "http://jayrjkinc.com/Home"
     },
     {
       name: "LMNT",

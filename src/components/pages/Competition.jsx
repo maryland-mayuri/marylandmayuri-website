@@ -38,14 +38,15 @@ import pranav from '../../assets/media-team-pranav.jpg'
 
 import arrowIcon from '../../assets/arrow-icon-dark.png'
 
-import uscd from '../../assets/team_photos/ucsdpushpanjali.jpg'
-import pitt from '../../assets/team_photos/pittnrityamala.jpg'
-import rpi from '../../assets/team_photos/rpirudras.jpg'
-import berkeley from '../../assets/team_photos/natyaberkeley.jpg'
-import rice from '../../assets/team_photos/ricerasikas.jpg'
-import tufts from '../../assets/team_photos/tuftspulse.jpg'
-import ut from '../../assets/team_photos/utnrityasangam.jpeg'
-import uga from '../../assets/team_photos/ugaamara.jpeg'
+import nsu from '../../assets/team_photos/nsuTeamPic.png'
+import bu from '../../assets/team_photos/buTeamPic.jpg'
+import tamu from '../../assets/team_photos/tamuTeamPic.jpg'
+import uw from '../../assets/team_photos/uwTeamPic.jpg'
+import slu from '../../assets/team_photos/sluTeamPic.JPG'
+import tufts from '../../assets/team_photos/nsuTeamPic.png'
+import ut from '../../assets/team_photos/utTeamPic.jpg'
+import ncsu from '../../assets/team_photos/ncsuTeamPic.JPG'
+
 
 
 import tempLogo from '../../assets/logo.png'
@@ -96,14 +97,14 @@ const Competition = () => {
   ]
 
   const teams = [
-    { id: 1, src: berkeley, alt: "Natya @ Berkeley" },
-    { id: 2, src: uga, alt: "UGA Amara" },
+    { id: 1, src: tamu, alt: "TAMU Sahithya" },
+    { id: 2, src: slu, alt: "SLU Omkara" },
     { id: 3, src: tufts, alt: "Tufts Pulse" },
-    { id: 4, src: uscd, alt: "USCD Pushpanjali" },
-    { id: 5, src: rice, alt: "Rice Rasikas" },
+    { id: 4, src: uw, alt: "Natya @ UW" },
+    { id: 5, src: bu, alt: "BU Dheem" },
     { id: 6, src: ut, alt: "UT Nritya Sangam" },
-    { id: 7, src: pitt, alt: "Pitt Nrityamala" },
-    { id: 8, src: rpi, alt: "RPI Rudras" }
+    { id: 7, src: ncsu, alt: "NCSU Thandav" },
+    { id: 8, src: nsu, alt: "NSU Veera" }
   ]
 
   const mediaTeam = [
@@ -189,10 +190,10 @@ const Competition = () => {
           <div className="event-cards">
             <div className="event-card main-event fade-in">
               <h2>Competition</h2>
-              <h3>Montgomery Blair High School</h3>
-              <p>51 University Blvd E, Silver Spring, MD 20901</p>
+              <h3>John F. Kennedy High School</h3>
+              <p>1901 Randolph Rd, Wheaton, MD 20902</p>
               <button className="ticket-button">
-                <a className="ticket-link" href="" rel="noopener noreferrer">Tickets Coming Out Soon...</a>
+                <a className="ticket-link" href="https://doorlist.app/e/ub5am90?s=hTtEk7nZf6&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnkBBfLKiCzKcC1eXn2NzP2Qfz4Z9Vqp9Elc80L-JZYhwnWHmW6C6qRkNI7cY_aem_KJlhdcK7D_AYWAHI82AjAg" rel="noopener noreferrer">Buy Tickets Here</a>
               </button>
             </div>
 {/* 
@@ -205,6 +206,26 @@ const Competition = () => {
                 <a className="ticket-link" href="https://www.eventbrite.com/e/mayuri-afterparty-2025-presented-by-nitesout-maryland-mayuri-tickets-1238651151939" target="_blank" rel="noopener noreferrer">Buy Afterparty Tickets</a>
               </button>
             </div> */}
+          </div>
+
+          <div className="competing-teams-section fade-in">
+            <h2>Competing Teams</h2>
+            <div className="team-panels">
+              {teams.map((team, index) => (
+                <div
+                  key={index}
+                  className={`team-panel ${activeTeam === index ? 'active' : ''}`}
+                  onClick={() => setActiveTeam(activeTeam === index ? null : index)}
+                >
+                  <div className="team-panel-header">
+                    <h3>{team.alt}</h3>
+                  </div>
+                  <div className="team-panel-content">
+                    <img src={team.src} alt={team.alt} />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="divider fade-in"></div>
           <h1 className='transition-header fade-in-longer'>Past Events</h1>
@@ -300,7 +321,7 @@ const Competition = () => {
             </div>
           </div>
 
-          {/* Liaison Promotion Bubble */}
+          {/* Comp Promotion Bubble */}
           <div style={{
             flex: '1',
             minWidth: '300px',
@@ -413,7 +434,7 @@ const Competition = () => {
               </div>
             </div>
 
-            {/* Liaison Promotion Bubble */}
+            {/* Comp Promotion Bubble */}
             <div style={{
               flex: '1',
               minWidth: '300px',
@@ -479,25 +500,7 @@ const Competition = () => {
         </div>
       </div>
 
-      {/* <div className="competing-teams-section">
-        <h2>Competing Teams</hZ2>
-        <div className="team-panels">
-          {teams.map((team, index) => (
-            <div
-              key={index}
-              className={`team-panel ${activeTeam === index ? 'active' : ''}`}
-              onClick={() => setActiveTeam(activeTeam === index ? null : index)}
-            >
-              <div className="team-panel-header">
-                <h3>{team.alt}</h3>
-              </div>
-              <div className="team-panel-content">
-                <img src={team.src} alt={team.alt} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
+
 
       {/* <div className="media-team-section">
         <h2>Our Media Team</h2>
