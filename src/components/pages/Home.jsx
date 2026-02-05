@@ -12,6 +12,9 @@ import Confetti from '../Confetti'
 import mayuriGlitch from '../../assets/mayuri_text_glitch.gif'
 import bluePillHand from '../../assets/blue_pill_hand.png'
 import redPillHand from '../../assets/red_pill_hand.png'
+import garba_1 from "../../assets/garba_tickets/garba-tickets-1.png"
+import garba_2 from "../../assets/garba_tickets/garba-tickets-2.png"
+import mayuri_ticket from "../../assets/mayuri-ticket.png"
 
 // Directors
 import nihira_m from '../../assets/board_member_pictures/director-Nihira-Mulkar.jpeg'
@@ -33,7 +36,7 @@ import bhavri_p from '../../assets/board_member_pictures/reg-Bharvi-Patel.jpg'
 
 // Hospitality
 import apurva_h from '../../assets/board_member_pictures/person_placeholder.jpg'
-import azraa_a  from '../../assets/board_member_pictures/hosp-Azraa-Abdoul.jpg' 
+import azraa_a from '../../assets/board_member_pictures/hosp-Azraa-Abdoul.jpg'
 import amos_s from '../../assets/board_member_pictures/hosp-Amos-Saudager.jpg'
 import isabelle_g from '../../assets/board_member_pictures/hosp-Isabelle-George.jpg'
 
@@ -53,16 +56,16 @@ import mahathi_c from '../../assets/board_member_pictures/judging-Mahathi-Chinth
 
 // Sponsorship
 import dhruvi_k from '../../assets/board_member_pictures/spons-Dhruvi-Kadhiwala.jpg'
-import sachin_t from  '../../assets/board_member_pictures/spons-Sachin-Thapar.jpg'
-import rahul_a from  '../../assets/board_member_pictures/spons-Rahul-Anantuni.jpg'
-import tanisha_s from  '../../assets/board_member_pictures/spons-Tanisha-Shah.jpg'
+import sachin_t from '../../assets/board_member_pictures/spons-Sachin-Thapar.jpg'
+import rahul_a from '../../assets/board_member_pictures/spons-Rahul-Anantuni.jpg'
+import tanisha_s from '../../assets/board_member_pictures/spons-Tanisha-Shah.jpg'
 
 
 
 // Public Relations
-import manasa_c from  '../../assets/board_member_pictures/pr-Manasa-Chekuri.jpg'
-import simran_k from  '../../assets/board_member_pictures/pr-Simran-Kumar.jpg'
-import nidhi_p from  '../../assets/board_member_pictures/pr-Nidhi-Patel.jpg'
+import manasa_c from '../../assets/board_member_pictures/pr-Manasa-Chekuri.jpg'
+import simran_k from '../../assets/board_member_pictures/pr-Simran-Kumar.jpg'
+import nidhi_p from '../../assets/board_member_pictures/pr-Nidhi-Patel.jpg'
 
 
 
@@ -117,12 +120,12 @@ const Home = () => {
   }
 
   const boardMembers = [
-//   { name: "Pratiksha Das", position: "Director", image: pratiksha_d },
+    //   { name: "Pratiksha Das", position: "Director", image: pratiksha_d },
     { name: "Nihira Mulkar", position: "Director", image: nihira_m },
     { name: "Aditya Patel", position: "Director", image: aditya_p },
 
 
-    { name: "Suhan Neema", position: "Event Operations", image: suhan_n },    
+    { name: "Suhan Neema", position: "Event Operations", image: suhan_n },
     { name: "Rushina Patel", position: "Event Operations", image: rushina_p },
 
     { name: "Pranav Palle", position: "Registration", image: pranav_p },
@@ -144,7 +147,7 @@ const Home = () => {
     { name: "Manasa Chekuri", position: "Public Relations", image: manasa_c },
     { name: "Simran Kumar", position: "Public Relations", image: simran_k },
     { name: "Nidhi Patel", position: "Public Relations", image: nidhi_p },
-    
+
 
     { name: "Mahathi Chintapalli", position: "Judging", image: mahathi_c },
     { name: "Srinidhi Gubba", position: "Judging", image: srinidhi_g },
@@ -186,7 +189,16 @@ const Home = () => {
   return (
     <div className='homepage-main-container'>
       <div className='hero-section'>
-        <img src={mayuriGlitch} alt="Maryland Mayuri" className="mayuri-glitch-header" />
+        <div className="mayuri-ticket-container">
+          <a href="https://fontmeme.com/mission-impossible-font/"><img src="https://fontmeme.com/permalink/260205/68524133.png" alt="mission-impossible-font" border="0" /></a>
+          <br />
+          <br />
+          <a href="https://doorlist.app/e/ub5am90?s=hTtEk7nZf6&utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" className="mayuri-ticket-link">
+            <img src={mayuri_ticket} alt="Maryland Mayuri" className="mayuri-ticket-header" />
+            <div className="buy-now-text">Do you accept the mission - Buy Tickets Now!</div>
+          </a>
+        </div>
+        {/* <img src={mayuriGlitch} alt="Maryland Mayuri" className="mayuri-glitch-header" />
         
         <div className='pill-hands-container'>
           <div className='pill-hand-wrapper'>
@@ -212,17 +224,17 @@ const Home = () => {
               Take the red pill, and help Mission Mayuri
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
-      
+
       <Confetti isActive={showConfetti} onComplete={handleConfettiComplete} />
       <div ref={nextSectionRef} className='home-container'
-            style={{'--homepage-image': `url(${mayuri_m_photo})`}}
+        style={{ '--homepage-image': `url(${mayuri_m_photo})` }}
       >
         <div className='heading-container'>
           <h1 className='homepage-heading'>Maryland Mayuri</h1>
-          
-          
+          <br />
+
 
           {/* <a href="https://www.zeffy.com/en-US/ticketing/mayuri-x-vhpa-garba" target="_blank" className='tickets'>
           <img src={garba_1} height={175} className="ticket1" 
@@ -271,10 +283,10 @@ const Home = () => {
           {boardMembers.map((member) => (
             <div key={member.name} className="member-card">
               <div className="member-image-container">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="member-image" 
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="member-image"
                   loading="lazy"
                   onClick={member.name === "Pranav Palle" ? handlePranavClick : undefined}
                   style={member.name === "Pranav Palle" ? { cursor: 'pointer' } : {}}
