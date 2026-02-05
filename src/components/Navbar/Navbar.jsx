@@ -13,8 +13,6 @@ const Navbar = () => {
     const [openDropdowns, setOpenDropdowns] = useState({});
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-    
-
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -83,9 +81,6 @@ const Navbar = () => {
                         <a href = 'https://www.zeffy.com/en-US/donation-form/donate-to-mayland-mayuri' target = 'blank'>Donate</a>
                     </div>
                 </div>
-
-
-
             </>
         );
     };
