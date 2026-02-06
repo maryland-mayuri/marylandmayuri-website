@@ -15,6 +15,7 @@ import redPillHand from '../../assets/red_pill_hand.png'
 import garba_1 from "../../assets/garba_tickets/garba-tickets-1.png"
 import garba_2 from "../../assets/garba_tickets/garba-tickets-2.png"
 import mayuri_ticket from "../../assets/mayuri-ticket.png"
+import mission_impossible_text from "../../assets/mission-mayuri.png"
 
 // Directors
 import nihira_m from '../../assets/board_member_pictures/director-Nihira-Mulkar.jpeg'
@@ -190,7 +191,7 @@ const Home = () => {
     <div className='homepage-main-container'>
       <div className='hero-section'>
         <div className="mayuri-ticket-container">
-          <a href="https://fontmeme.com/mission-impossible-font/"><img src="https://fontmeme.com/permalink/260205/68524133.png" alt="mission-impossible-font" border="0" /></a>
+          <img className="mayuri-text" src={mission_impossible_text} alt="mission-impossible-font"/>
           <br />
           <br />
           <a href="https://doorlist.app/e/ub5am90?s=hTtEk7nZf6&utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" className="mayuri-ticket-link">
