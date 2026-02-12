@@ -193,19 +193,18 @@ const Competition = () => {
               <h3>John F. Kennedy High School</h3>
               <p>1901 Randolph Rd, Wheaton, MD 20902</p>
               <button className="ticket-button">
-                <a className="ticket-link" href="https://doorlist.app/e/ub5am90?s=hTtEk7nZf6&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnkBBfLKiCzKcC1eXn2NzP2Qfz4Z9Vqp9Elc80L-JZYhwnWHmW6C6qRkNI7cY_aem_KJlhdcK7D_AYWAHI82AjAg" rel="noopener noreferrer">Buy Tickets Here</a>
+                <a className="ticket-link" href="https://doorlist.app/e/ub5am90?s=hTtEk7nZf6&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnkBBfLKiCzKcC1eXn2NzP2Qfz4Z9Vqp9Elc80L-JZYhwnWHmW6C6qRkNI7cY_aem_KJlhdcK7D_AYWAHI82AjAg" target='_blank' rel="noopener noreferrer">Buy Tickets Here</a>
               </button>
             </div>
-{/* 
-            <div className="event-card afterparty">
+
+            <div className="event-card afterparty fade-in">
               <h2>Afterparty</h2>
-              <h3>Venue TBA</h3>
-              <p>Address: To be announced</p>
-              <p>Time: To be announced</p>
+              <h3>KOI Sushi Lounge</h3>
+              <p>1413 K Street Northwest, Washington, DC 20005</p>
               <button className="ticket-button">
-                <a className="ticket-link" href="https://www.eventbrite.com/e/mayuri-afterparty-2025-presented-by-nitesout-maryland-mayuri-tickets-1238651151939" target="_blank" rel="noopener noreferrer">Buy Afterparty Tickets</a>
+                <a className="ticket-link" href="https://www.eventbrite.com/e/mayuri-afterparty-2026-presented-by-nitesout-maryland-mayuri-tickets-1980938246621" target="_blank" rel="noopener noreferrer">Buy Afterparty Tickets</a>
               </button>
-            </div> */}
+            </div>
           </div>
 
           <div className="competing-teams-section fade-in">
